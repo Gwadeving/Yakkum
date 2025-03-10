@@ -44,8 +44,9 @@
             position: fixed;
             z-index: 5;
             background: white;
-            display: none;
+            /* display: none; */
         }
+
 
         .containCountdown{
             height: 23vw;
@@ -396,7 +397,7 @@
     
     <!-- Halaman -->
     <!-- Navbar -->
-    <nav class="navbar fixed-top d-flex navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar d-none fixed-top d-flex navbar-expand-lg" data-bs-theme="dark">
         <div class="logoContainer">
             <img src="img/Logos/2015.PNG">
             <p class="navbar-brand">YAKKUM</p>        
@@ -893,6 +894,8 @@
         logo = document.querySelector("#logo"),
         VideoLoading = document.querySelector(".VideoLoading");
         
+        let Navbar = document.querySelector(".navbar");
+
 
         function countdown(awal, akhir, durasiAnimasi, step) {
             return new Promise((resolve) => {
@@ -982,8 +985,8 @@
                     container_loading.style.animation = `opKeluar ${3}s ease-out`;
                     setTimeout(()=>{
                         container_loading.style.display = "none";
-
-                    }, 3000)
+                        Navbar.classList.remove("d-none")
+                    }, 1000)
 
                 })
             }, 1000)
