@@ -44,7 +44,7 @@
             position: fixed;
             z-index: 5;
             background: white;
-            /* display: none; */
+            display: none;
         }
 
 
@@ -404,7 +404,7 @@
     
     <!-- Halaman -->
     <!-- Navbar -->
-    <nav class="navbar d-none fixed-top d-flex navbar-expand-lg" data-bs-theme="dark">
+    <nav class="navbar fixed-top d-flex navbar-expand-lg rounded-bottom-2" data-bs-theme="dark">
         <div class="logoContainer">
             <img src="img/Logos/2015.PNG">
             <p class="navbar-brand">YAKKUM</p>        
@@ -420,7 +420,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Profile
                     </a>
-                    <ul class="dropdown-menu bg-transparent">
+                    <ul class="dropdown-menu bg-blueYakkum dropDownBg">
                       <li><a class="dropdown-item" href="#">Visi & Misi YAKKUM</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">RENSTRA YAKKUM</a></li>
@@ -842,7 +842,7 @@
                                 </div>
                             </div>
                             <div class="col p-4 p-lg-5 d-flex align-items-center">
-                                <p class="fs-4">AKADEMIK YAKKUM <br><span class="fw-light">
+                                <p class="fs-5">AKADEMIK YAKKUM <br><span class="fw-light">
                                     Yayasan Kristen untuk Kesehatan Umum (YAKKUM) memiliki 13 RS dan 12 Klinik di wilayah JAWA TENGAH, YOGYAKARTA, LAMPUNG
                                 </span></p>
                             </div>
@@ -853,8 +853,15 @@
            </div>
 
            <!-- Media dan Informasi -->
-            <div class="bg-white">
-
+            <div class="bg-white w-100">
+                <h1 class="text-center mb-4">Media dan Informasi</h1>
+                <div class="row w-100 row-cols-3 gap-5 d-flex align-items-center justify-content-center">
+                    <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">
+                        YAKKUM
+                    </div>
+                    <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
+                    <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
+                </div>
             </div>
     </div>
 
@@ -895,6 +902,36 @@
 
         ]
 
+
+
+
+
+        document.addEventListener("scroll", () => {
+            const customMaxScroll = 500;
+            const currentScroll = window.scrollY;
+            let nav = document.querySelector(".navbar"),
+            bsTheme = document.querySelector("[data-bs-theme]"),
+            dropDownBg = document.querySelector(".dropDownBg")
+
+            const opacity = Math.min(currentScroll / customMaxScroll, 1);
+
+            if(!(nav.classList).toString().includes("bg-white")) nav.style.backgroundColor = `rgba(255,255,255, ${opacity})`;
+
+            if(opacity === 1){
+                dropDownBg.classList.add("bg-white")
+                dropDownBg.classList.remove("bg-transparent")
+                dropDownBg.classList.remove("bg-blueYakkum")
+            } else {
+                dropDownBg.classList.add("bg-blueYakkum")
+                dropDownBg.classList.remove("bg-dark")
+                dropDownBg.classList.remove("bg-white")
+
+            }
+            opacity === 1 ? bsTheme.setAttribute('data-bs-theme', "light") : bsTheme.setAttribute('data-bs-theme', "dark")
+            nav.style.boxShadow = `0 4px 8px rgba(0,0,0, ${opacity * 0.05})`;
+        });
+
+
         let h1c = document.querySelector(".count"),
         scaleLoading = document.querySelector(".scaleLoading"),
         hilangkanLoading = document.querySelector(".hilangkanLoading"),
@@ -913,8 +950,6 @@
                 const timer = setInterval(() => {
                     if (saatIni < akhir) {
                         let currents = saatIni == 1965 || saatIni == 2010 ? saatIni - 1 : saatIni;
-
-                        console.log(currents)
 
                         Logos.forEach(items => {
                             if (currents === items.muncul) {
