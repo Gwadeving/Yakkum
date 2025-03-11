@@ -405,6 +405,12 @@
     </style>
 </head>
 <body>
+    <!-- VisiMisi -->
+     <section class="fixed d-none visiMisi" style="background: #f2f7ff;">
+        <button type="button" class="btn btn-danger" onclick="removeVisiMisi()">Back</button>
+        <img src="img/visiMisi.png" alt="" srcset="" style="width: 100%;">
+     </section>
+
     <!-- Loading -->
     <div class="container_loading fixed-center">
         <div class="w-75 VideoLoading d-flex align-items-center justify-content-center">
@@ -461,7 +467,7 @@
                            Profile
                          </a>
                          <ul class="dropdown-menu bg-blueYakkum dropDownBg">
-                           <li><a class="dropdown-item" href="pages/visi&misi.html">Visi & Misi YAKKUM</a></li>
+                           <li><a class="dropdown-item" href="#" onclick="setVisiMisi()">Visi & Misi YAKKUM</a></li>
                            <li><hr class="dropdown-divider"></li>
                            <li><a class="dropdown-item" href="#">RENSTRA YAKKUM</a></li>
                            <li><hr class="dropdown-divider"></li>
@@ -971,8 +977,20 @@
             },
 
         ]
+        
+        let navs = document.querySelector(".navbar")
+        let visiMisi = document.querySelector(".visiMisi")
+        function setVisiMisi(){
+            navs.classList.add("d-none")
+            hilangkanSemuaIsi.classList.add("d-none")
+            visiMisi.classList.remove("d-none")
+        }
 
-
+        function removeVisiMisi(){
+            navs.classList.remove("d-none")
+            hilangkanSemuaIsi.classList.remove("d-none")
+            visiMisi.classList.add("d-none")
+        }
 
 
 
