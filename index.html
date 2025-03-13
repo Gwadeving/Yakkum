@@ -36,6 +36,11 @@
             color: white;
         }
 
+        body{
+            background: var(--YakkumGray);
+        }
+
+
         /* _________________________________________ LOADING _______________________________________ */
         .container_loading{
             display: flex;
@@ -47,7 +52,6 @@
             position: fixed;
             z-index: 5;
             background: white;
-            /* display: none; */
         }
 
 
@@ -289,7 +293,7 @@
             }
 
             .count{
-                font-size: 10vw !important;
+                font-size: 25vw !important;
             }
 
             .textSLider :first-child{
@@ -315,6 +319,14 @@
 
             .aturDidukungOleh{
                 width: 100% !important;
+            }
+
+            .logoFooter{
+                width: 30% !important;
+            }
+
+            .fontSizeAlamatFooter{
+                font-size: 4vw !important;
             }
 
          }
@@ -348,14 +360,25 @@
             .aturDidukungOleh{
                 width: 60% !important;
             }
+
+            .logoFooter{
+                width: 70% !important;
+            }
+
+            .fontSizeAlamatFooter{
+                font-size: 3vw !important;
+            }
          }
 
-         @media screen and (max-width: 1024px){
+         @media screen and (min-width: 992px) and (max-width: 1024px){
 
              .count{
                 font-size: 25vw !important;
             }
 
+            .fontSizeAlamatFooter{
+                font-size: 1.3vw !important;
+            }
          }
 
 
@@ -368,9 +391,6 @@
             aspect-ratio: 1/1;
          }
 
-         body{
-            background: var(--YakkumGray);
-         }
          .card-text {
             line-height: 30px;
         }
@@ -397,24 +417,22 @@
         }
         
          /* Footer */
-         footer{
-            padding: 15px;
-         }
-
-
+        .fontSizeAlamatFooter{
+            font-size: 5vw;
+        }
     </style>
 </head>
 <body>
     <!-- VisiMisi -->
-     <section class="fixed d-none visiMisi" style="background: #f2f7ff;">
+     <!-- <section class="fixed-center d-none visiMisi" style="background: #f2f7ff; overflow: hidden;">
         <button type="button" class="btn btn-danger" onclick="removeVisiMisi()">Back</button>
         <img src="img/visiMisi.png" alt="" srcset="" style="width: 100%;">
-     </section>
+     </section> -->
 
     <!-- Loading -->
-    <div class="container_loading fixed-center">
+    <div class="container_loading fixed-center d-none">
         <div class="w-75 VideoLoading d-flex align-items-center justify-content-center">
-            <div class="hilangkanLoading w-100 scaleLoading d-flex align-items-center justify-content-center position-relative overflow-hidden">
+            <div class="hilangkanLoading w-100 scaleLoading d-flex align-items-center justify-content-center position-relative">
                 <div class="containCountdown position-absolute z-3 d-flex align-items-center justify-content-center">
                     <img src="img/Logos/1955.webp" id="logo">
                 </div>
@@ -434,7 +452,7 @@
     
                     </div>
                     <div class="col">
-                        <button type="button" class="text-start btn btn-outline-light rounded-pill perjalananKamiButton p-0 p-1 px-3 m-0 animate__animated animate__fadeIn" onclick="hilangkanLoadings()">Perjalanan Kami <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <button type="button" class="text-start btn btn-outline-light rounded-pill perjalananKamiButton p-0 p-1 px-3 m-0 animate__animated animate__fadeIn" onclick="">Perjalanan Kami <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                           </svg></button>
                     </div>
@@ -467,7 +485,7 @@
                            Profile
                          </a>
                          <ul class="dropdown-menu bg-blueYakkum dropDownBg">
-                           <li><a class="dropdown-item" href="#" onclick="setVisiMisi()">Visi & Misi YAKKUM</a></li>
+                           <li><a class="dropdown-item" href="pages/VisiMisi.html">Visi & Misi YAKKUM</a></li>
                            <li><hr class="dropdown-divider"></li>
                            <li><a class="dropdown-item" href="#">RENSTRA YAKKUM</a></li>
                            <li><hr class="dropdown-divider"></li>
@@ -842,10 +860,10 @@
                  <!-- Pelayanan Yakkum -->
                 <div class="bg-white p-4 shadow-lg">
      
-                         <h1 class="judulPelayanan mb-4 mb-lg-5 mt-4 bg-blueYakkum p-2 px-4 rounded-pill m-auto">Pelayanan YAKKUM</h1>
+                    <h1 class="judulPelayanan mb-4 mb-lg-5 mt-4 bg-blueYakkum p-2 px-4 rounded-pill m-auto">Pelayanan YAKKUM</h1>
      
                     <div class="d-flex align-items-center justify-content-center">
-                       <div class="row PelayananKotak row-cols-1 gap-4">
+                       <div class="row PelayananKotak row-cols-1 gap-4 ">
      
                            <div class="col rounded-3 bg-blueYakkum overflow-hidden shadow-sm">
                              <div class="row row-cols-1 row-cols-lg-2">
@@ -898,19 +916,22 @@
                 </div>
      
                 <!-- Media dan Informasi -->
-                 <div class="bg-white w-100">
+                 <div class="bg-white">
                      <h1 class="text-center mb-4">Media dan Informasi</h1>
-                     <div class="row w-100 row-cols-3 gap-5 d-flex align-items-center justify-content-center">
-                         <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">
-                             YAKKUM
-                         </div>
-                         <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
-                         <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
-                     </div>
+                      <div class="w-100 d-flex align-items-center justify-content-center">
+                          <div class="row w-100 row-cols-3 gap-5 d-flex align-items-center justify-content-center">
+                              <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">
+                                  YAKKUM
+                              </div>
+                              <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
+                              <div class="col ratio ratio-1x1 shadow d-flex align-items-center justify-content-center" style="max-width: 300px;">YAKKUM</div>
+                          </div>
+                      </div>
+
                  </div>
      
                  <!-- Mitra Kami -->
-                  <div class="w-100 text-center pt-5 bg-white">
+                  <div class="w-100 text-center py-5 bg-white">
                       <h2>Di Dukung Oleh</h2>
                        <div class="w-100 d-flex align-items-center justify-content-center">
                           <div class="row aturDidukungOleh row-cols-1">
@@ -936,13 +957,48 @@
                        </div>
      
                   </div>
+
+                  <!-- Footer -->
+                  <footer class="p-5">
+                    <div class="d-flex justify-content-center shadow-sm p-2">
+                        <div class="row w-100 row-cols-1 row-cols-lg-2 align-items-center justify-content-center gap-3 gap-lg-0">
+                            <div class="col-auto d-flex align-items-center justify-content-center">
+                                <div class="row w-100 d-block d-lg-flex">
+                                    <div class="col-auto d-flex align-items-center justify-content-center">
+                                        <img src="img/Logos/2015.webp" alt="" srcset="" style="max-width: 100px;">
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <p class="fw-bold p-0 m-0 text-center text-lg-start fs-5 fontSizeAlamatFooter mt-3 mt-lg-0">YAYASAN KRISTEN UNTUK KESEHATAN UMUM <br><span>
+                                            Jl. Adi Sumarmo 51 Tohudan Colomadu 57173 Karanganyar Surakarta, Jawa Tengah.
+                                        </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="row w-100 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                    <div class="col-auto d-lg-block p-0">
+                                        <div class="border rounded" style="max-width: 200px; max-height: 100px; overflow:hidden;"><div style="width: 100%"><iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=200&amp;hl=en&amp;q=+(kantor%20pusat%20yakkum)&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/drones/">best drones</a></iframe></div></div>
+                                        <div class="w-100 mt-2 d-flex align-items-center justify-content-center fs-3">
+                                            <a href="#" class="mx-3 text-dark">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                            <a href="#" class="mx-3 text-dark">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                            <a href="#" class="mx-3 text-dark">
+                                                <i class="bi bi-youtube"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                  </footer>
          </div>
      
      
-             <!-- Footer -->
-             <footer class="p-4">
-     
-             </footer>
      </div>
     
     <!-- Anti Inspect System -->
@@ -953,7 +1009,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <!-- System -->
     <script src="scripts/createPathAutomatic.js"></script>
+    <script src="scripts/cekIsLoading.js"></script>
     <script>
+
         // Loading System Setiing
         const durasiAnimasi = 7, //detik
         stepTahun = 5, //tahun
@@ -977,21 +1035,35 @@
             },
 
         ]
+
+        let hilangkanSemuaIsi = document.querySelector(".containAll");
+        let container_loading = document.querySelector(".container_loading")
+
         
-        let navs = document.querySelector(".navbar")
-        let visiMisi = document.querySelector(".visiMisi")
-        function setVisiMisi(){
-            navs.classList.add("d-none")
-            hilangkanSemuaIsi.classList.add("d-none")
-            visiMisi.classList.remove("d-none")
+        if(sessionStorage.getItem("loadingScreen").toString().toLowerCase() === "true"){
+            hilangkanLoadings()
+        } else {
+            munculkanLoadings()
+        }
+        
+
+        function isLoading() {
+            let originalData = JSON.stringify(sessionStorage);
+
+            setInterval(() => {
+                let currentData = JSON.stringify(sessionStorage);
+
+                if (currentData !== originalData) {
+                    if(sessionStorage.getItem("loadingScreen").toString().toLowerCase() === "true"){
+                        hilangkanLoadings()
+                    }
+
+                    originalData = currentData;
+                } 
+            }, 1);
         }
 
-        function removeVisiMisi(){
-            navs.classList.remove("d-none")
-            hilangkanSemuaIsi.classList.remove("d-none")
-            visiMisi.classList.add("d-none")
-        }
-
+        isLoading();
 
 
         document.addEventListener("scroll", () => {
@@ -1026,8 +1098,7 @@
         logo = document.querySelector("#logo"),
         VideoLoading = document.querySelector(".VideoLoading");
         
-        let hilangkanSemuaIsi = document.querySelector(".containAll");
-        let container_loading = document.querySelector(".container_loading")
+
 
         function countdown(awal, akhir, durasiAnimasi, step) {
             return new Promise((resolve) => {
@@ -1117,8 +1188,8 @@
                     setTimeout(()=>{
                         VideoLoading.style.display = "none";
                         textAwal.classList.remove("d-none")
+                        sessionStorage.setItem("loadingScreen", true)
                     }, 1000)
-
                 })
             }, 1000)
         });
@@ -1144,10 +1215,17 @@
 
         });
 
+
+
         function hilangkanLoadings(){
-            hilangkanSemuaIsi.classList.remove("d-none")
             container_loading.classList.add("d-none")
+            hilangkanSemuaIsi.classList.remove("d-none")
             createPathSejarah()
+        }
+
+        function munculkanLoadings(){
+            hilangkanSemuaIsi.classList.add("d-none")
+            container_loading.classList.remove("d-none")
         }
         
         function GantiVideo(videoPlayers) {
@@ -1171,58 +1249,57 @@
         GantiVideo(videoPlayer);
 
 
-        function createPathSejarah(){
+        function createPathSejarah(){  
+            let titik1M = document.querySelector(".titik1Mobile")
+            let titik2M = document.querySelector(".titik2Mobile")
+            let titik3M = document.querySelector(".titik3Mobile")
+            let titik4M = document.querySelector(".titik4Mobile")
+            let titik5M = document.querySelector(".titik5Mobile")
+            let titik6M = document.querySelector(".titik6Mobile")
+            let titik7M = document.querySelector(".titik7Mobile")
+            let titik8M = document.querySelector(".titik8Mobile")
+            let titik9M = document.querySelector(".titik9Mobile")
             
-        let titik1M = document.querySelector(".titik1Mobile")
-        let titik2M = document.querySelector(".titik2Mobile")
-        let titik3M = document.querySelector(".titik3Mobile")
-        let titik4M = document.querySelector(".titik4Mobile")
-        let titik5M = document.querySelector(".titik5Mobile")
-        let titik6M = document.querySelector(".titik6Mobile")
-        let titik7M = document.querySelector(".titik7Mobile")
-        let titik8M = document.querySelector(".titik8Mobile")
-        let titik9M = document.querySelector(".titik9Mobile")
-        
-        let titik1 = document.querySelector(".titik1")
-        let titik2 = document.querySelector(".titik2")
-        let titik3 = document.querySelector(".titik3")
-        let titik6 = document.querySelector(".titik6")
+            let titik1 = document.querySelector(".titik1")
+            let titik2 = document.querySelector(".titik2")
+            let titik3 = document.querySelector(".titik3")
+            let titik6 = document.querySelector(".titik6")
 
-        let titik4 = document.querySelector(".titik4")
-        let titik5 = document.querySelector(".titik5")
+            let titik4 = document.querySelector(".titik4")
+            let titik5 = document.querySelector(".titik5")
 
 
-        let titik7 = document.querySelector(".titik7")
-        let titik8 = document.querySelector(".titik8")
+            let titik7 = document.querySelector(".titik7")
+            let titik8 = document.querySelector(".titik8")
 
-        let titik9 = document.querySelector(".titik9")
-        let titik10 = document.querySelector(".titik10")
+            let titik9 = document.querySelector(".titik9")
+            let titik10 = document.querySelector(".titik10")
 
-        let titik11 = document.querySelector(".titik11")
-        let titik12 = document.querySelector(".titik12")
+            let titik11 = document.querySelector(".titik11")
+            let titik12 = document.querySelector(".titik12")
 
-        CreateConnectPath(titik1, titik2, "black", "dash", "mid")
-        CreateConnectPath(titik2, titik3, "black", "dash", "mid")
-        CreateConnectPath(titik3, titik6, "black", "dash", "mid","right")
-        CreateConnectPath(titik4, titik5, "black", "dash", "mid", "bottom")
-        CreateConnectPath(titik7, titik8, "black", "dash", "left", "bottom")
-        CreateConnectPath(titik9, titik10, "black", "dash", "right", "top")
-        CreateConnectPath(titik10, titik10, "black", "dash", "top", "bottom")
-        CreateConnectPath(titik11, titik12, "black", "dash", "right", "top")
-        CreateConnectPath(titik12, titik12, "black", "dash", "top", "bottom")
+            CreateConnectPath(titik1, titik2, "black", "dash", "mid")
+            CreateConnectPath(titik2, titik3, "black", "dash", "mid")
+            CreateConnectPath(titik3, titik6, "black", "dash", "mid","right")
+            CreateConnectPath(titik4, titik5, "black", "dash", "mid", "bottom")
+            CreateConnectPath(titik7, titik8, "black", "dash", "left", "bottom")
+            CreateConnectPath(titik9, titik10, "black", "dash", "right", "top")
+            CreateConnectPath(titik10, titik10, "black", "dash", "top", "bottom")
+            CreateConnectPath(titik11, titik12, "black", "dash", "right", "top")
+            CreateConnectPath(titik12, titik12, "black", "dash", "top", "bottom")
 
 
 
-        CreateConnectPath(titik1M, titik2M, "black", "dash", "mid")
-        CreateConnectPath(titik1M, titik3M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik4M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik5M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik6M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik7M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik8M, "black", "dash", "mid", "left")
-        CreateConnectPath(titik1M, titik9M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik2M, "black", "dash", "mid")
+            CreateConnectPath(titik1M, titik3M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik4M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik5M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik6M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik7M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik8M, "black", "dash", "mid", "left")
+            CreateConnectPath(titik1M, titik9M, "black", "dash", "mid", "left")
 
-    }
+        }
     </script>
 </body>
 </html>
