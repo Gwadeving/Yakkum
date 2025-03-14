@@ -1,0 +1,403 @@
+
+/* _________________________________________ Framework  _______________________________________ */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* _________________________________________ FONT _______________________________________ */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+/* _________________________________________ ROOT _______________________________________ */
+*{
+    margin: 0;
+    padding: auto;
+    font-family: "signika";
+    font-weight: normal;
+}
+
+
+body{
+    background: var(--YakkumGray);
+}
+
+img, video {
+    pointer-events: none;
+}
+
+/* _________________________________________ LOADING _______________________________________ */
+.container_loading{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    background: white;
+}
+
+
+.containCountdown{
+    height: 23vw;
+}
+@keyframes scales {
+    0%{
+        scale: 0.8;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes opKeluar {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes opMasuk {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes Flicker {
+    0%{
+        opacity: .3;
+    } 50%{
+        opacity: 1;
+    } 100%{
+        opacity: .3;
+    }
+}
+
+@keyframes charAppear {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes charExit {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+
+.count span {
+    display: inline-block;
+    opacity: 0;
+}
+.count{
+    font-size: 40vh;
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    height: 45%;
+}
+
+ /* _______________________________________________________________________________________ */
+/* _________________________________________ Halaman _______________________________________ */
+.navbar{
+    align-items: center;
+    background: transparent;
+    /* background: linear-gradient(90deg, rgba(9,115,177,1) 0%, rgba(10,75,123,1) 100%);
+    box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);
+    -webkit-box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);
+    -moz-box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2); */
+}
+
+.logoContainer{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.navbar img{
+    width: 63px;
+    height: 60px;
+    margin: 10px;
+}
+
+.navbar p{
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 8%;
+}
+.navbar-toggler{
+    margin-right: 5%;
+}
+.navbar-toggler{
+    margin-right: 5%;
+}
+#navbarSupportedContent{
+    margin-left: 8%;
+}
+.nav-item{
+    margin-right: 50px;
+}
+
+.navbar-nav{
+    margin-right: 20px;
+}
+
+/* Slider */
+.Slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ .textContentSlider{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+.kotakInfo1{
+    background: var(--YakkumGray);
+    box-shadow: 0px 0px 23.3px 2.5px rgba(0,0,0,0.1);
+    border: 5px solid var(--YakkumGray);
+    border-radius: 10px;
+}
+
+ /* SLIDER */
+ .textSLider :first-child{
+    font-size: 7vw;
+    line-height: 4vw;
+ }
+ 
+ .textSLider :last-child{
+    font-size: 2.9vw;
+ }
+
+ .textSLider p{
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.28);
+ }
+
+ .keterangan p{
+    font-size: 1.2vw;
+ }
+ .keterangan :last-child {
+    font-weight: 600;
+ }
+
+ .perjalananKamiButton{
+    font-size: 1.3vw;
+ }
+
+ /* Info1 */
+ .containerInfo1{
+    top: -50px;
+ }
+
+ .aturWidthInfo1{
+    width: 95%;
+ }
+
+ .aturWidthInfo1 svg{
+    width: 50%;
+    color: var(--YakkumBlue);
+ }
+
+ .aturUkuranLingkaran{
+    width: 40%;
+    background: var(--YakkumGray);
+    box-shadow: 0 0 5px 2px var(--YakkumGray);
+ }
+
+
+ .aturUkuranFont{
+    font-size: 1.3vw;
+ }
+
+ .backgroundInfo{
+    background: var(--YakkumBlue);
+    border: 5px solid var(--YakkumGray);
+    border-radius: 10px;
+    color: var(--YakkumGray);
+ }
+
+ .containerPerjalananKamiMobile{
+    display: none;
+ }
+ 
+ @media screen and (max-width: 576px){
+    #logo{
+        height: 100% !important;
+    }
+     .aturUkuranFont{
+        font-size: 5vw !important;
+        text-align: center;
+     }
+     .aturUkuranLingkaran{
+        width: 23%;
+    }
+
+    .count{
+        font-size: 25vw !important;
+    }
+
+    .textSLider :first-child{
+        font-size: 15vw;
+        line-height: 10vw;
+    }
+    
+    .textSLider :last-child{
+        font-size: 6.2vw;
+    }
+
+    .perjalananKamiButton{
+        font-size: 3vw !important;
+    }
+
+    .containerPerjlananKami{
+        display: none;
+    }
+
+    .containerPerjalananKamiMobile{
+        display: block;
+    }
+
+    .aturDidukungOleh{
+        width: 100% !important;
+    }
+
+    .logoFooter{
+        width: 30% !important;
+    }
+
+    .fontSizeAlamatFooter{
+        font-size: 4vw !important;
+    }
+
+ }
+
+ @media screen and (min-width: 576px) and (max-width: 992px){
+    #logo{
+        height: 100% !important;
+    }
+
+    .aturUkuranFont{
+        font-size: 2.5vw;
+        text-align: center;
+     }
+
+     .count{
+        font-size: 20vh !important;
+    }
+    .textSLider :first-child{
+        font-size: 10vw;
+        line-height: 7vw;
+    }
+    
+    .textSLider :last-child{
+        font-size: 4.1vw;
+    }
+
+    .perjalananKamiButton{
+        font-size: 2.5vw !important;
+    }
+
+    .aturDidukungOleh{
+        width: 60% !important;
+    }
+
+    .logoFooter{
+        width: 70% !important;
+    }
+
+    .fontSizeAlamatFooter{
+        font-size: 3vw !important;
+    }
+ }
+
+ @media screen and (min-width: 992px) and (max-width: 1024px){
+
+     .count{
+        font-size: 25vw !important;
+    }
+
+    .fontSizeAlamatFooter{
+        font-size: 1.3vw !important;
+    }
+ }
+
+
+ /* Perjalanan Kami */
+ .perjalanankami{
+    width: 95%;
+ }
+ .edge{
+    width: 10px;
+    aspect-ratio: 1/1;
+ }
+
+ .card-text {
+    line-height: 30px;
+}
+
+.CircleListSejarah{
+    width: 20px;
+    left: -1vw;
+}
+
+/* Pelayanan Yakkum */
+
+.PelayananKotak{
+    width: 90%;
+}
+
+.judulPelayanan{
+    width: fit-content;
+}
+
+
+/* Mitra Kami */
+.aturDidukungOleh{
+    width: 50%;
+}
+
+ /* Footer */
+.fontSizeAlamatFooter{
+    font-size: 5vw;
+}

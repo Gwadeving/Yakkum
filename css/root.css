@@ -1,0 +1,10 @@
+:root{
+    --YakkumBlue: #134A6E;
+    --YakkumGray: #f1f1f1;
+}
+
+
+.bg-blueYakkum{
+    background: var(--YakkumBlue);
+    color: white;
+}
