@@ -40,6 +40,9 @@
             background: var(--YakkumGray);
         }
 
+        img, video {
+            pointer-events: none;
+        }
 
         /* _________________________________________ LOADING _______________________________________ */
         .container_loading{
@@ -517,30 +520,61 @@
      
          <!-- Content -->
          <div class="Content position-relative">
-             <div class="w-100 h-100 position-absolute z-2 d-flex justify-content-center align-items-center">
+             <div class="w-100 h-100 position-absolute z-2 d-flex justify-content-center align-items-center d-none">
                  <div class="row w-75 justify-content-start align-items-center row-cols-1 gap-2 gap-lg-2 animate__animated animate__fadeInLeft">
                      <div class="col">
-                         <div class="text-white textSLider">
+                         <!-- <div class="text-white textSLider">
                              <p class="p-0 m-0 fw-bold">YAKKUM</p>
                              <p class="p-0 m-0 fw-normal">Melayani dengan Hati</p>
-                         </div>
+                         </div> -->
      
                      </div>
                      <div class="col">
-                         <a href="#perjalanankami" class="text-start btn btn-outline-light rounded-pill perjalananKamiButton p-0 p-1 px-3 m-0">Perjalanan Kami <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                         <!-- <a href="#perjalanankami" class="text-start btn btn-outline-light rounded-pill perjalananKamiButton p-0 p-1 px-3 m-0">Perjalanan Kami <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                           </svg></a>
+                           </svg></a> -->
                      </div>
                  </div>
              </div>
+
              <!-- Layar Slider -->
-             <div id="Slider" class="carousel slide">
+             <div id="carouselExampleInterval" class="carousel slide animate__animated animate__fadeIn" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="img/slider/1.webp" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/slider/2.webp" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/slider/3.webp" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/slider/4.webp" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="img/slider/5.webp" class="d-block w-100">
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <!-- Video HIded -->
+             <!-- <div id="Slider carouselExampleInterval" class="carousel slide"  data-ride="carousel">
                  <div class="carousel-inner">
                    <div class="carousel-item active">
                      <video class="videoPlayer" autoplay muted></video>
                    </div>
                  </div>
-             </div>
+             </div> -->
          </div>
          
          <!-- Isi -->
@@ -959,7 +993,7 @@
                   </div>
 
                   <!-- Footer -->
-                  <footer class="p-5">
+                <footer class="p-5">
                     <div class="d-flex justify-content-center shadow-sm p-2">
                         <div class="row w-100 row-cols-1 row-cols-lg-2 align-items-center justify-content-center gap-3 gap-lg-0">
                             <div class="col-auto d-flex align-items-center justify-content-center">
@@ -995,10 +1029,8 @@
                             </div>
                         </div>
                     </div>
-                  </footer>
+                </footer>
          </div>
-     
-     
      </div>
     
     <!-- Anti Inspect System -->
