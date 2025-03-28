@@ -1,3 +1,6 @@
+
+sessionStorage.setItem("loadingScreen", true)
+
 // Loading System Setiing
 const durasiAnimasi = 7, //detik
 stepTahun = 5, //tahun
@@ -150,7 +153,6 @@ countdown(awalTahunCowndown, TahunSaatini(), durasiAnimasi, stepTahun).then(() =
             setTimeout(()=>{
                 VideoLoading.style.display = "none";
                 textAwal.classList.remove("d-none")
-                sessionStorage.setItem("loadingScreen", true)
             }, 1000)
         })
     }, 1000)
@@ -203,6 +205,7 @@ function GantiVideo(videoPlayers) {
     videoAwal.play();            
     videoPlayers.play();
 }
+
 
 videoPlayer.addEventListener('ended', () => {
     GantiVideo(videoPlayer);

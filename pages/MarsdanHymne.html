@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/jpg" href="../img/Logos/2015.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/root.css">
+
+    <!-- Animation Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        .ukuranKotakHymne{
+            width: 30%;
+        }
+
+
+        
+        /* Mobile */
+        @media screen and (max-width: 576px){
+            .ukuranKotakHymne{
+                width: 75% !important;
+            }
+        }
+
+         /* Tablet */
+        @media screen and (min-width: 576px) and (max-width: 992px){
+            .ukuranKotakHymne{
+                width: 42% !important;
+            }
+        }
+
+    </style>
+    <title>Mars & Hymne</title>
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <nav class="navbar sticky-top d-flex navbar-expand-lg rounded-bottom-2 animate__animated animate__fadeInDown bg-white shadow-sm" data-bs-theme="light">
+        <div class="logoContainer">
+            <img src="../img/Logos/2015.webp">
+            <p class="navbar-brand fw-semibold">YAKKUM</p>        
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
+               </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Profile
+                    </a>
+                    <ul class="dropdown-menu  dropDownBg">
+                      <li><a class="dropdown-item" href="../pages/TentangKami.html">TENTANG KAMI</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">RENSTRA YAKKUM</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Nilai-Nilai & Budaya Kerja YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Management Strategic YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Organ YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Structure YAKKUM</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item active disabled" href="#">Hymne & MARS YAKKUM</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Karier</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html#MediaInformasi">Media & Informasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Donasi</a>
+              </li>
+            </ul>
+    </nav>
+
+    <!-- Hymne Mars -->
+    <div class="position-relative w-100 d-flex align-items-center justify-content-center my-4 containMarsHymne">
+        <div class="row w-100 row-cols-1 row-cols-md-2 gap-5 d-flex align-items-center justify-content-center">
+
+            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars">
+                <div class="w-100 h-100 m-0 p-0">
+                    <div class="position-absolute top-0 end-0 my-3 mx-3 bg-white">
+                        <button type="button" class="btn btn-outline-dark rounded-circle m-0 p-0 d-flex align-items-center justify-content-center p-2 downloadBtn" id="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill w-100" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+                        <div class="px-3 px-md-4 px-lg-5 mb-4" style="overflow-y:  scroll; height: 70%; box-shadow: 10px -125px 89px -82px rgba(255,255,255,1) inset;">
+                            <h2 class="fw-bold">MARS YAKKUM</h2>
+                            <p>Bangun warga YAKKUM, 
+                                <br> Sambutlah tantangan zaman
+                                <br> Singsingkanlah lengan baju bekerja
+                                <br> Mari bulatkanlah niat dan tekad kita, 
+                                <br> Bersatulah menggalang karya kita
+                                <br> Landasan kita adalah firman Allah
+                                <br> Harapan kita di tanganNya
+                                <br> Jangan bimbang ragu dan jangan menyimpang
+                                <br> Allah serta kita itulah iman kita
+                                <br> Berkarya, Hadirkan damai dan sejahtera
+                                <br> Baktikan dirimu untuk Bangsa dan Negara
+                                <br> Serta untuk kemuliaan Allah Raja Kita yang maha Besar</p>
+                        </div>
+                    </div>
+                    <div class="position-absolute bottom-0 mb-4 w-100 d-flex align-items-center justify-content-center" style="height: 5vh;">
+                        <button type="button" class="btn btn-dark d-flex align-items-center justify-content-center rounded-circle p-1 m-0 playBtn" style="scale: 1.8;" id="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill w-100" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars">
+                <div class="w-100 h-100 m-0 p-0">
+                    <div class="position-absolute top-0 end-0 my-3 mx-3 bg-white">
+                        <button type="button" class="btn btn-outline-dark rounded-circle m-0 p-0 d-flex align-items-center justify-content-center p-2 downloadBtn" id="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-arrow-down-fill w-100" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+                        <div class="px-3 px-md-4 px-lg-5 mb-4" style="overflow-y: scroll; height: 70%; box-shadow: 10px -125px 89px -82px rgba(255,255,255,1) inset;">
+                            <h2 class="fw-bold">HYMNE YAKKUM</h2>
+                            <p>Kawan Kita semua, Mitra Allah diatas Bumi 
+                               <br> Bekerja beralas kasih, Melayani insan sesama
+                               <br> Kawan dimana-mana, banyak insan berduka hati
+                               <br> Hidupnya gelap dan pedih, menantikan belaian cinta
+                               <br> Tugas mulia ada di pundak kita
+                               <br> Menyinarkan ‘trang cinta Allah
+                               <br> Supaya Manusia, mendapatkan bah’gia
+                               <br> sejah’tra di dalam hidupnya
+                               <br> Menyatu dalam diri
+                               <br> Cipta kata-kata dan amal
+                               <br> S’bagai putra pertiwi mengemban amanat kekal</p>
+                        </div>
+                    </div>
+                    <div class="position-absolute bottom-0 mb-4 w-100 d-flex align-items-center justify-content-center" style="height: 5vh;">
+                        <button type="button" class="btn btn-dark d-flex align-items-center justify-content-center rounded-circle p-1 m-0 playBtn" style="scale: 1.8;" id="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill w-100" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <div class="w-100 position-relative">
+            <footer class="p-5 bg-white">
+                <div class="d-flex justify-content-center shadow-sm p-2">
+                    <div class="row w-100 row-cols-1 row-cols-lg-2 align-items-center justify-content-center gap-3 gap-lg-0">
+                        <div class="col-auto d-flex align-items-center justify-content-center">
+                            <div class="row w-100 d-block d-lg-flex">
+                                <div class="col-auto d-flex align-items-center justify-content-center">
+                                    <img src="../img/Logos/2015.webp" alt="" srcset="" style="max-width: 100px;">
+                                </div>
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <p class="fw-bold p-0 m-0 text-center text-lg-start fs-5 fontSizeAlamatFooter mt-3 mt-lg-0">YAYASAN KRISTEN UNTUK KESEHATAN UMUM <br><span class="fw-normal">
+                                        Jl. Adi Sumarmo 51 Tohudan Colomadu 57173 Karanganyar Surakarta, Jawa Tengah.
+                                    </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <div class="row w-100 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <div class="col-auto d-lg-block p-0">
+                                    <div class="border rounded" style="max-width: 200px; max-height: 100px; overflow:hidden;"><div style="width: 100%"><iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=200&amp;hl=en&amp;q=+(kantor%20pusat%20yakkum)&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/drones/">best drones</a></iframe></div></div>
+                                    <div class="w-100 mt-2 d-flex align-items-center justify-content-center fs-3">
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sekretariatky@gmail.com" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-envelope"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/yakkum.official/" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-instagram"></i>
+                                        </a>
+                                        <a href="http://www.youtube.com/@yakkum-melayanidenganhati" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+   
+        </div>
+
+    <!-- Framework -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+    <!-- System -->
+    <script src="../scripts/strokeProgress.js"></script>
+    <script>
+        
+
+
+
+    let hymnemars = document.querySelectorAll(".HymneMars")
+    let Musik = [
+        {
+            src: "../Musik/hymne.mp3",
+            judul: "Mars YAKKUM"
+
+        },
+        {
+            src: "../Musik/hymne.mp3",
+            judul: "Hymne YAKKUM"
+        }
+
+    ]
+        
+    function createStroke(el, percentase, clasName){
+        const progress = buatStroke((el || document.querySelector(el) || document.querySelector(`#${el}`) || document.querySelector(`.${el}`)), {
+            color: "var(--YakkumBlue)",
+            strokeWidth: 1,
+            className: clasName,
+            progress: percentase,
+            zIndex: 2
+        })
+
+    }
+    
+    let playBtn = document.querySelectorAll(".playBtn")
+    let downloadBtn = document.querySelectorAll(".downloadBtn")
+
+    // Download System
+    downloadBtn.forEach(down => {
+        down.addEventListener("click", async () => {
+            let id = down.id;
+            let src = Musik[id].src;
+            let judul = Musik[id].judul;
+
+            try {
+                const response = await fetch(src);
+                const blob = await response.blob();
+                
+                const base64Data = await blobToBase64Data(blob);
+                
+                downloadFromBase64(base64Data, judul);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
+    });
+
+    function blobToBase64Data(blob) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+            reader.readAsDataURL(blob);
+        });
+    }
+
+    function downloadFromBase64(base64Data, fileName) {
+        try {
+            const matches = base64Data.match(/^data:(.+?)(;|,)/);
+            if (!matches || matches.length < 2) {
+                throw new Error("Invalid base64 data URL");
+            }
+            
+            const mimeType = matches[1];
+            const extension = "mp3";
+            
+            const a = document.createElement('a');
+            a.href = base64Data;
+            a.download = `${fileName}.${extension}`;
+            
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        } catch (error) {
+            alert("Download error!");
+            throw error;
+
+
+        }
+    }
+
+
+    // Play and Stop
+    var isPlaying = null;
+    var plays = false;
+    let musik = new Audio()
+
+    playBtn.forEach(bttn => {
+        bttn.addEventListener("click", () => {
+
+            if (!bttn.classList.contains("play")) {
+                playBtn.forEach(btn => {
+                    btn.classList.remove("play");
+                    btn.classList.remove("disabled");
+                });
+                
+                bttn.classList.add("play");
+                isPlaying = bttn.id
+                plays = true
+                updateProgres(isPlaying)
+                
+                playBtn.forEach(btn => {
+                    if (btn !== bttn) {
+                        btn.classList.add("disabled");
+                    }
+                });
+            } else {
+                bttn.classList.remove("play");
+                playBtn.forEach(btn => {
+                    btn.classList.remove("disabled");
+                    plays = false
+                    
+
+                    btn.innerHTML = ""
+                    btn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill w-100" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                        </svg>
+                    `
+                });
+            }
+
+
+            musik.src = Musik[isPlaying].src
+            musik.loop = false
+
+            
+            if(plays){
+                musik.play()
+            } else{
+                musik.pause()
+                setTimeout(()=>{
+                    resetStroke()
+                }, 100)
+            }
+            
+
+
+            let play = document.querySelector(".play")
+            if(play){
+                play.innerHTML = ""
+                play.innerHTML = 
+                `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.5 5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5z"/>
+                    </svg>
+                `
+            }
+        });
+    });
+
+
+    function calculatePlaybackPercentage() {
+        if (isNaN(musik.duration)) {
+            return 0;
+        }
+    
+        const percentage = (musik.currentTime / musik.duration) * 100;
+        
+        return Math.min(100, Math.max(0, percentage));
+    }
+
+    function updateProgres(id){
+        musik.addEventListener('timeupdate', ()=> {
+            const percentage = calculatePlaybackPercentage();
+            let percent = `${percentage.toFixed(1)}`
+            
+            updateStrokeProgress(`strokes-${isPlaying}`, percentage)
+        
+        });
+
+    }
+
+    // Reset
+    function resetStroke(){
+        for(let i = 0; i < hymnemars.length; i++){
+            updateStrokeProgress(`strokes-${i}`, 100)
+    
+        }
+
+    }
+
+    // Create Stroke
+    function create(){
+        for(let i = 0; i <= hymnemars.length; i++){
+            createStroke(hymnemars[i], 100, `strokes-${i}`)
+    
+        }
+    }
+
+    create()
+    </script>
+</body>
+</html>

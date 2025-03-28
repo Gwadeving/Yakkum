@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img, video {
+    pointer-events: none;
+}
+
 :root{
     --YakkumBlue: #134A6E;
     --YakkumGray: #f1f1f1;
@@ -8,3 +21,92 @@
     background: var(--YakkumBlue);
     color: white;
 }
+
+.bg-grayYakkum{
+    background: var(--YakkumGray);
+    color: white;
+}
+
+
+/* Navbar */
+.navbar{
+    align-items: center;
+    background: transparent;
+    /* background: linear-gradient(90deg, rgba(9,115,177,1) 0%, rgba(10,75,123,1) 100%);
+    box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);
+    -webkit-box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);
+    -moz-box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2); */
+}
+
+.logoContainer{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.navbar img{
+    width: 63px;
+    height: 60px;
+    margin: 10px;
+}
+
+.navbar p{
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 8%;
+}
+.navbar-toggler{
+    margin-right: 5%;
+}
+.navbar-toggler{
+    margin-right: 5%;
+}
+#navbarSupportedContent{
+    margin-left: 8%;
+}
+.nav-item{
+    margin-right: 50px;
+}
+
+.navbar-nav{
+    margin-right: 20px;
+}
+
+
+ /* Footer */
+ .fontSizeAlamatFooter{
+    font-size: 5vw;
+}
+
+/* Mobile */
+@media screen and (max-width: 576px){
+    .logoFooter{
+        width: 30% !important;
+    }
+
+    .fontSizeAlamatFooter{
+        font-size: 4vw !important;
+    }
+}
+
+
+/* Tablet */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .logoFooter{
+        width: 70% !important;
+    }
+
+    .fontSizeAlamatFooter{
+        font-size: 3vw !important;
+    }
+}
+
+ /* Desktop */
+ @media screen and (min-width: 992px) and (max-width: 1024px){
+    
+    .fontSizeAlamatFooter{
+        font-size: 1.3vw !important;
+    }
+ }
