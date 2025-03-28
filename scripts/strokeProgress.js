@@ -14,7 +14,7 @@ function buatStroke(refObject, configPath = {}) {
     const config = {...defaultConfig, ...configPath};
     config.progress = Math.max(0, Math.min(100, config.progress));
 
-    // Handle both selector string and DOM element
+
     const reffObject = typeof refObject === 'string' 
         ? document.querySelector(refObject) 
         : refObject;
@@ -24,15 +24,15 @@ function buatStroke(refObject, configPath = {}) {
         return null;
     }
 
-    // Generate unique ID jika className ada
+
     const instanceId = config.className ? `${config.className}-${Date.now()}` : `stroke-${Date.now()}`;
     
-    // Fungsi untuk update posisi dan ukuran stroke
+
     function updateStrokePosition() {
         const rect = reffObject.getBoundingClientRect();
         const styles = window.getComputedStyle(reffObject);
 
-        // Update border radius
+    
         const borderRadius = {
             topLeft: parseFloat(styles.borderTopLeftRadius),
             topRight: parseFloat(styles.borderTopRightRadius),
@@ -51,7 +51,7 @@ function buatStroke(refObject, configPath = {}) {
         const width = rect.width - config.strokeWidth;
         const height = rect.height - config.strokeWidth;
 
-        // Build path data
+    
         let pathData = `M ${offset + adjustedBorderRadius.topLeft},${offset}`;
         pathData += ` H ${width - adjustedBorderRadius.topRight + offset}`;
         
@@ -74,7 +74,7 @@ function buatStroke(refObject, configPath = {}) {
             pathData += ` A ${adjustedBorderRadius.topLeft},${adjustedBorderRadius.topLeft} 0 0 1 ${offset + adjustedBorderRadius.topLeft},${offset}`;
         }
 
-        // Update SVG dan wrapper
+    
         wrapper.style.top = `${rect.top + window.scrollY}px`;
         wrapper.style.left = `${rect.left + window.scrollX}px`;
         wrapper.style.width = `${rect.width}px`;
@@ -85,26 +85,26 @@ function buatStroke(refObject, configPath = {}) {
         
         path.setAttribute('d', pathData);
         
-        // Update progress jika ada perubahan ukuran
+    
         const pathLength = path.getTotalLength();
         const visibleLength = (pathLength * config.progress) / 100;
         path.setAttribute('stroke-dasharray', `${visibleLength} ${pathLength}`);
     }
 
-    // Create wrapper div
+
     const wrapper = document.createElement('div');
     wrapper.style.position = 'absolute';
     wrapper.style.pointerEvents = 'none';
     wrapper.style.zIndex = config.zIndex;
     wrapper.dataset.strokeId = instanceId;
 
-    // Create SVG
+
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('width', '100%');
     svg.setAttribute('height', '100%');
     svg.style.overflow = 'visible';
 
-    // Create path
+
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('fill', 'none');
     path.setAttribute('stroke', config.color);
@@ -119,10 +119,10 @@ function buatStroke(refObject, configPath = {}) {
     wrapper.appendChild(svg);
     document.body.appendChild(wrapper);
 
-    // Initial update
+
     updateStrokePosition();
 
-    // Handle resize
+
     let resizeTimeout;
     function handleResize() {
         clearTimeout(resizeTimeout);
@@ -135,14 +135,14 @@ function buatStroke(refObject, configPath = {}) {
         window.addEventListener('resize', handleResize);
     }
 
-    // Mutation observer untuk perubahan pada elemen target
+
     const observer = new MutationObserver(updateStrokePosition);
     observer.observe(reffObject, {
         attributes: true,
         attributeFilter: ['style', 'class']
     });
 
-    // Buat instance object
+
     const instance = {
         element: wrapper,
         pathElement: path,
@@ -168,15 +168,14 @@ function buatStroke(refObject, configPath = {}) {
         }
     };
 
-    // Simpan instance ke dalam storage
+
     strokeInstances[instanceId] = instance;
 
     return instance;
 }
 
-// Fungsi untuk mengupdate progress berdasarkan className
 function updateStrokeProgress(className, newProgress) {
-    // Cari semua instance dengan className yang sesuai
+
     const instances = Object.values(strokeInstances).filter(
         instance => instance.className === className
     );
@@ -186,13 +185,12 @@ function updateStrokeProgress(className, newProgress) {
         return;
     }
     
-    // Update semua instance yang cocok
+
     instances.forEach(instance => {
         instance.updateProgress(newProgress);
     });
 }
 
-// Fungsi untuk menghapus stroke berdasarkan className
 function removeStrokeByClass(className) {
     const instances = Object.values(strokeInstances).filter(
         instance => instance.className === className
