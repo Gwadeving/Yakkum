@@ -35,23 +35,85 @@
             max-height: 400px;
         }
 
+        .isiText h1{
+            font-size: 3rem;
+        }
+
+        .containerMisi{
+            width: 75%;
+        }
+        .containerVisi{
+            width: 75%;
+        }
+
+        .visi{
+            width: 15vw; 
+            right: -3vw;
+        }
+        .misi{
+            width: 10vw; 
+            left: -3.5vw;
+        }
 
 
 
         /* breakPoin */
         /* Mobile */
         @media screen and (max-width: 576px){
-
+            .titles{
+                scale: 1.3 !important;
+            }
             .titles h1{
-                font-size: 5vw !important;
+                font-size: 5.5vw !important;
             }
             .titles p{
-                font-size: 2.1vw !important;
+                font-size: 2.15vw !important;
             }
 
 
             .petaPelayanan{
                 width: 100% !important;
+            }
+
+            .Images{
+                width: 90% !important;
+            }
+
+            .isiText h1{
+                font-size: 2rem;
+            }
+
+
+            .containerVisi{
+                width: 90% !important;
+            }
+
+            .containerMisi{
+                width: 90% !important;
+            }
+
+            .visiYakkum{
+                font-size: 5vw !important;
+                line-height: 1rem;
+            }
+            .isiVisiYakkum{
+                font-size: 3vw !important;
+            }
+
+            .isiMisi p{
+                font-size: 5vw !important;
+            }
+            .isiMisi li{
+                font-size: 2.5vw !important;
+            }
+
+            .visi{
+                width: 60vw !important; 
+                right: -5vw !important;
+            }
+            .misi{
+                width: 33vw !important; 
+                right: -10vw !important;
             }
         }
 
@@ -61,6 +123,36 @@
             .petaPelayanan{
                 width: 100% !important;
             }
+
+            .Images{
+                width: 85% !important;
+            }
+
+            .isiText h1{
+                font-size: 3.5rem;
+            }
+            .isiText p{
+                font-size: 1.3rem;
+            }
+
+
+            .containerVisi{
+                width: 90% !important;
+            }
+
+            .containerMisi{
+                width: 90% !important;
+            }
+
+            .visi{
+                width: 35vw !important; 
+                right: -5vw !important;
+            }
+            .misi{
+                width: 16vw !important; 
+                right: -5vw !important;
+            }
+
         }
 
         /* Desktop */
@@ -69,6 +161,7 @@
             .petaPelayanan{
                 width: 70% !important;
             }
+
         }
 
     </style>
@@ -125,10 +218,10 @@
     <!-- title isi -->
     <div class="w-100 bg-white p-1 d-flex align-items-center justify-content-center">
         <div class="w-100 bg-white rounded overflow-hidden d-flex align-items-center justify-content-center position-relative" style="max-height: 400px;">
-            <div class="w-100 position-absolute h-100 p-4 d-flex align-items-center justify-content-center">
+            <div class="w-100 position-absolute h-100 p-4 p-md-5 d-flex align-items-center justify-content-center">
                 <div class="position-absolute z-2 text-light border-start border-end border-2 px-3 titles" style="width: 50%;">
-                    <h1 class="m-0 fw-bold text-center" style="font-size:5.8vw;">TENTANG KAMI</h1>
-                    <p class="m-0 text-center" style="font-size:2.4vw;">Yayasan Kristen Untuk Kesehatan Umum</p>
+                    <h1 class="m-0 fw-bold text-center">TENTANG KAMI</h1>
+                    <p class="m-0 text-center">Yayasan Kristen Untuk Kesehatan Umum</p>
                 </div>
                 <div class="w-100 h-100 bg-blueYakkum rounded opacity-75"></div>
             </div>
@@ -143,25 +236,30 @@
     <div class="w-100 bg-white d-flex justify-content-center shadow-sm">
         <div class="row w-100 row-cols-1 gap-3 my-4 mb-4">
             <div class="col d-flex align-items-center justify-content-start p-0">
-                <div class="w-75 bg-blueYakkum d-flex align-items-center justify-content-end py-2 rounded-pill rounded-start">
-                    <p class="py-4 ps-5 m-0 fs-4 fw-bold">Visi YAKKUM <br> <span class="fs-5 fw-normal">Menuju system pengelolaan Lembaga pelayanan Kesehatan holistik yang unggul, bertumbuh dan terintegrasi dan mampu mentransformasi lembaga sejenis</span></p>
-                    <div class="rounded-circle ratio ratio-1x1 bg-primary border border-5 d-flex align-items-center justify-content-center fs-3 fw-semibold" style="width: 15vw; right: -3vw;">
+                <div class="containerVisi bg-blueYakkum d-flex align-items-center justify-content-end py-2 rounded-pill rounded-start">
+                    <p class="py-4 ps-3 ps-md-5 m-0 fw-bold visiYakkum fs-4">Visi YAKKUM <br> <span class="fw-normal isiVisiYakkum fs-5">Menuju system pengelolaan Lembaga pelayanan Kesehatan holistik yang unggul, bertumbuh dan terintegrasi dan mampu mentransformasi lembaga sejenis</span></p>
+                    <div class="rounded-circle ratio ratio-1x1 bg-primary border border-5 d-flex align-items-center justify-content-center fs-3 fw-semibold visi">
                         VISI
                     </div>
                 </div>
             </div>
             <div class="col d-flex align-items-center justify-content-end p-0">
-                <div class="w-75 bg-blueYakkum d-flex align-items-center justify-content-start py-2 rounded-pill rounded-end">
-                    <div class="rounded-circle ratio ratio-1x1 bg-primary border border-5 d-flex align-items-center justify-content-center fs-3 fw-semibold" style="width: 10vw; left: -3.5vw;">
+                <div class="containerMisi bg-blueYakkum d-flex align-items-center justify-content-start py-2 rounded-pill rounded-end">
+                    <div class="rounded-circle ratio ratio-1x1 bg-primary border border-5 d-flex align-items-center justify-content-center fs-3 fw-semibold misi">
                         MISI
                     </div>
-                    <p class="py-4 pe-5 m-0 fs-4 fw-bold">Misi YAKKUM <br> <span class="fs-5 fw-normal text-end">
-                        1. Menghadirkan Lembaga pelayanan Kesehatan dan mewujudkan karya kasih Allah.u <br>
-                        2. Berkontribusi positif pada kesejahteraan manusia dan lingkungan. <br>
-                        3. Melayani secara holistic, menyeluruh, dan inklusi. <br>
-                        4. Membangun organisasi yang sehat, bertumbuh, terintegrasi serta berjejaring. <br>
-                        5. Mengembangkan perilaku proaktif yang visioner antisipatif
-                    </span></p>
+                    <ul class="py-2 py-md-4 m-0 px-3 isiMisi">
+                        <p class=" m-0 fs-4 fw-bold">Misi YAKKUM</p>
+                        <ol type="1" class="ps-3 m-0">
+                            <li>Menghadirkan Lembaga pelayanan Kesehatan dan mewujudkan karya kasih Allah.u</li>
+                            <li>Berkontribusi positif pada kesejahteraan manusia dan lingkungan.</li>
+                            <li>Melayani secara holistic, menyeluruh, dan inklusi.</li> 
+                            <li>Membangun organisasi yang sehat, bertumbuh, terintegrasi serta berjejaring.</li> 
+                            <li>Mengembangkan perilaku proaktif yang visioner antisipatif</li> 
+                          </ol>
+                    </ul>
+                    <!-- <p  <br> <span class="fs-5 fw-normal text-end">
+                    </span></p> -->
                 </div>
 
             </div>
@@ -170,19 +268,21 @@
 
         <!-- Isi1 -->
         <div class="d-flex justify-content-center w-100 p-0 m-0 py-5">
-            <div class="row w-100 row-cols-2 p-0">
+            <div class="row w-100 row-cols-1 row-cols-lg-2 p-0">
                 <div class="col p-0">
-                    <div class="w-50 ratio ratio-16x9 rounded-end bg-blueYakkum opacity-75"></div>
-                    <div class="w-75 ratio ratio-16x9 rounded-end bg-primary opacity-75" style="margin-top: -23%;"></div>
-                    <div class="w-100 ratio ratio-16x9 rounded-end overflow-hidden d-flex align-items-center justify-content-center" style="margin-top: -37%;">
-                        <img src="../img/Tentang Kami/1/bg.webp">
-                        <img src="../img/Tentang Kami/1/karyawan.webp">
+                    <div class="Images p-0 position-relative">
+                        <div class="w-50 ratio ratio-16x9 rounded-end bg-blueYakkum opacity-75"></div>
+                        <div class="w-75 ratio ratio-16x9 rounded-end bg-primary opacity-75" style="margin-top: -23%;"></div>
+                        <div class="w-100 ratio ratio-16x9 rounded-end overflow-hidden d-flex align-items-center justify-content-center" style="margin-top: -37%;">
+                            <img src="../img/Tentang Kami/1/bg.webp">
+                            <img src="../img/Tentang Kami/1/karyawan.webp">
+                        </div>
                     </div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-center">
-                    <div class="p-4">
+                    <div class="p-2 pt-3 p-md-4 isiText">
                         <h1 class="fw-bold m-0" style="text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--YakkumBlue);">YAKKUM</h1>
-                        <p class="ms-1 m-0 mt-2">
+                        <p class="ms-0 ms-md-1 m-0 mt-3">
                             Yayasan Kristen Untuk Kesehatan Umum (YAKKUM) adalah lembaga Kristen yang melakukan pelayanan di bidang kesehatan. Dibawah Sinode GKJ dan GKI Sinode Wilayah Jawa Tengah, YAKKUM diutus untuk mewartakan kasih dan solidaritas Allah di tengah-tengah dunia. <br> <br>
                             13 unit rumah sakit, 3 unit kemanusiaan, dan Sekolah Tinggi Kesehatan (STIKES) adalah wujud pada komitmen YAKKUM untuk menyediakan pelayanan yang holistik. Juga sebagai lembaga misi, kami berkomitmen untuk memastikan kualitas layanan kami sambil menyalurkan kasih pada setiap orang.
                         </p>

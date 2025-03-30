@@ -1,6 +1,8 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: auto;
+    font-family: "signika";
+    font-weight: normal;
 }
 
 html {

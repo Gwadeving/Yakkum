@@ -6,14 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
 
 /* _________________________________________ ROOT _______________________________________ */
-*{
-    margin: 0;
-    padding: auto;
-    font-family: "signika";
-    font-weight: normal;
-}
-
-
 body{
     background: var(--YakkumGray);
 }
