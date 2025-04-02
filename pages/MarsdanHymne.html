@@ -65,7 +65,7 @@
                     <ul class="dropdown-menu  dropDownBg">
                       <li><a class="dropdown-item" href="../pages/TentangKami.html">TENTANG KAMI</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">RENSTRA YAKKUM</a></li>
+                      <li><a class="dropdown-item" href="../pages/Restra.html">RENSTRA YAKKUM</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Nilai-Nilai & Budaya Kerja YAKKUM </a></li>
                       <li><hr class="dropdown-divider"></li>
@@ -94,7 +94,7 @@
     <div class="position-relative w-100 d-flex align-items-center justify-content-center my-4">
         <div class="row w-100 row-cols-1 row-cols-md-2 gap-5 d-flex align-items-center justify-content-center containMarsHymne">
 
-            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars">
+            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars animate__animated animate__zoomIn">
                 <div class="w-100 h-100 m-0 p-0">
                     <div class="position-absolute top-0 end-0 my-3 mx-3 bg-white">
                         <button type="button" class="btn btn-outline-dark rounded-circle m-0 p-0 d-flex align-items-center justify-content-center p-2 downloadBtn" id="0">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             
-            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars">
+            <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars animate__animated animate__zoomIn">
                 <div class="w-100 h-100 m-0 p-0">
                     <div class="position-absolute top-0 end-0 my-3 mx-3 bg-white buttonDownload">
                         <button type="button" class="btn btn-outline-dark rounded-circle m-0 p-0 d-flex align-items-center justify-content-center p-2 downloadBtn" id="1">
@@ -239,7 +239,7 @@
     function createStroke(el, percentase, clasName){
         const progress = buatStroke((el || document.querySelector(el) || document.querySelector(`#${el}`) || document.querySelector(`.${el}`)), {
             color: "var(--YakkumBlue)",
-            strokeWidth: 1,
+            strokeWidth: 1.5,
             className: clasName,
             progress: percentase,
             zIndex: 2
@@ -355,7 +355,6 @@
                     return;
                 }
 
-                // Stop any currently playing audio
                 if (isPlaying !== null) {
                     const currentPlayBtn = document.querySelector(".play");
                     if (currentPlayBtn) {
@@ -386,6 +385,8 @@
             }
 
             const percentage = (musik.currentTime / musik.duration) * 100;
+            console.log("Total Durasi Musik: "+musik.duration)
+            console.log("Persentase: "+`${Math.floor(percentage)}%`)
             return Math.min(100, Math.max(0, percentage));
         }
 
@@ -412,7 +413,8 @@
             }
         }
 
-        create();
+        setTimeout(create, 1010)
+        // create();
 
         musik.addEventListener("ended", () => {
             const play = document.querySelector(".play");
