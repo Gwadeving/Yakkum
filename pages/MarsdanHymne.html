@@ -18,7 +18,17 @@
         }
 
         .containMarsHymne{
-            margin-top: 6.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .titleIsi{
+            margin-top: 6.5em;
+        }
+        .titles h1{
+            font-size: 5.8vw;
+        }
+        .titles p{
+            font-size: 2.4vw;
         }
         
         /* Mobile */
@@ -64,11 +74,11 @@
                       Profile
                     </a>
                     <ul class="dropdown-menu  dropDownBg">
-                      <li><a class="dropdown-item" href="../pages/TentangKami.html">TENTANG KAMI</a></li>
+                      <li><a class="dropdown-item" href="TentangKami.html">TENTANG KAMI</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="../pages/Renstra.html">RENSTRA YAKKUM</a></li>
+                      <li><a class="dropdown-item" href="Renstra.html">RENSTRA YAKKUM</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Nilai-Nilai & Budaya Kerja YAKKUM </a></li>
+                      <li><a class="dropdown-item" href="nilai_nilai.html">Nilai-Nilai & Budaya Kerja YAKKUM </a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Management Strategic YAKKUM </a></li>
                       <li><hr class="dropdown-divider"></li>
@@ -91,8 +101,20 @@
             </ul>
     </nav>
 
+    <div class="w-100 bg-white p-1 d-flex align-items-center justify-content-center titleIsi animate__animated animate__fadeIn animate__slow">
+        <div class="w-100 bg-white rounded overflow-hidden d-flex align-items-start justify-content-center position-relative" style="max-height: 400px;">
+            <div class="w-100 position-absolute h-100 p-4 p-md-5 d-flex align-items-center justify-content-center">
+                <div class="position-absolute z-2 text-light border-start border-end border-2 px-3 titles" style="width: 50%;">
+                    <h1 class="m-0 fw-bold text-center">HYMNE & MARS</h1>
+                </div>
+                <div class="w-100 h-100 bg-blueYakkum rounded opacity-75"></div>
+            </div>
+            <img src="../img/Hymne&Mars/1.jpg" class="object-fit-cover w-100"></img>
+        </div>
+    </div>
+
     <!-- Hymne Mars -->
-    <div class="position-relative w-100 d-flex align-items-center justify-content-center my-4">
+    <div class="position-relative w-100 d-flex align-items-center justify-content-center">
         <div class="row w-100 row-cols-1 row-cols-md-2 gap-5 d-flex align-items-center justify-content-center containMarsHymne">
 
             <div class="col p-0 m-0 d-flex align-items-center justify-content-center ukuranKotakHymne bg-white shadow rounded ratio ratio-1x1 HymneMars animate__animated animate__zoomIn">
@@ -226,12 +248,12 @@
     let hymnemars = document.querySelectorAll(".HymneMars")
     let Musik = [
         {
-            src: "../Musik/hymne.mp3",
+            src: "../Musik/hymne.wav",
             judul: "Mars YAKKUM"
 
         },
         {
-            src: "../Musik/hymne.mp3",
+            src: "../Musik/hymne.wav",
             judul: "Hymne YAKKUM"
         }
 
@@ -301,7 +323,7 @@
             }
             
             const mimeType = matches[1];
-            const extension = "mp3";
+            const extension = "wav";
             
             const a = document.createElement('a');
             a.href = base64Data;
@@ -374,6 +396,10 @@
                 musik.src = Musik[isPlaying].src;
                 musik.loop = false;
                 musik.currentTime = 0;
+                
+                musik.addEventListener("onload", ()=>{
+                    bttn.classList.add("disabled")
+                })
                 musik.play();
                 
                 updateProgres(isPlaying);

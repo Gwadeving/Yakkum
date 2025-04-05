@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/jpg" href="../img/Logos/2015.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/root.css">
+
+    <!-- Animation Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root{
+            --bg-Gray2: #a6a6a6;
+            --ukuran-segitiga: 400px;
+            --kanan-triangle: #e115b9;
+            --kiri-triangle: #3f98e8;
+            --bawah-triangle: #ffa717;
+        }
+        .turun{
+            margin-top: 6rem;
+        }
+
+        .titles h1{
+            font-size: 5.8vw;
+        }
+        .titles p{
+            font-size: 2.4vw;
+        }
+
+        .kiri{
+            fill: var(--kiri-triangle);
+            /* filter: drop-shadow(0px 0px 8px var(--kiri-triangle)); */
+            width: 100%;
+        }
+
+        .kanan{
+            fill: var(--kanan-triangle);
+            /* filter: drop-shadow(0px 0px 8px var(--kanan-triangle)); */
+            width: 100%;
+        }
+
+        .bawah{
+            fill: var(--bawah-triangle);
+            /* filter: drop-shadow(0px 0px 8px var(#ffa717)); */
+            width: 100%;
+        }
+
+        .kiri:hover {
+            filter: drop-shadow(0 0 3px var(--kiri-triangle)) 
+                    drop-shadow(0 0 4px var(--kiri-triangle))
+                    drop-shadow(0 0 5px var(--kiri-triangle));
+            transition: filter 0.3s ease;
+        }
+
+        .kanan:hover {
+            filter: drop-shadow(0 0 3px var(--kanan-triangle)) 
+                    drop-shadow(0 0 4px var(--kanan-triangle))
+                    drop-shadow(0 0 5px var(--kanan-triangle));
+            transition: filter 0.3s ease;
+        }
+
+        .bawah:hover {
+            filter: drop-shadow(0 0 3px var(--bawah-triangle)) 
+                    drop-shadow(0 0 4px var(--bawah-triangle))
+                    drop-shadow(0 0 5px var(--bawah-triangle));
+            transition: filter 0.3s ease;
+        }
+
+                /* breakPoin */
+        /* Mobile */
+        @media screen and (max-width: 576px){
+            .headers h1{
+                font-size: 1.4rem !important;
+            }
+            .headers p{
+                font-size: .9rem !important;
+            }
+            .h1Core{
+                font-size: 1.5rem !important;
+            }
+
+            .pr{
+                width: 30% !important;
+            }
+
+            .gradienBlue{
+                width: 100% !important;
+            }
+        }
+        
+        /* Tablet */
+        @media screen and (min-width: 576px) and (max-width: 992px){
+            .pr{
+                width: 20% !important;
+            }
+            .gradienBlue{
+                width: 60% !important;
+            }
+        }
+        
+
+    
+        
+        
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 8px;
+        }
+            
+
+
+
+        .div4 {
+            grid-column: span 3 / span 3;
+        }
+
+        .headers{
+            text-align: center;
+        }
+          
+        .headers h1{
+            color: var(--color);
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+        .headers p{
+            font-size: 1.4em;
+            margin-bottom: 0;
+            font-weight: lighter;
+        }
+
+        .containIsi1{
+            background: var(--YakkumGray);
+            z-index: 0;
+        }
+        
+        .h1Core{
+            font-size: 3rem;
+            margin-bottom: 3%;
+            overflow: hidden;
+
+        }
+
+        .gradienBlue{
+            background: linear-gradient(90deg, rgba(24,150,233,1) 24%, rgba(63,197,255,1) 100%);
+
+        }
+
+        .gradienBlue svg {
+            fill: white;
+            width: 60%;
+        }
+
+        .shadow_{
+            transition: all .5s ease-in-out;
+        }
+    </style>
+    <title>Nilai-Nilai YAKKUM</title>
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top d-flex navbar-expand-lg rounded-bottom-2 animate__animated animate__fadeInDown bg-white shadow-sm" data-bs-theme="light" >
+        <div class="logoContainer">
+            <img src="../img/Logos/2015.webp">
+            <p class="navbar-brand fw-semibold">YAKKUM</p>        
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
+               </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Profile
+                    </a>
+                    <ul class="dropdown-menu  dropDownBg">
+                      <li><a class="dropdown-item" href="TentangKami.html">TENTANG KAMI</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="Renstra.html">RENSTRA YAKKUM</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item active disabled" href="#">Nilai-Nilai & Budaya Kerja YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Management Strategic YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Organ YAKKUM </a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Structure YAKKUM</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="MarsdanHymne.html">Hymne & MARS YAKKUM</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Karier</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html#MediaInformasi">Media & Informasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Donasi</a>
+              </li>
+            </ul>
+    </nav>
+
+        <!-- Isi -->
+         <div class="turun overflow-hidden">
+                <!-- title isi -->
+                <div class="w-100 bg-white p-1 d-flex align-items-center justify-content-center titleIsi animate__animated animate__fadeIn animate__slow">
+                    <div class="w-100 bg-white rounded overflow-hidden d-flex align-items-center justify-content-center position-relative" style="max-height: 400px;">
+                        <div class="w-100 position-absolute h-100 p-4 p-md-5 d-flex align-items-center justify-content-center">
+                            <div class="position-absolute z-2 text-light border-start border-end border-2 px-3 titles" style="width: 50%;">
+                                <h1 class="m-0 fw-bold text-center">NILAI-NILAI YAKKUM</h1>
+                            </div>
+                            <div class="w-100 h-100 bg-blueYakkum rounded opacity-75"></div>
+                        </div>
+                        <img src="../img/restra/restra.jpg" class="object-fit-cover w-100"></img>
+                    </div>
+                </div>
+
+
+                <!-- Isi -->
+                 <div class="w-100 mt-3 p-0 m-0 d-flex align-items-center justify-content-center pb-5 animate__animated animate__fadeInUp">
+                    <div class="row p-0">
+                        <div class="col-12 col-lg-auto p-2 d-flex align-items-center align-items-lg-start justify-content-center">
+                            <div class="w-100 row row-cols-2 row-cols-lg-1">
+                                <div class="col d-flex justify-content-center justify-content-md-end justify-content-lg-end align-items-center align-items-md-end">
+                                    <img src="../img/Nilai Yakkum/1.webp" alt="" srcset="" style="width: 130px; max-width: 200px;">
+                                </div>
+                                <div class="col d-flex justify-content-center justify-content-md-start justify-content-lg-end align-items-center align-items-md-end">
+                                    <img src="../img/Nilai Yakkum/2.webp" alt="" srcset="" style="width: 130px; max-width: 200px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col p-4 p-lg-5 py-md-4 p-lg-5">
+                            <h1 class="m-0">Nilai Budaya YAKKUM</h1>
+                            <p class="m-0">Tiga nilai budaya YAKKUM adalah: </p>
+                            <ol class="m-0">
+                                <li>
+                                    <b>KARAKTER KRISTEN</b>, di mana ditekankan untuk memiliki sikap kasih, benar dan bersyukur. 
+                                </li>
+                                <li>
+                                    <b>BISNIS DENGAN ETIKA KRISTEN</b>, yang diartikan bahwa dengan sikap kasih, benar dan bersyukur, yang adalah karakter Kristen yang utama dalam nilai budaya YAKKUM, YAKKUM menampakkan bisnis dengan etika Kristen itu dalam perilaku berorganisasinya, yaitu perilaku bekerja keras, hidup sederhana dan Kebijakan-kebijakan berdiakonia. yang digulirkan oleh YAKKUM akan diwarnai dengan etika Kristen yang ditekankan oleh gereja pendiri dan pendukung. 
+
+                                </li>
+                                <li>
+                                    <b>BEKERJA DALAM BUDAYA PEMBELAJARAN</b>, Dalam proses berorganisasinya, perilaku yang ditumbuhkan lewat karakter Kristen dan berbisnis dengan etika Kristen menguatkan kebiasaan bekerja dalam pembelajaran yang budaya bersifat evidence based, analytical, dan visioner antisipatif. 
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                 </div>
+
+            <!-- <svg class="kanan" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="805.4px" height="1395px" viewBox="0 0 805.4 1395" style="enable-background:new 0 0 805.4 1395;" xml:space="preserve">
+                    <defs>
+                    </defs>
+                    <g>
+                        <g>
+                            <g>
+                                <polygon class="st0" points="805.4,1395 296.7,1101.3 0,587.4 0,0 			"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg> -->
+
+                <!-- <svg class="bawah" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="1610.8px" height="293.8px" viewBox="0 0 1610.8 293.8" style="enable-background:new 0 0 1610.8 293.8;"
+                    xml:space="preserve" fill="red">
+                <defs>
+                </defs>
+                <g>
+                    <g>
+                        <g>
+                            <polygon class="st0" points="1610.8,293.8 0,293.8 508.8,0 1101.9,0 			"/>
+                        </g>
+                    </g>
+                </g>
+                </svg> -->
+
+                <!-- <svg class="kiri" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="805.4px"
+                    height="1395px" viewBox="0 0 805.4 1395" style="enable-background:new 0 0 805.4 1395;" xml:space="preserve">
+                <defs>
+                </defs>
+                <g>
+                    <g>
+                        <g>
+                            <polygon class="st0" points="805.4,0 805.4,587.4 508.7,1101.3 0,1395 			"/>
+                        </g>
+                    </g>
+                </g>
+                </svg> -->
+
+
+
+                <div class="w-100 pt-4 containIsi1 animate__animated animate__fadeIn">
+                    <h2 class="text-center h1Core">core value <br> YAKKUM BERSINAR</h2>
+                    <div class="parent p-2 pb-0">
+                        <div class="div1 d-flex align-items-center justify-content-center">
+                            <div class="headers titik2" style="--color: var(--kiri-triangle);">
+                                <h1><b>BER</b>syukur</h1>
+                                <p>Dedikasi dan berkomitmen tinggi</p>
+                            </div>
+                        </div>
+                        <div class="div2">
+                            <div class="w-100 d-flex p-0 m-0 flex-column align-items-center justify-content-center position-relative">
+                                <div class="w-100 d-flex align-items-center justify-content-center">
+                                    <div class="w-100 p-1 p-md-2 p-lg-2 pt-0 pt-md-0 pt-lg-0">
+                                        <svg class="kiri titik1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 805.4 1395" style="enable-background:new 0 0 805.4 1395;" xml:space="preserve">
+                                            <polygon class="st0" points="805.4,0 805.4,587.4 508.7,1101.3 0,1395 			"/>
+                                        </svg>
+                                    </div>
+                                    <div class="w-100 p-1 p-md-2 p-lg-2 pt-0 pt-md-0 pt-lg-0">
+                                        <svg class="kanan titik3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 805.4 1395" style="enable-background:new 0 0 805.4 1395;" xml:space="preserve">
+                                            <polygon class="st0" points="805.4,1395 296.7,1101.3 0,587.4 0,0 			"/>
+                        
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="position-absolute bottom-0 w-100 d-flex align-items-center justify-content-center p-0 m-0 p-2 p-md-4 p-lg-4 pb-0 pb-md-0 pb-lg-0">
+                                    <svg class="bawah titik5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1610.8 293.8" style="enable-background:new 0 0 1610.8 293.8;"
+                                        xml:space="preserve">
+                                            <polygon class="st0" points="1610.8,293.8 0,293.8 508.8,0 1101.9,0 			"/>
+                                    </svg>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="div3 d-flex align-items-center justify-content-center">
+                            <div class="headers titik4" style="--color: var(--kanan-triangle);">
+                                <h1>ka<b>SI</b>h</h1>
+                                <p>Kerjasama dan berdampak positif</p>
+                            </div>
+                        </div>
+                        <div class="div4 d-flex align-items-center justify-content-center">
+                            <div class="headers titik6" style="--color: var(--bawah-triangle); margin-bottom: 2rem;">
+                                <h1>be<b>NAR</b></h1>
+                                <p>Integritas dan bertanggung jawab</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="isi2 z-1 w-100 mt-5 px-3 animate__animated animate__fadeIn">
+                    <div class="text-center mb-3">
+                        <h1 class="d-inline-block bg-blueYakkum text-white px-4 py-2 rounded-pill fs-3 fs-md-2 fw-bold">
+                            MANAJEMEN STRATEJIK YAKKUM
+                        </h1>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="z-2 w-100 p-4 d-flex align-items-center justify-content-center d-none d-lg-block">
+                        <div class="w-100 row row-cols-3 d-flex align-items-center justify-content-center p-0 p-0">
+                            <div class="col p-0 p-3 d-flex align-items-center justify-content-start">
+                                <div class="w-75 shadow_ ratio ratio-16x9 rounded-2 me-3">
+                                    <div class="w-100 h-100 text-center d-flex align-items-center justify-content-center p-3">
+                                        <p>
+                                            <span class="fw-bold" style="font-size: 1.5vw;">Manajemen SDM</span><br>
+                                            Menggarap Transformasi budaya perilaku Capacity building tere
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="w-25 gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik8">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 626.5" style="enable-background:new 0 0 800 626.5;" xml:space="preserve">
+                                            <defs>
+                                            </defs>
+                                            <g>
+                                                <path d="M799.1,555.1c-3.7-41.5-22.5-74.6-55.4-99.8c-11.6-8.9-24.7-15.4-38.7-20.3c43.9-32.6,38.7-89.7,9.1-117.9
+                                                    C684.4,288.7,637,289,607.4,318c-28.1,27.5-34.5,83.5,9.9,117c-1.5,0.5-2.8,1.1-4.2,1.6c-54.1,20.2-89.7,70.9-90.2,128.6
+                                                    c-0.1,15.3,0.2,30.7-0.2,46c-0.2,7.5,2.4,12.5,9.3,15.3h259c3-3.3,6-6.7,9-10v-57C799.7,558,799.3,556.6,799.1,555.1z M609.1,372.9
+                                                    c-0.4-28.9,22.8-52.7,51.8-53c28.6-0.3,52.1,22.8,52.3,51.8c0.3,28.8-22.8,52.3-51.6,52.5C633.4,424.5,609.4,401.1,609.1,372.9z
+                                                    M682.9,445.1c-7.5,10.8-14.3,20.6-21.6,31c-7.2-10.3-14.1-20.1-21.6-30.9C654.3,449.1,668,449.2,682.9,445.1z M775.6,599.2
+                                                    c0,0.9-0.3,1.9-0.5,3H547.3c-0.1-1.5-0.3-2.9-0.3-4.4c0.3-15.5-0.7-31.1,1.2-46.4c4.9-38.7,25.6-67.1,59.5-85.9
+                                                    c12.1-6.7,12.3-6.4,20.1,4.9c7.5,10.8,15,21.6,22.6,32.4c6.2,8.8,15.4,8.9,21.7,0c10-14.1,19.8-28.4,30.1-43.1
+                                                    c27,10.9,47.2,28.9,60.6,54.2c8.4,15.9,12.5,32.9,12.8,50.8C775.8,576.2,775.7,587.7,775.6,599.2z"/>
+                                                <path d="M275.8,549.3c-3.4-35.7-20.4-64.9-47.4-88.3c-13.5-11.7-28.8-20.1-45.7-25.9c45.7-34.5,37.2-91.6,8.9-118.1
+                                                    c-30.2-28.3-77.4-27.9-106.8,1.3C55.6,347,52,403.2,94.9,435c-1.7,0.6-3.2,1.2-4.6,1.7c-43.9,17.8-72.9,49-85.4,94.9
+                                                    c-2.5,9.1-3.3,18.6-4.9,27.9v57c3,3.3,6,6.7,9,10h259c4.9-2.3,9.1-5.3,9-11.3C276.8,593.2,277.9,571.1,275.8,549.3z M86.9,372.4
+                                                    c-0.2-29,22.7-52.3,51.5-52.5c28.6-0.2,52.3,23.1,52.6,51.7c0.3,28.4-23,52.2-51.7,52.6C110.7,424.6,87,401.3,86.9,372.4z
+                                                    M160.5,445c-7.6,10.9-14.5,20.7-21.7,31.1c-7.2-10.4-14.1-20.1-21.6-30.9C132,449.1,145.8,449.3,160.5,445z M252.1,602.1H24.6
+                                                    c-1.1-33.6-2.3-66.8,17.2-96.4c13.9-21.1,32.2-36.5,56-46c8.2,11.7,16.2,23.2,24.3,34.8c2.1,3,4.1,6.1,6.3,9c6,7.9,15,7.9,20.8-0.3
+                                                    c9.3-13.2,18.6-26.4,27.7-39.8c2.1-3.2,4-3.6,7.3-2c38.5,18.2,62.3,47.9,67.6,90.4C253.8,568.2,252.1,585.1,252.1,602.1z"/>
+                                                <path d="M538.4,277.3c-0.2-9.8,0-19.8-1.8-29.4c-9.9-52.2-39.9-88.1-89.4-107.6c-1.1-0.4-2.1-1-3.4-1.6
+                                                    c40.6-30.3,41.6-84.6,10.3-116.4c-29.9-30.3-80.9-29.5-109.6,1.4c-30,32.3-28.1,85.3,12,115.1c-1.9,0.7-3.3,1.2-4.6,1.7
+                                                    c-17.9,6.9-34,16.7-47.8,30.1c-26.3,25.7-40.8,56.7-42.2,93.5c-0.6,17.1-0.3,34.3-0.3,51.5c0,10.6,4.3,14.8,14.9,14.8
+                                                    c82.3,0,164.6,0,246.9,0c10.8,0,15-4.2,15-15.2C538.5,302.6,538.7,289.9,538.4,277.3z M348,75.9c0-28.6,23.1-51.8,51.6-51.9
+                                                    c28.9-0.1,52.3,23,52.4,51.7c0.1,29.1-23.3,52.6-52.2,52.5C371.2,128.1,348,104.7,348,75.9z M421.7,149
+                                                    c-7.5,10.8-14.3,20.6-21.6,31.1c-7.3-10.4-14.1-20.2-21.6-30.9C393.1,153,406.7,153.4,421.7,149z M286.1,306.1
+                                                    c-1.4-34.9-2.5-69.3,19-99.6c12.8-18.1,29.1-31.8,49.3-41c3.4-1.5,5.3-1.3,7.6,2.1c8.7,13,17.8,25.7,26.8,38.5
+                                                    c6.8,9.7,15.7,9.7,22.5,0c9.2-13.1,18.4-26.1,27.4-39.3c1.8-2.7,3.3-2.9,6-1.7c38.3,17.7,62.1,46.9,68.1,88.9c2.4,17,1.4,34.5,2,52
+                                                    H286.1z"/>
+                                                <path d="M399.5,360c-62,0-112.3,50-112.4,111.8c-0.1,61.5,50.1,111.8,111.7,111.9c62.3,0.1,112.2-49.9,112.2-112.3
+                                                    C511.1,410.1,460.9,360,399.5,360z M399.3,559.6c-48.8-0.1-88-39.2-87.9-87.9c0-48.5,39.5-87.6,88.3-87.5
+                                                    c48.5,0.1,87.4,39.5,87.3,88.4C486.9,520.6,447.4,559.7,399.3,559.6z"/>
+                                                <path d="M463.1,442.9c-1,1.3-2.2,2.5-3.4,3.7c-22.5,22.5-45,45-67.5,67.5c-8.2,8.2-13.9,8.2-22,0.1c-10.8-10.8-21.7-21.7-32.5-32.5
+                                                    c-5.9-6-6.5-12.9-1.5-18.1c5.2-5.4,12.4-5,18.5,1c8.7,8.7,17.3,17.4,26.8,27c5.2-5.5,9.8-10.7,14.7-15.6
+                                                    c15.7-15.8,31.5-31.6,47.3-47.4c3.8-3.8,8.1-6.4,13.8-4.4C465.4,427.1,468.2,436.1,463.1,442.9z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-0 d-flex align-items-center justify-content-center">
+                                <div class="ratio ratio-1x1 bg-grayYakkum border border-5 d-flex titik7 align-items-center justify-content-center rounded-circle m-auto" style="width: 30%;">
+                                    <img src="../img/Logos/2015.webp" alt="" class=" p-3 ms-1 w-100 m-0">
+                                </div>
+                            </div>
+                            <div class="col p-0 p-3 d-flex align-items-center justify-content-end">
+                                <div class="w-25 gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik9">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 853.9 912.1" style="enable-background:new 0 0 853.9 912.1;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M565.1,817.1c0-14.6-7-21.8-21.5-21.8c-74.5,0-148.9-0.1-223.4,0c-14.8,0-21.9,7.3-21.9,22.2c0,23.2,0.4,46.4-0.2,69.5
+                                                c-0.3,11.7,3.3,20.2,14.2,25h238.3c11.4-4.7,14.8-13.6,14.6-25.4C564.8,863.5,565.1,840.3,565.1,817.1z M525.7,872.9h-188v-38.1
+                                                h188V872.9z"/>
+                                            <path d="M431.1,116.6c11.8,0.5,20.2-7.8,20.3-20.3c0.1-23.9-0.3-47.9,0.2-71.8c0.2-11.8-3.7-20.2-15-24.6h-9.1
+                                                c-8,3.3-14.6,8.3-14.7,17.6c-0.3,27.1-0.4,54.3,0,81.4C413,108.9,421.2,116.2,431.1,116.6z"/>
+                                            <path d="M92.9,421c-22.8-0.2-45.6,0.3-68.4-0.2c-12.1-0.2-20.5,4-24.5,15.8v8c3.3,8.2,8.4,14.9,17.9,15c26,0.3,52,0.3,78.1,0
+                                                c8-0.1,14.5-5.8,16.8-13.2C117,433.1,107.7,421.1,92.9,421z"/>
+                                            <path d="M835.8,421.2c-24.5-0.4-48.9-0.4-73.4,0c-11.1,0.2-18.5,9.1-18.1,20c0.3,11.1,8.5,18.6,20.7,18.7
+                                                c21.4,0.1,42.9-0.3,64.3,0.2c12.1,0.3,20.5-3.8,24.7-15.4v-8C850.8,428.1,845.6,421.3,835.8,421.2z"/>
+                                            <path d="M464.2,469.3c-0.6,3.4-1.4,5.3-4.7,6.6c-15.5,6.3-30.9,12.6-46.3,19.3c-3.9,1.7-6.2,1.3-9.3-1.6c-21.1-19.6-52-21-74.7-3.6
+                                                c-22.5,17.1-29.5,47.5-16.7,72.6c11.8,23.1,38,36,62.9,30.9c26.6-5.4,45.5-27,47.1-54.3c0.3-4.8,2-6.9,6.2-8.6
+                                                c14.8-5.9,29.5-12,44.2-18.4c4.1-1.8,6.7-1.6,10.3,1.6c18.6,16.2,39.9,20.4,62.5,10.3c22.2-9.9,34.4-27.9,34.8-52.4
+                                                c0.7-38.1-34-65.8-71.6-57.3c-4.7,1-7.1,0-9.9-3.6c-13.9-17.8-28.1-35.4-42.3-52.9c-2.4-2.9-3-5.1-1.1-8.9
+                                                c19.4-38.8-8.9-84.8-52.1-84.9c-24,0-46,15.2-54.5,37.9c-8.5,22.6-2.2,48,16,63.8c15.2,13.2,32.7,17.7,52.5,13.1
+                                                c2.6-0.6,5.1-2,7.6,1.2c15,19.1,30.3,38,45.4,57.1c1,1.3,0.7,4,0.3,5.9C468.5,451.8,465.8,460.4,464.2,469.3z M364.1,554.8
+                                                c-10.8-0.1-19-8.4-19.1-19.2c-0.1-11,8.3-19.6,19.3-19.6c10.9,0,19.6,8.7,19.5,19.5C383.7,546.4,375,554.9,364.1,554.8z
+                                                M522.2,451.4c10.7-0.1,19.2,8.2,19.5,18.9c0.2,11-8.1,19.7-19,19.9c-10.8,0.2-19.7-8.4-19.8-19.2
+                                                C502.8,460.1,511.3,451.5,522.2,451.4z M403.3,341.8c-10.7,0.1-19.4-8.7-19.4-19.6c0-11.1,8.3-19.3,19.5-19.2
+                                                c11.1,0.1,19.5,8.6,19.2,19.6C422.4,333.2,413.9,341.7,403.3,341.8z"/>
+                                            <path d="M204.6,500.1c-6.3-21.3-9.1-43-9-65.2c-0.5-0.1-1.1-0.1-1.6-0.2c2.5-18,3.9-36.2,7.8-53.9c21.8-98.9,110.1-175,210.9-182.3
+                                                c51.6-3.7,99.9,6.9,144.3,34c10.4,6.3,22.3,4,28-5.3c6.1-9.9,3-20.9-8-27.6c-66.3-40.3-137.7-51.6-212.3-32.2
+                                                c-97.6,25.3-162.8,87.7-195.8,183c-13.1,37.7-16,76.8-11.4,116.3c1.9,16.3,5.9,32.4,10,48.4c3.3,13,17.3,17.9,28.7,11.1
+                                                C204.8,521,208,511.4,204.6,500.1z"/>
+                                            <path d="M678.5,490.3c-9.2-0.6-17.2,4.9-20.4,15c-14.9,47.3-42.6,85.5-80.6,116.9c-22.1,18.2-36.3,41.7-41.9,70
+                                                c-1.7,8.5-2.2,17.2-3.2,25.9h-201c-0.7-8-0.9-15.4-2.1-22.6c-5.1-30.4-20.1-55-44.1-74.1c-7.8-6.2-18.8-5.5-25.7,0.9
+                                                c-6.7,6.3-7.8,17.1-2.3,25c1.6,2.3,3.8,4.2,6,6c13.6,11.6,23.5,25.8,26.5,43.4c2.1,12.4,1.8,25.3,2.1,38c0.4,14.3,7,21.6,21.3,21.6
+                                                c79,0.1,158.1,0.1,237.1,0c14,0,20.8-7.3,21-21.3c0.1-9.5-0.4-19.1,0.6-28.5c2.7-24.3,15.1-43.3,33.9-58.5
+                                                c43.1-34.7,72-79.2,89.4-131.4c1.1-3.3,1.5-7.2,0.9-10.6C694.3,496.6,687.6,490.9,678.5,490.3z"/>
+                                            <path d="M707.1,423.3c0-0.8,0-1.7-0.1-2.5c0-0.2,0-0.3,0-0.5c0-0.3,0-0.7,0-1c0-0.3,0-0.6,0-1c0,0,0-0.1,0-0.1c0-0.4,0-0.8-0.1-1.3
+                                                c0-0.2,0-0.4,0-0.6c0-0.3,0-0.6,0-0.9c0-0.1,0-0.2,0-0.3c0,0,0,0.1,0,0.1c0-0.1,0-0.2,0-0.3c0,0.1,0,0.1,0,0.2c0-0.3,0-0.6,0-0.9
+                                                c0-0.2,0-0.3,0-0.5c0-0.1,0-0.1,0-0.2c0-0.4,0-0.7-0.1-1.1c0,0,0,0,0,0c0,0,0,0,0,0c0-0.2,0-0.3,0-0.5c0-0.3,0-0.5-0.1-0.8
+                                                c0-0.1,0-0.3,0-0.4c0-0.6-0.1-1.2-0.1-1.8c0-0.2,0-0.4,0-0.6c0-0.1,0-0.3,0-0.4c0,0.2,0,0.3,0,0.5c-0.3-3.9-0.7-7.7-1.2-11.5
+                                                c-0.1-1-0.3-2-0.4-3.1c-0.3-2-0.6-4.1-0.9-6.1c-0.2-1-0.3-2-0.5-3c-3.4-19.6-9-38.7-16.7-56.5c-5.1-11.8-15.8-17-26-12.5
+                                                c-11,4.7-15,15.6-10.1,27.5c8.9,21.5,14.7,43.8,16.7,67c0.8,9.2,0.7,18.6,2.1,27.8c1.4,9.2,10,15.1,19.5,14.8
+                                                c9.5-0.3,17.1-7,18.1-16.4c0.1-0.8,0.1-1.7,0.2-2.5c0-0.4,0-0.7,0-1.1c0-1.8,0-3.6-0.1-5.4C707.1,426.1,707.1,424.7,707.1,423.3z"
+                                                />
+                                            <path d="M807.7,219.2c-2.3-7.8-9.1-12.9-17.5-13.6c-3.1,0.8-6.5,1-9.2,2.5c-23.4,13.3-46.8,26.5-69.9,40.3
+                                                c-9.1,5.4-11.2,16.6-6,25.4c5.4,9.1,16.7,13.2,25.5,8.3c23-12.8,45.8-26,68.5-39.3C806.8,238.3,810.2,227.5,807.7,219.2z"/>
+                                            <path d="M581.1,149.8c0.2,0.4,0.4,0.8,0.6,1.2c0.1,0.3,0.3,0.5,0.4,0.8c0.2,0.4,0.5,0.8,0.7,1.1c0.4,0.6,0.9,1.2,1.4,1.8
+                                                c0.2,0.2,0.4,0.4,0.6,0.7c1.4,1.4,3,2.6,4.9,3.6c0.2,0.1,0.5,0.2,0.7,0.3c0.6,0.3,1.2,0.5,1.9,0.7c0.2,0.1,0.5,0.1,0.7,0.2
+                                                c0.1,0,0.2,0,0.2,0.1c0.6,0.2,1.1,0.3,1.7,0.4c0.1,0,0.1,0,0.2,0c0.5,0.1,1,0.1,1.5,0.2c-0.1,0-0.1,0-0.2,0c0.1,0,0.2,0,0.3,0
+                                                c0,0,0,0,0.1,0c0,0,0,0,0.1,0c0,0,0,0,0.1,0c0.1,0,0.2,0,0.3,0c-0.1,0-0.1,0-0.2,0c0.2,0,0.3,0,0.5,0c0,0,0,0,0,0c0,0,0,0,0,0
+                                                c0.1,0,0.2,0,0.3,0c0,0,0,0,0,0c0.1,0,0.1,0,0.2,0c0,0,0,0-0.1,0c0.1,0,0.1,0,0.2,0c0,0-0.1,0-0.1,0c0.2,0,0.4,0,0.6,0
+                                                c0.3,0,0.6,0,0.9,0c-0.1,0-0.3,0-0.4,0c1.5,0,2.9-0.1,4.2-0.4c0.4-0.1,0.8-0.2,1.2-0.3c0,0,0,0,0,0c0.2-0.1,0.4-0.1,0.6-0.2
+                                                c3.8-1.2,6.8-3.6,9.3-7c0.2-0.3,0.4-0.6,0.6-0.9c0.3-0.4,0.6-0.9,0.9-1.4c12.9-22.4,25.8-44.7,38.5-67.1c5.8-10.2,2.7-21.7-7-27.1
+                                                c-9.5-5.3-20.5-2.2-26.5,7.7c-3.6,6-7,12.1-10.5,18.2c-9.2,16.1-18.7,32.1-27.7,48.4c-3.4,6.2-3.8,12.6-1.8,17.9
+                                                C580.9,149.2,581,149.5,581.1,149.8z"/>
+                                            <path d="M150.5,246.8c-21.8-12.7-43.6-25.2-65.6-37.6c-3.2-1.8-7-2.6-10.5-3.8c-9.1,0.8-16.4,6.5-18.7,14.9
+                                                c-2.4,8.9,1,17.2,9.5,22.2c21.8,12.6,43.6,25.2,65.5,37.7c10.9,6.2,22,3.4,28-6.9C164.6,263.4,161.5,253.1,150.5,246.8z"/>
+                                            <path d="M222.6,108.7c8.4,14.4,16.6,29,25.3,43.2c5.9,9.8,17.2,12.7,26.1,7.6c9.2-5.3,12.6-16.5,7.2-26.2
+                                                c-12.9-22.8-26-45.5-39.1-68.1c-3.6-6.1-9.2-9.4-16.5-9.5c-14.7,0-24,15.1-17.1,28.2C212.8,92.4,217.8,100.5,222.6,108.7z"/>
+                                            <path d="M220.1,559.8c-10.7-0.1-18.4,7.7-18.5,18.7c-0.1,11.3,8.3,19.9,19.5,20c10.7,0.1,19.2-8.5,19.3-19.5
+                                                C240.6,568.1,231.9,560,220.1,559.8z"/>
+                                            <path d="M607.8,267.9c0,10.2,9,19.2,19.2,19.3c10.7,0.1,19.5-8.5,19.6-19.3c0.1-10.9-8.4-19.2-19.6-19.1
+                                                C616.3,248.9,607.7,257.3,607.8,267.9z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-75 shadow_ ratio ratio-16x9 rounded-2 ms-3">
+                                    <div class="w-100 h-100 text-center d-flex align-items-center justify-content-center p-3">
+                                        <p>
+                                            <span class="fw-bold" style="font-size: 1.5vw;">Manajemen Budaya</span><br>
+                                            Sebagai pijakan Menuju healing hospital
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-0 p-3 d-flex align-items-center justify-content-start">
+                                <div class="w-75 shadow_ ratio ratio-16x9 rounded-2 me-3">
+                                    <div class="w-100 h-100 text-center d-flex align-items-center justify-content-center p-3">
+                                        <p>
+                                            <span class="fw-bold" style="font-size: 1.5vw;">Manajemen Data</span><br>
+                                            Sentralisasi data, DSS, data security
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="w-25 gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik10">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 795.9 742" style="enable-background:new 0 0 795.9 742;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M795.9,172c-0.8-1-1.5-2.1-2.2-3.1c-0.4-0.5-0.7-1.1-1.1-1.6c-1.8-2.6-3.6-5.2-5.9-7.5c-38-38.1-76-76.2-114.1-114.2
+                                                c-12.7-12.7-25.3-25.3-38-38c-0.4-0.4-0.7-0.7-1.1-1.1c-1.5-1.4-3.2-2.6-4.9-3.8c-1.3-0.9-2.5-1.8-3.7-2.8l0,0c0,0,0,0,0,0h-441
+                                                c-7.9,3.9-10.6,10.2-10.4,19c0.4,24,0.1,48,0.2,72c0,3.3-1,4.8-4.1,6.2c-75.7,33-123,89.8-136.4,171.4
+                                                C18.9,355.9,48.7,428,116.3,484.5c1.3,1.1,2.6,2.1,4.3,3.5c-7.5,10.6-14.9,21-22.4,31.3c-0.6,0.8-2.3,1.1-3.6,1.1
+                                                c-10.8,0.3-18.7,5.2-25,14.1c-20.8,29.5-42,58.8-63.1,88.2c-6,8.3-8.4,17.3-5.1,27.3C5,660.2,11.9,667,22.7,669
+                                                c12,2.2,22.3-1.5,29.6-11.3c11.5-15.4,22.4-31.1,33.6-46.6c10.6-14.8,21-29.6,31.8-44.3c6.1-8.3,7.5-17.2,5-27
+                                                c-0.4-1.6-0.6-3.9,0.2-5.1c7.3-10.7,14.8-21.3,22.2-31.9c9.4,4.3,18.4,8.4,27.4,12.7c0.9,0.4,1.5,2.1,1.6,3.2c0.2,3,0.1,6,0.1,9
+                                                c0,65,0.1,130-0.1,195c0,8.8,2.4,15.6,10.8,19.3h600c0,0,0,0,0,0c3.7,0,7.3,0,11,0c0-4,0-8,0-12c0,0,0,0,0,0V172
+                                                C795.9,172,795.9,172,795.9,172L795.9,172z M745.8,159h-109V52.1C672.3,86.9,708.5,122.4,745.8,159z M58.6,306.1
+                                                c0.1-109.5,88.3-197.8,197.6-197.6c109.4,0.2,197.6,88.5,197.6,197.9c0,109-88.9,197.7-197.8,197.5
+                                                C147.1,503.8,58.6,415.1,58.6,306.1z M766.4,713.6H202.9V526.2C280.2,542,349.3,526,408,473.4c48.7-43.6,73.8-99.4,74.5-164.8
+                                                c0.7-73.1-27.8-134-84.9-179.9c-57.3-46-122.9-58.8-194.7-43.8V28.5h404.4v5.7c0,44.5,0,89,0,133.5c0,1.8,0,3.7,0.1,5.5
+                                                c0.7,8.8,6,14,14.9,14.1c15.7,0.2,31.3,0.1,47,0.1h97.1V713.6z"/>
+                                            <path d="M696.9,575.9c-2.2-0.2-4.3-0.2-6.5-0.2c-68.7,0-137.3,0-206,0c-68.7,0-137.3,0-206,0c-2.3,0-4.7,0-7,0.2
+                                                c-8.5,1-14.2,9.7-11.7,18c2.2,7.3,7.6,10.8,17.1,10.8c138.5,0,277,0,415.5,0c2.5,0,5-0.2,7.4-0.8c6.7-1.8,11-8.2,10.4-15.2
+                                                C709.4,581.8,703.9,576.4,696.9,575.9z"/>
+                                            <path d="M693.9,495.1c-74.6,0-149.2,0-223.8,0c-2.6,0-5.3,0.5-7.7,1.5c-6.3,2.6-9.6,9.4-8.3,16c1.3,6.7,7.4,11.4,14.9,11.4
+                                                c37.6,0,75.3,0,112.9,0c37.1,0,74.3,0,111.4,0c2.1,0,4.4,0,6.4-0.6c6.9-2,11.1-8.7,10.2-15.8C708.9,500.1,702.8,495.1,693.9,495.1z
+                                                "/>
+                                            <path d="M641.1,414.9c-4.6,0-9.3,0-13.9,0c-3.4,0-6.7,0-10.1,0c-5.7,0-11.5,0-17.2,0c-19.7,0-39.5,0-59.2,0.2
+                                                c-3.6,0-7.7,1.1-10.7,2.9c-5.4,3.3-7.1,10-5.1,15.8c2.2,6.4,7.7,10,15.6,10c50.8,0,101.6,0,152.4,0c9.8,0,16.3-5.8,16.4-14.3
+                                                c0.1-7.3-4.8-15-16.2-14.8c-10.6,0.2-21.3,0.2-31.9,0.2C654.5,415,647.8,414.9,641.1,414.9z"/>
+                                            <path d="M416.1,305.9c-0.1-88.4-71.7-159.9-160.1-159.8c-88.2,0-160,71.9-159.9,160.1c0.1,88.4,71.7,160,159.9,159.9
+                                                C344.8,466,416.2,394.5,416.1,305.9z M252.5,437.1C184.1,435.3,125.3,379,125.1,306c0.4-73.5,59.3-131.3,133.5-130.9
+                                                c70.7,0.3,128.9,60.2,128.6,131.9C386.8,379.8,326.4,439.1,252.5,437.1z"/>
+                                            <path d="M326.9,247.4c-6.4-5.4-14.7-4.4-20.7,2.3c-23.5,26.3-47.1,52.6-70.6,79c-0.8,0.8-1.2,2-2.2,3.8c-1.7-2.2-2.5-3.3-3.3-4.3
+                                                c-8.1-9.1-16.1-18.3-24.2-27.3c-5.7-6.3-14.8-7-20.6-1.9c-6.2,5.4-6.6,14.3-0.8,21c1.3,1.5,2.7,3,4,4.5c11,12.3,22,24.6,33.1,36.7
+                                                c7,7.6,15.9,7.9,22.2,0.9c28-31.2,56-62.5,83.9-93.9C333.7,261.4,333.2,252.8,326.9,247.4z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-0 p-3 d-flex flex-column align-items-center justify-content-center">
+                                <div class="w-25 gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik11">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 781 677.1" style="enable-background:new 0 0 781 677.1;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M419.4,549.1V532C419.4,537.7,419.3,543.4,419.4,549.1c0,10.4,0,20.8,0,31.2C419.4,569.9,419.4,559.5,419.4,549.1z"/>
+                                            <path d="M607.5,230.5c0,10.2,4.3,15.9,11.8,15.9c7.5,0,11.8-5.8,11.8-16c0-47.1,0-94.2,0-141.3c0-12.3-3.6-15.9-16.1-15.9
+                                                c-43.2,0-86.4,0-129.6,0h-6.3c-0.1-1.7-0.2-2.9-0.3-4c-0.3-18.9-9.9-28.4-28.9-28.4c-9.5,0-18.9-0.1-28.4,0c-3.2,0-4.8-0.5-5.5-4.3
+                                                C412.2,15.9,393.4,0.2,372.9,0c-21.2-0.2-39.6,15.2-43.8,36.8c-0.6,2.9-1.7,4-4.8,4c-11.2-0.1-22.5-0.3-33.7,0.1
+                                                c-12.5,0.5-21.8,9.1-23.7,21.3c-0.5,3.3-0.1,6.8-0.1,10.9H260c-43.7,0-87.4,0-131,0c-10.6,0-14.7,4.2-14.7,14.9
+                                                c0,19.1,0,38.2,0,57.2v5.3c-3.7,0.6-6.8,0.9-9.8,1.5C38.3,164.3-5.8,222.7,0.6,289.5C6,346,51.6,393.6,107.9,401
+                                                c5.4,0.7,6.5,2.3,6.5,7.4c-0.2,84.3-0.1,168.6-0.2,252.8c0,7.2,2,12.7,8.7,15.9h498.8c0.6-0.3,1.2-0.6,1.7-0.9
+                                                c5.9-2.7,8.5-7.5,7.3-13.3c-1.2-5.7-5.5-9.1-12-9.3c-2,0-3.9,0-5.9,0h-475V411.7c0-9.5,0-9.5,9.3-11.2
+                                                c67.4-12.1,112.8-72.7,103.8-140.1c-6.3-47.2-32.1-80.7-75.6-99.8c-11.6-5.1-24.4-7.5-37.2-11.4v-52h128.8c0,4.4-0.6,8.5,0.1,12.5
+                                                c2.3,13.4,12.5,21.3,27.4,21.3c52.2,0,104.3,0,156.5,0c2.1,0,4.2-0.2,6.3-0.5c10.6-1.5,18.7-8.8,20.8-19.3c0.9-4.5,0.9-9.3,1.3-14
+                                                h128.3v6.7C607.5,146.1,607.5,188.3,607.5,230.5z M228.6,276.4c0,56.8-47.2,104.3-106.1,102.3c-54.9-1.9-99.3-47-99-103.7
+                                                c0.3-55.7,46.9-101.6,103-101.2C183.1,174.2,228.6,220.2,228.6,276.4z M455.4,70.5c-0.4,10.4-0.3,20.9,0,31.3
+                                                c0.1,4.3-1.2,5.6-5.5,5.6c-25.7-0.2-51.5-0.1-77.2-0.1c-24.8,0-49.5,0-74.3,0c-9.6,0-8.2,0.7-8.2-8.5c-0.1-9.6,0.2-19.2-0.1-28.8
+                                                c-0.1-4.2,1-5.7,5.4-5.6c13.8,0.3,27.7,0.1,41.5,0.1c10.5,0,14.7-4.3,14.8-14.8c0-2.8-0.1-5.6,0.4-8.3c2.1-10.9,11.4-18.3,22-17.4
+                                                c10.6,0.8,18.8,9.6,19.6,20.9c0.1,2.1,0,4.2,0.1,6.4c0.1,8.6,4.5,13.2,13.3,13.3c14,0.1,28,0.2,42-0.1
+                                                C453.8,64.2,455.6,65.3,455.4,70.5z"/>
+                                            <path d="M766.1,273.8c-18.1,0.3-36.2,0.1-54.3,0.1c-10.2,0-14.3,4.1-14.3,14.2c0,105.8,0,211.5,0,317.3c0,10.7,4.2,14.9,14.7,14.9
+                                                c18.1,0,36.2-0.1,54.3,0.1c6.5,0.1,11.4-1.9,14.5-7.9V280.9C777.5,275.5,772.6,273.7,766.1,273.8z M757.5,596.8h-36V297.9h36V596.8
+                                                z"/>
+                                            <path d="M761,139.9c-13.2-9.3-30.9-9-43.9,0.7c-13,9.7-18.7,26.9-12.7,41.8c2.5,6.2,2.1,10.3-2.6,14.4c-0.6,0.5-1,1.3-1.5,1.9
+                                                c-22.2,27.3-44.3,54.7-66.5,82c-0.9,1.2-2.9,2.6-4.1,2.3c-11.9-2.8-22.9-1.2-33,5.7c-19.3-13.6-38.2-27.2-57.4-40.4
+                                                c-3.9-2.7-5.7-5.2-4.1-10c0.7-2.1,0.5-4.6,0.2-6.8c-2-15.8-10.1-27.2-25.4-32.2c-14.9-4.9-28.5-1.5-39.2,10.1
+                                                c-10.7,11.6-12.5,25.3-6.7,39.9c1,2.6,0.9,4.3-0.8,6.6c-23.3,29.7-46.6,59.4-69.6,89.4c-3.8,4.9-7.1,6.6-13.4,5.9
+                                                c-18-2.1-34.3,10.1-38.9,27.9c-4.5,17.4,4.6,35.7,21.3,43.1c16.3,7.2,36,1.6,45.7-13.3c9.3-14.4,8.4-28.8-0.6-43
+                                                c0.1-0.4,0.2-0.7,0.4-0.9c24.2-31.1,48.4-62.2,72.6-93.3c1.8-2.4,3.5-2.5,6.2-1.6c10.8,3.6,21.3,2.2,30.8-3.9
+                                                c2.7-1.7,4.4-1.4,6.8,0.3c18,12.9,36.1,25.7,54.2,38.3c3.1,2.2,4.1,4.1,3.3,8c-4.8,24,17.9,47.2,41.8,42.9
+                                                c26.6-4.7,39.5-30.5,27.6-55c-0.6-1.2-0.5-3.6,0.3-4.6c23.8-29.6,47.7-59.1,71.7-88.5c0.9-1.1,3.3-1.6,4.9-1.6
+                                                c3.9,0.2,7.7,1.4,11.5,1.4c16.1,0.1,30.2-10.5,35.2-26.1C780,166.1,774.2,149.2,761,139.9z M377.5,401.9
+                                                c-7.4-0.1-13.7-6.4-13.6-13.8c0-7.6,6.1-13.6,13.7-13.5c7.7,0,13.6,6,13.6,13.6C391.1,395.7,384.9,402,377.5,401.9z M498.5,248.4
+                                                c-7.3,0.2-13.8-6.1-13.9-13.5c-0.1-7.8,5.6-13.8,13.3-13.8c7.7-0.1,13.8,5.8,14.1,13.3C512.1,241.5,505.7,248.2,498.5,248.4z
+                                                M618.6,332.6c-7.5-0.2-13.6-6.5-13.6-13.9c0-7.5,6.2-13.5,13.9-13.4c7.6,0.1,13.6,6.1,13.5,13.7
+                                                C632.4,326.5,626,332.8,618.6,332.6z M739.5,184.1c-7.4,0-13.7-6.3-13.7-13.7c0-7.5,6.3-13.7,13.8-13.7c7.6,0,13.7,6.2,13.7,13.7
+                                                C753.1,177.9,747,184.1,739.5,184.1z"/>
+                                            <path d="M540.2,557.5c0-69.9,0-139.8,0-209.8c0-10.9-4-15.1-14.4-15.1c-18.4,0-36.8,0-55.2,0c-10.1,0-14.2,4.2-14.2,14.2v258.7
+                                                c0,10.6,4.2,14.8,14.7,14.8c18.1,0,36.2,0,54.3,0c10.5,0,14.8-4.3,14.9-14.9C540.2,589.5,540.2,573.5,540.2,557.5z M516.2,596.5
+                                                h-36.1v-240h36.1V596.5z"/>
+                                            <path d="M645.8,413c-18.1,0-36.2,0-54.3,0c-10.4,0-14.8,4.5-14.9,14.9c0,59.2,0,118.3,0,177.5c0,10.5,4.4,15,14.8,15
+                                                c18.1,0,36.2,0,54.3,0c10.8,0,15-4.2,15-15.2c0-29.5,0-59,0-88.5c0-29.5,0-59,0-88.5C660.8,417.1,656.7,413,645.8,413z
+                                                M636.8,596.5h-36.1V436.7h36.1V596.5z"/>
+                                            <path d="M419.4,549.1V532c0-13.7,0-27.4,0-41.1c0-9-4.5-13.3-13.6-13.3c-18.7,0-37.5,0-56.2,0c-9.3,0-13.7,4.3-13.8,13.7
+                                                c0,38.4,0,76.9,0,115.4c0,9.3,4.4,13.7,13.9,13.7c18.6,0,37.1,0,55.7,0c9.7,0,14-4.4,14-14.1c0-8.7,0-17.3,0-26
+                                                C419.4,569.9,419.4,559.5,419.4,549.1z M395.4,596.5h-35.9v-95.3h35.9V596.5z"/>
+                                            <path d="M417.5,202.6c-0.1,5.3-3.1,9.4-8.2,10.8c-2,0.6-4.2,0.8-6.2,0.8c-39.3,0-78.5,0-117.8,0c-1.8,0-3.6,0-5.3-0.4
+                                                c-6-1.4-9.8-6.6-9.4-12.5c0.5-5.9,5-10.4,11.4-10.5c13.4-0.2,26.7-0.1,40.1-0.1c7.3,0,14.7,0,22,0c0,0,0,0,0,0
+                                                c20.4,0,40.7-0.1,61.1,0C412.9,190.8,417.6,195.6,417.5,202.6z"/>
+                                            <path d="M417.5,266.3c0.2,6.6-4.2,11.6-10.9,11.9c-8.6,0.4-17.3,0.2-25.9,0.2c-12.2,0-24.4,0-36.7,0c-19.4,0-38.8,0-58.2,0
+                                                c-2.7,0-5.6-0.1-8.2-1c-4.6-1.5-7.5-6.7-7.2-11.6c0.3-5,3.8-9.2,8.8-10.4c1.7-0.4,3.5-0.6,5.3-0.6c39.6,0,79.2,0,118.8,0
+                                                C412.2,254.8,417.3,259.1,417.5,266.3z"/>
+                                            <path d="M303.8,562.3c0,5.5-3.5,10-9,11.2c-2,0.4-4.2,0.6-6.3,0.6c-32.3,0-64.5,0-96.8,0c-2.1,0-4.3-0.2-6.3-0.6
+                                                c-5.2-1.2-8.9-6.2-8.7-11.5c0.2-5.6,4.3-10.6,9.8-11.1c5.2-0.5,10.4-0.4,15.6-0.4c5.8,0,11.5,0,17.3,0c6.9,0,13.9,0,20.8,0
+                                                c4.9,0,9.8,0,14.7,0c11.9,0,23.8,0,35.6,0C298.9,550.5,303.8,555.1,303.8,562.3z"/>
+                                            <path d="M303.8,498c0,7.1-5.2,11.7-13.3,11.8c-33.6,0-67.1,0-100.7,0c-6.7,0-10.9-3.1-12.5-8.8c-1.4-4.9,0.4-10.2,4.8-12.7
+                                                c2.3-1.3,5.2-1.9,7.8-2c16.8-0.2,33.6-0.1,50.3-0.1s33.6,0,50.3,0C298.9,486.3,303.8,490.8,303.8,498z"/>
+                                            <path d="M150.7,264.7c-4.1-0.5-8.3-0.1-12.6-0.1v-19.9h5.5c8.6,0,17.3,0.1,25.9-0.1c6.4-0.1,11.5-5.3,11.7-11.5
+                                                c0.2-6.1-4.8-11.4-11.3-11.9c-2.1-0.2-4.2-0.1-6.3-0.1h-25.8c0-3.5,0.1-6.4,0-9.3c-0.3-7.5-4.9-12.3-11.7-12.3
+                                                c-6.7,0-11.4,4.9-11.8,12.3c-0.1,2.9,0,5.8,0,9.2c-4,0-7.3-0.1-10.7,0c-18,0.5-32.4,15.2-32.5,33.2c-0.1,18,14.1,32.9,32,33.5
+                                                c3.5,0.1,7.1,0,10.8,0v20h-5.6c-8.3,0-16.6,0-24.9,0c-4.8,0-8.6,1.8-10.9,6.2c-4.4,8.2,1.4,17.1,11.5,17.4c8.3,0.3,16.6,0,24.9,0.1
+                                                c1.7,0,3.4,0.2,5.5,0.3c0,4-0.3,7.5,0.1,10.8c0.8,6.2,5.9,10.5,11.6,10.4c6.1-0.1,11-4.7,11.5-11.1c0.2-3.2,0-6.5,0-10.5
+                                                c3.8,0,6.7,0.1,9.6,0c19.1-0.8,33.1-14.1,34-32.3C182.2,281.9,169.2,267,150.7,264.7z M114.1,264.4c-6.1-0.7-12.5,2.3-17.3-3.7
+                                                c-2.7-3.4-3.1-7.3-0.8-11c4.3-7,11.3-4.7,18.1-4.9V264.4z M149.7,307.5c-10.6,2.3-11.9,1.2-11.9-9.6v-10.2
+                                                c4.7,0.3,8.6,0.2,12.4,0.9c4.6,0.9,7.6,5.1,7.5,9.6C157.5,302.8,154.3,306.5,149.7,307.5z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="w-75 shadow_ ratio ratio-16x9 rounded-2 mt-3">
+                                    <div class="w-100 h-100 text-center d-flex align-items-center justify-content-center p-3">
+                                        <p>
+                                            <span class="fw-bold" style="font-size: 1.5vw;">Manajemen Kas</span><br>
+                                            Menggarap Cost effective activity Investasi SDM yang tepat manfaat Return di atas rata-rata 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col p-0 p-3 d-flex align-items-center justify-content-end">
+                                <div class="w-25 gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik12">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 767" style="enable-background:new 0 0 800 767;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M570.1,289.9h-128c-14.7,0-21,6.3-21,20.9c0,145.2,0,290.3-0.1,435.4c0,10,3.5,17.1,13,20.7h144
+                                                c8.3-3.9,12.2-10.2,12.2-19.7c-0.2-145.8-0.1-291.6-0.1-437.4C590.1,296.6,583.4,289.9,570.1,289.9z M550,732.8
+                                                c-29.5-0.2-59-0.1-88.4-0.1c-1.6,0-3.3-0.1-5.4-0.2V325h99.5v5.6c0,132.1,0,264.2,0.1,396.3C555.7,731.3,554.7,732.9,550,732.8z"/>
+                                            <path d="M779.3,587.2c-8.2,1.8-13.3,8.4-13.3,17.6c-0.1,40.3,0,80.7,0,121v6h-99.5V247.6c2.3,0,4.3,0,6.2,0c14,0,28,0.2,42-0.2
+                                                c10.3-0.3,16.8-8,16.4-18.1c-0.4-9.4-7.6-16.2-17.4-16.2c-21.5-0.1-43-0.1-64.5,0c-2.4,0-5,0.5-7.3,1.5
+                                                c-8.7,3.5-10.2,10.7-10.2,19.2c0.1,171,0.1,342,0,512.9c0,9.2,3,16.1,11.3,20.4h145c5.1-2.4,9.7-5.4,12-11V599
+                                                c-0.4-0.7-0.9-1.4-1.3-2.1C794.6,589.1,787.2,585.4,779.3,587.2z"/>
+                                            <path d="M169.2,466.5c0-1.7,0-3.3-0.1-5c-0.4-9.5-7.1-16.5-16.5-16.5c-45.2-0.1-90.3-0.1-135.5,0c-6.8,0-11.6,3.5-14.8,9.4
+                                                c-0.7,1.3-1.5,2.5-2.3,3.7v296c0.2,0.3,0.3,0.5,0.5,0.8c-0.2-0.3-0.3-0.5-0.5-0.8c0,4.3,0,8.7,0,13c4.3,0,8.7,0,13,0
+                                                c-0.8-0.3-1.5-0.6-2.2-0.9c0.7,0.3,1.4,0.7,2.2,0.9h144c9.3-4,12.4-11.1,12.3-21.1C169.1,652.8,169.2,559.6,169.2,466.5z
+                                                M134.6,732.2H35.1v-5.5c0-80.5,0-161-0.1-241.4c0-4.8,1.2-6.1,6.1-6.1c29.3,0.2,58.7,0.1,88,0.1h5.6V732.2z"/>
+                                            <path d="M157.7,316.7c30.6-8.6,61.3-16.9,91.7-26.1c93.2-28.4,183.8-63.4,270.2-108.5c59.1-30.8,115.1-66.2,165.4-110.2
+                                                c4.3-3.8,8.6-7.6,13.8-12.3c0,2.9,0,4.5,0,6.1c0,11.5-0.2,23,0.1,34.5c0.2,9.2,7.7,16,17.1,16c9.3,0,17-6.8,17-16
+                                                c0.2-27.8,0.1-55.7,0-83.5c0-6.4-3.5-10.9-8.9-14.1c-1.4-0.8-2.8-1.7-4.2-2.5h-92c-0.4,0.5-0.7,1.1-1.2,1.4
+                                                c-9.4,4.9-13.3,12-11.2,20.3c2.3,9.1,8.5,13.4,19.4,13.4c11.5,0,23,0,34.5,0c1.2,0,2.4,0.3,3.8,0.4c-0.4,0.8-0.5,1.1-0.7,1.3
+                                                c-2.2,2-4.4,4.1-6.6,6.1c-49.2,43.8-104.5,78.5-162.7,108.8c-79.3,41.3-162.2,73.7-247.5,100.3c-35.4,11-71.4,20.5-107.1,30.7
+                                                c-10.1,2.9-15.5,11.8-13,21.4C138.3,314.1,147.7,319.5,157.7,316.7z"/>
+                                            <path d="M797.9,220.7c-4.3-6.4-10.5-8.7-17.8-7.4c-7,1.2-11.7,5.6-13.5,12.5c-0.7,2.5-0.6,5.3-0.6,7.9c0,76.5,0,152.9,0,229.4
+                                                c0,1.5,0,3,0.1,4.5c0.5,8.4,6.9,15,15.3,15.8c9,0.9,14.8-3.8,18.7-11.3V224C799.3,222.9,798.6,221.8,797.9,220.7z"/>
+                                            <path d="M778.4,518.2c-7.4,2.1-12.5,8.9-12.4,16.7c0,7.6,4.9,14.2,12.2,16.4c7.4,2.3,15.2-0.6,19.6-7.2c0.7-1.1,1.5-2.1,2.3-3.1
+                                                v-12c-0.7-1.1-1.4-2.2-2.1-3.3C793.5,519,785.9,516,778.4,518.2z"/>
+                                            <path d="M292.1,733.1c-8,1.7-13.8,9.6-13.2,18.2c0.5,8,5.6,12.4,12.2,15.7h10c1.1-0.7,2.3-1.3,3.4-1.9c7.6-4.3,10.8-13,7.8-21.1
+                                                C309.2,735.8,300.8,731.3,292.1,733.1z"/>
+                                            <path d="M788,767c4,0,8,0,12,0c0-3.7,0-7.3,0-11C797.7,761.6,793.1,764.6,788,767z"/>
+                                            <path d="M305.1,397c5.6-4.1,6.8-12,4.3-18.7c-2.6-6.9-8.8-11-17.4-11c-20.8-0.1-41.7-0.1-62.5,0c-2.6,0-5.3,0.5-7.8,1.4
+                                                c-8.2,3.1-10.8,7.8-10.8,18.6c0,119.5,0,239,0,358.5c0,1.2,0,2.3,0,3.5c0.5,11.2,10.9,18.7,21.7,15.8c8.6-2.3,12.7-8.6,12.7-19.6
+                                                V402.3c1.8-0.1,3-0.2,4.1-0.2c14.2,0,28.4,0.4,42.5-0.2C296.4,401.6,301.4,399.6,305.1,397z"/>
+                                            <path d="M379.8,383.9c-1.1-11.6-11.3-18.8-22.4-15.8c-7.8,2.2-12.4,9-12.4,18.9c0,119.3,0,238.7,0,358c0,1.2,0,2.3,0.1,3.5
+                                                c1,9.7,8.3,16.2,17.8,15.9c10.3-0.3,16.9-7.8,16.9-19.5c0-59.5,0-119,0-178.5c0-59.2,0-118.3,0-177.5
+                                                C379.9,387.2,380,385.5,379.8,383.9z"/>
+                                            <path d="M85.9,332.9c8.7,0.1,16.4-7.8,16.6-17.1c0.2-9.4-8.1-17.8-17.7-17.8c-8.7,0-16.5,8.1-16.6,17.2
+                                                C67.9,325.8,74.9,332.8,85.9,332.9z"/>
+                                        </g>
+                                        </svg>
+    
+                                    </div>
+                                </div>
+                                <div class="w-75 shadow_ ratio ratio-16x9 rounded-2 ms-3">
+                                    <div class="w-100 h-100 text-center d-flex align-items-center justify-content-center p-3">
+                                        <p>
+                                            <span class="fw-bold" style="font-size: 1.5vw;">Manajemen Resources</span><br>
+                                            Peningkatan revenue Pengembangan usaha Leverage lewat Kerjasama Kepastian hukum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>
+
+                    <!-- Tablet -->
+                    <div class="w-100 d-block d-lg-none mt-2">
+                        <div class="ratio ratio-1x1 bg-grayYakkum border border-5 d-flex align-items-center justify-content-center rounded-circle m-auto mb-4 pr titik13">
+                            <img src="../img/Logos/2015.webp" alt="" class=" p-3 ms-1 w-100 m-0">
+                        </div>
+                        <div class="isiTab row row-cols-5 ms-1 mt-3 p-0 d-flex align-items-center justify-content-center">
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik14">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 626.5" style="enable-background:new 0 0 800 626.5;" xml:space="preserve">
+                                            <defs>
+                                            </defs>
+                                            <g>
+                                                <path d="M799.1,555.1c-3.7-41.5-22.5-74.6-55.4-99.8c-11.6-8.9-24.7-15.4-38.7-20.3c43.9-32.6,38.7-89.7,9.1-117.9
+                                                    C684.4,288.7,637,289,607.4,318c-28.1,27.5-34.5,83.5,9.9,117c-1.5,0.5-2.8,1.1-4.2,1.6c-54.1,20.2-89.7,70.9-90.2,128.6
+                                                    c-0.1,15.3,0.2,30.7-0.2,46c-0.2,7.5,2.4,12.5,9.3,15.3h259c3-3.3,6-6.7,9-10v-57C799.7,558,799.3,556.6,799.1,555.1z M609.1,372.9
+                                                    c-0.4-28.9,22.8-52.7,51.8-53c28.6-0.3,52.1,22.8,52.3,51.8c0.3,28.8-22.8,52.3-51.6,52.5C633.4,424.5,609.4,401.1,609.1,372.9z
+                                                    M682.9,445.1c-7.5,10.8-14.3,20.6-21.6,31c-7.2-10.3-14.1-20.1-21.6-30.9C654.3,449.1,668,449.2,682.9,445.1z M775.6,599.2
+                                                    c0,0.9-0.3,1.9-0.5,3H547.3c-0.1-1.5-0.3-2.9-0.3-4.4c0.3-15.5-0.7-31.1,1.2-46.4c4.9-38.7,25.6-67.1,59.5-85.9
+                                                    c12.1-6.7,12.3-6.4,20.1,4.9c7.5,10.8,15,21.6,22.6,32.4c6.2,8.8,15.4,8.9,21.7,0c10-14.1,19.8-28.4,30.1-43.1
+                                                    c27,10.9,47.2,28.9,60.6,54.2c8.4,15.9,12.5,32.9,12.8,50.8C775.8,576.2,775.7,587.7,775.6,599.2z"/>
+                                                <path d="M275.8,549.3c-3.4-35.7-20.4-64.9-47.4-88.3c-13.5-11.7-28.8-20.1-45.7-25.9c45.7-34.5,37.2-91.6,8.9-118.1
+                                                    c-30.2-28.3-77.4-27.9-106.8,1.3C55.6,347,52,403.2,94.9,435c-1.7,0.6-3.2,1.2-4.6,1.7c-43.9,17.8-72.9,49-85.4,94.9
+                                                    c-2.5,9.1-3.3,18.6-4.9,27.9v57c3,3.3,6,6.7,9,10h259c4.9-2.3,9.1-5.3,9-11.3C276.8,593.2,277.9,571.1,275.8,549.3z M86.9,372.4
+                                                    c-0.2-29,22.7-52.3,51.5-52.5c28.6-0.2,52.3,23.1,52.6,51.7c0.3,28.4-23,52.2-51.7,52.6C110.7,424.6,87,401.3,86.9,372.4z
+                                                    M160.5,445c-7.6,10.9-14.5,20.7-21.7,31.1c-7.2-10.4-14.1-20.1-21.6-30.9C132,449.1,145.8,449.3,160.5,445z M252.1,602.1H24.6
+                                                    c-1.1-33.6-2.3-66.8,17.2-96.4c13.9-21.1,32.2-36.5,56-46c8.2,11.7,16.2,23.2,24.3,34.8c2.1,3,4.1,6.1,6.3,9c6,7.9,15,7.9,20.8-0.3
+                                                    c9.3-13.2,18.6-26.4,27.7-39.8c2.1-3.2,4-3.6,7.3-2c38.5,18.2,62.3,47.9,67.6,90.4C253.8,568.2,252.1,585.1,252.1,602.1z"/>
+                                                <path d="M538.4,277.3c-0.2-9.8,0-19.8-1.8-29.4c-9.9-52.2-39.9-88.1-89.4-107.6c-1.1-0.4-2.1-1-3.4-1.6
+                                                    c40.6-30.3,41.6-84.6,10.3-116.4c-29.9-30.3-80.9-29.5-109.6,1.4c-30,32.3-28.1,85.3,12,115.1c-1.9,0.7-3.3,1.2-4.6,1.7
+                                                    c-17.9,6.9-34,16.7-47.8,30.1c-26.3,25.7-40.8,56.7-42.2,93.5c-0.6,17.1-0.3,34.3-0.3,51.5c0,10.6,4.3,14.8,14.9,14.8
+                                                    c82.3,0,164.6,0,246.9,0c10.8,0,15-4.2,15-15.2C538.5,302.6,538.7,289.9,538.4,277.3z M348,75.9c0-28.6,23.1-51.8,51.6-51.9
+                                                    c28.9-0.1,52.3,23,52.4,51.7c0.1,29.1-23.3,52.6-52.2,52.5C371.2,128.1,348,104.7,348,75.9z M421.7,149
+                                                    c-7.5,10.8-14.3,20.6-21.6,31.1c-7.3-10.4-14.1-20.2-21.6-30.9C393.1,153,406.7,153.4,421.7,149z M286.1,306.1
+                                                    c-1.4-34.9-2.5-69.3,19-99.6c12.8-18.1,29.1-31.8,49.3-41c3.4-1.5,5.3-1.3,7.6,2.1c8.7,13,17.8,25.7,26.8,38.5
+                                                    c6.8,9.7,15.7,9.7,22.5,0c9.2-13.1,18.4-26.1,27.4-39.3c1.8-2.7,3.3-2.9,6-1.7c38.3,17.7,62.1,46.9,68.1,88.9c2.4,17,1.4,34.5,2,52
+                                                    H286.1z"/>
+                                                <path d="M399.5,360c-62,0-112.3,50-112.4,111.8c-0.1,61.5,50.1,111.8,111.7,111.9c62.3,0.1,112.2-49.9,112.2-112.3
+                                                    C511.1,410.1,460.9,360,399.5,360z M399.3,559.6c-48.8-0.1-88-39.2-87.9-87.9c0-48.5,39.5-87.6,88.3-87.5
+                                                    c48.5,0.1,87.4,39.5,87.3,88.4C486.9,520.6,447.4,559.7,399.3,559.6z"/>
+                                                <path d="M463.1,442.9c-1,1.3-2.2,2.5-3.4,3.7c-22.5,22.5-45,45-67.5,67.5c-8.2,8.2-13.9,8.2-22,0.1c-10.8-10.8-21.7-21.7-32.5-32.5
+                                                    c-5.9-6-6.5-12.9-1.5-18.1c5.2-5.4,12.4-5,18.5,1c8.7,8.7,17.3,17.4,26.8,27c5.2-5.5,9.8-10.7,14.7-15.6
+                                                    c15.7-15.8,31.5-31.6,47.3-47.4c3.8-3.8,8.1-6.4,13.8-4.4C465.4,427.1,468.2,436.1,463.1,442.9z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik15">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 853.9 912.1" style="enable-background:new 0 0 853.9 912.1;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M565.1,817.1c0-14.6-7-21.8-21.5-21.8c-74.5,0-148.9-0.1-223.4,0c-14.8,0-21.9,7.3-21.9,22.2c0,23.2,0.4,46.4-0.2,69.5
+                                                c-0.3,11.7,3.3,20.2,14.2,25h238.3c11.4-4.7,14.8-13.6,14.6-25.4C564.8,863.5,565.1,840.3,565.1,817.1z M525.7,872.9h-188v-38.1
+                                                h188V872.9z"/>
+                                            <path d="M431.1,116.6c11.8,0.5,20.2-7.8,20.3-20.3c0.1-23.9-0.3-47.9,0.2-71.8c0.2-11.8-3.7-20.2-15-24.6h-9.1
+                                                c-8,3.3-14.6,8.3-14.7,17.6c-0.3,27.1-0.4,54.3,0,81.4C413,108.9,421.2,116.2,431.1,116.6z"/>
+                                            <path d="M92.9,421c-22.8-0.2-45.6,0.3-68.4-0.2c-12.1-0.2-20.5,4-24.5,15.8v8c3.3,8.2,8.4,14.9,17.9,15c26,0.3,52,0.3,78.1,0
+                                                c8-0.1,14.5-5.8,16.8-13.2C117,433.1,107.7,421.1,92.9,421z"/>
+                                            <path d="M835.8,421.2c-24.5-0.4-48.9-0.4-73.4,0c-11.1,0.2-18.5,9.1-18.1,20c0.3,11.1,8.5,18.6,20.7,18.7
+                                                c21.4,0.1,42.9-0.3,64.3,0.2c12.1,0.3,20.5-3.8,24.7-15.4v-8C850.8,428.1,845.6,421.3,835.8,421.2z"/>
+                                            <path d="M464.2,469.3c-0.6,3.4-1.4,5.3-4.7,6.6c-15.5,6.3-30.9,12.6-46.3,19.3c-3.9,1.7-6.2,1.3-9.3-1.6c-21.1-19.6-52-21-74.7-3.6
+                                                c-22.5,17.1-29.5,47.5-16.7,72.6c11.8,23.1,38,36,62.9,30.9c26.6-5.4,45.5-27,47.1-54.3c0.3-4.8,2-6.9,6.2-8.6
+                                                c14.8-5.9,29.5-12,44.2-18.4c4.1-1.8,6.7-1.6,10.3,1.6c18.6,16.2,39.9,20.4,62.5,10.3c22.2-9.9,34.4-27.9,34.8-52.4
+                                                c0.7-38.1-34-65.8-71.6-57.3c-4.7,1-7.1,0-9.9-3.6c-13.9-17.8-28.1-35.4-42.3-52.9c-2.4-2.9-3-5.1-1.1-8.9
+                                                c19.4-38.8-8.9-84.8-52.1-84.9c-24,0-46,15.2-54.5,37.9c-8.5,22.6-2.2,48,16,63.8c15.2,13.2,32.7,17.7,52.5,13.1
+                                                c2.6-0.6,5.1-2,7.6,1.2c15,19.1,30.3,38,45.4,57.1c1,1.3,0.7,4,0.3,5.9C468.5,451.8,465.8,460.4,464.2,469.3z M364.1,554.8
+                                                c-10.8-0.1-19-8.4-19.1-19.2c-0.1-11,8.3-19.6,19.3-19.6c10.9,0,19.6,8.7,19.5,19.5C383.7,546.4,375,554.9,364.1,554.8z
+                                                M522.2,451.4c10.7-0.1,19.2,8.2,19.5,18.9c0.2,11-8.1,19.7-19,19.9c-10.8,0.2-19.7-8.4-19.8-19.2
+                                                C502.8,460.1,511.3,451.5,522.2,451.4z M403.3,341.8c-10.7,0.1-19.4-8.7-19.4-19.6c0-11.1,8.3-19.3,19.5-19.2
+                                                c11.1,0.1,19.5,8.6,19.2,19.6C422.4,333.2,413.9,341.7,403.3,341.8z"/>
+                                            <path d="M204.6,500.1c-6.3-21.3-9.1-43-9-65.2c-0.5-0.1-1.1-0.1-1.6-0.2c2.5-18,3.9-36.2,7.8-53.9c21.8-98.9,110.1-175,210.9-182.3
+                                                c51.6-3.7,99.9,6.9,144.3,34c10.4,6.3,22.3,4,28-5.3c6.1-9.9,3-20.9-8-27.6c-66.3-40.3-137.7-51.6-212.3-32.2
+                                                c-97.6,25.3-162.8,87.7-195.8,183c-13.1,37.7-16,76.8-11.4,116.3c1.9,16.3,5.9,32.4,10,48.4c3.3,13,17.3,17.9,28.7,11.1
+                                                C204.8,521,208,511.4,204.6,500.1z"/>
+                                            <path d="M678.5,490.3c-9.2-0.6-17.2,4.9-20.4,15c-14.9,47.3-42.6,85.5-80.6,116.9c-22.1,18.2-36.3,41.7-41.9,70
+                                                c-1.7,8.5-2.2,17.2-3.2,25.9h-201c-0.7-8-0.9-15.4-2.1-22.6c-5.1-30.4-20.1-55-44.1-74.1c-7.8-6.2-18.8-5.5-25.7,0.9
+                                                c-6.7,6.3-7.8,17.1-2.3,25c1.6,2.3,3.8,4.2,6,6c13.6,11.6,23.5,25.8,26.5,43.4c2.1,12.4,1.8,25.3,2.1,38c0.4,14.3,7,21.6,21.3,21.6
+                                                c79,0.1,158.1,0.1,237.1,0c14,0,20.8-7.3,21-21.3c0.1-9.5-0.4-19.1,0.6-28.5c2.7-24.3,15.1-43.3,33.9-58.5
+                                                c43.1-34.7,72-79.2,89.4-131.4c1.1-3.3,1.5-7.2,0.9-10.6C694.3,496.6,687.6,490.9,678.5,490.3z"/>
+                                            <path d="M707.1,423.3c0-0.8,0-1.7-0.1-2.5c0-0.2,0-0.3,0-0.5c0-0.3,0-0.7,0-1c0-0.3,0-0.6,0-1c0,0,0-0.1,0-0.1c0-0.4,0-0.8-0.1-1.3
+                                                c0-0.2,0-0.4,0-0.6c0-0.3,0-0.6,0-0.9c0-0.1,0-0.2,0-0.3c0,0,0,0.1,0,0.1c0-0.1,0-0.2,0-0.3c0,0.1,0,0.1,0,0.2c0-0.3,0-0.6,0-0.9
+                                                c0-0.2,0-0.3,0-0.5c0-0.1,0-0.1,0-0.2c0-0.4,0-0.7-0.1-1.1c0,0,0,0,0,0c0,0,0,0,0,0c0-0.2,0-0.3,0-0.5c0-0.3,0-0.5-0.1-0.8
+                                                c0-0.1,0-0.3,0-0.4c0-0.6-0.1-1.2-0.1-1.8c0-0.2,0-0.4,0-0.6c0-0.1,0-0.3,0-0.4c0,0.2,0,0.3,0,0.5c-0.3-3.9-0.7-7.7-1.2-11.5
+                                                c-0.1-1-0.3-2-0.4-3.1c-0.3-2-0.6-4.1-0.9-6.1c-0.2-1-0.3-2-0.5-3c-3.4-19.6-9-38.7-16.7-56.5c-5.1-11.8-15.8-17-26-12.5
+                                                c-11,4.7-15,15.6-10.1,27.5c8.9,21.5,14.7,43.8,16.7,67c0.8,9.2,0.7,18.6,2.1,27.8c1.4,9.2,10,15.1,19.5,14.8
+                                                c9.5-0.3,17.1-7,18.1-16.4c0.1-0.8,0.1-1.7,0.2-2.5c0-0.4,0-0.7,0-1.1c0-1.8,0-3.6-0.1-5.4C707.1,426.1,707.1,424.7,707.1,423.3z"
+                                                />
+                                            <path d="M807.7,219.2c-2.3-7.8-9.1-12.9-17.5-13.6c-3.1,0.8-6.5,1-9.2,2.5c-23.4,13.3-46.8,26.5-69.9,40.3
+                                                c-9.1,5.4-11.2,16.6-6,25.4c5.4,9.1,16.7,13.2,25.5,8.3c23-12.8,45.8-26,68.5-39.3C806.8,238.3,810.2,227.5,807.7,219.2z"/>
+                                            <path d="M581.1,149.8c0.2,0.4,0.4,0.8,0.6,1.2c0.1,0.3,0.3,0.5,0.4,0.8c0.2,0.4,0.5,0.8,0.7,1.1c0.4,0.6,0.9,1.2,1.4,1.8
+                                                c0.2,0.2,0.4,0.4,0.6,0.7c1.4,1.4,3,2.6,4.9,3.6c0.2,0.1,0.5,0.2,0.7,0.3c0.6,0.3,1.2,0.5,1.9,0.7c0.2,0.1,0.5,0.1,0.7,0.2
+                                                c0.1,0,0.2,0,0.2,0.1c0.6,0.2,1.1,0.3,1.7,0.4c0.1,0,0.1,0,0.2,0c0.5,0.1,1,0.1,1.5,0.2c-0.1,0-0.1,0-0.2,0c0.1,0,0.2,0,0.3,0
+                                                c0,0,0,0,0.1,0c0,0,0,0,0.1,0c0,0,0,0,0.1,0c0.1,0,0.2,0,0.3,0c-0.1,0-0.1,0-0.2,0c0.2,0,0.3,0,0.5,0c0,0,0,0,0,0c0,0,0,0,0,0
+                                                c0.1,0,0.2,0,0.3,0c0,0,0,0,0,0c0.1,0,0.1,0,0.2,0c0,0,0,0-0.1,0c0.1,0,0.1,0,0.2,0c0,0-0.1,0-0.1,0c0.2,0,0.4,0,0.6,0
+                                                c0.3,0,0.6,0,0.9,0c-0.1,0-0.3,0-0.4,0c1.5,0,2.9-0.1,4.2-0.4c0.4-0.1,0.8-0.2,1.2-0.3c0,0,0,0,0,0c0.2-0.1,0.4-0.1,0.6-0.2
+                                                c3.8-1.2,6.8-3.6,9.3-7c0.2-0.3,0.4-0.6,0.6-0.9c0.3-0.4,0.6-0.9,0.9-1.4c12.9-22.4,25.8-44.7,38.5-67.1c5.8-10.2,2.7-21.7-7-27.1
+                                                c-9.5-5.3-20.5-2.2-26.5,7.7c-3.6,6-7,12.1-10.5,18.2c-9.2,16.1-18.7,32.1-27.7,48.4c-3.4,6.2-3.8,12.6-1.8,17.9
+                                                C580.9,149.2,581,149.5,581.1,149.8z"/>
+                                            <path d="M150.5,246.8c-21.8-12.7-43.6-25.2-65.6-37.6c-3.2-1.8-7-2.6-10.5-3.8c-9.1,0.8-16.4,6.5-18.7,14.9
+                                                c-2.4,8.9,1,17.2,9.5,22.2c21.8,12.6,43.6,25.2,65.5,37.7c10.9,6.2,22,3.4,28-6.9C164.6,263.4,161.5,253.1,150.5,246.8z"/>
+                                            <path d="M222.6,108.7c8.4,14.4,16.6,29,25.3,43.2c5.9,9.8,17.2,12.7,26.1,7.6c9.2-5.3,12.6-16.5,7.2-26.2
+                                                c-12.9-22.8-26-45.5-39.1-68.1c-3.6-6.1-9.2-9.4-16.5-9.5c-14.7,0-24,15.1-17.1,28.2C212.8,92.4,217.8,100.5,222.6,108.7z"/>
+                                            <path d="M220.1,559.8c-10.7-0.1-18.4,7.7-18.5,18.7c-0.1,11.3,8.3,19.9,19.5,20c10.7,0.1,19.2-8.5,19.3-19.5
+                                                C240.6,568.1,231.9,560,220.1,559.8z"/>
+                                            <path d="M607.8,267.9c0,10.2,9,19.2,19.2,19.3c10.7,0.1,19.5-8.5,19.6-19.3c0.1-10.9-8.4-19.2-19.6-19.1
+                                                C616.3,248.9,607.7,257.3,607.8,267.9z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik16">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 795.9 742" style="enable-background:new 0 0 795.9 742;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M795.9,172c-0.8-1-1.5-2.1-2.2-3.1c-0.4-0.5-0.7-1.1-1.1-1.6c-1.8-2.6-3.6-5.2-5.9-7.5c-38-38.1-76-76.2-114.1-114.2
+                                                c-12.7-12.7-25.3-25.3-38-38c-0.4-0.4-0.7-0.7-1.1-1.1c-1.5-1.4-3.2-2.6-4.9-3.8c-1.3-0.9-2.5-1.8-3.7-2.8l0,0c0,0,0,0,0,0h-441
+                                                c-7.9,3.9-10.6,10.2-10.4,19c0.4,24,0.1,48,0.2,72c0,3.3-1,4.8-4.1,6.2c-75.7,33-123,89.8-136.4,171.4
+                                                C18.9,355.9,48.7,428,116.3,484.5c1.3,1.1,2.6,2.1,4.3,3.5c-7.5,10.6-14.9,21-22.4,31.3c-0.6,0.8-2.3,1.1-3.6,1.1
+                                                c-10.8,0.3-18.7,5.2-25,14.1c-20.8,29.5-42,58.8-63.1,88.2c-6,8.3-8.4,17.3-5.1,27.3C5,660.2,11.9,667,22.7,669
+                                                c12,2.2,22.3-1.5,29.6-11.3c11.5-15.4,22.4-31.1,33.6-46.6c10.6-14.8,21-29.6,31.8-44.3c6.1-8.3,7.5-17.2,5-27
+                                                c-0.4-1.6-0.6-3.9,0.2-5.1c7.3-10.7,14.8-21.3,22.2-31.9c9.4,4.3,18.4,8.4,27.4,12.7c0.9,0.4,1.5,2.1,1.6,3.2c0.2,3,0.1,6,0.1,9
+                                                c0,65,0.1,130-0.1,195c0,8.8,2.4,15.6,10.8,19.3h600c0,0,0,0,0,0c3.7,0,7.3,0,11,0c0-4,0-8,0-12c0,0,0,0,0,0V172
+                                                C795.9,172,795.9,172,795.9,172L795.9,172z M745.8,159h-109V52.1C672.3,86.9,708.5,122.4,745.8,159z M58.6,306.1
+                                                c0.1-109.5,88.3-197.8,197.6-197.6c109.4,0.2,197.6,88.5,197.6,197.9c0,109-88.9,197.7-197.8,197.5
+                                                C147.1,503.8,58.6,415.1,58.6,306.1z M766.4,713.6H202.9V526.2C280.2,542,349.3,526,408,473.4c48.7-43.6,73.8-99.4,74.5-164.8
+                                                c0.7-73.1-27.8-134-84.9-179.9c-57.3-46-122.9-58.8-194.7-43.8V28.5h404.4v5.7c0,44.5,0,89,0,133.5c0,1.8,0,3.7,0.1,5.5
+                                                c0.7,8.8,6,14,14.9,14.1c15.7,0.2,31.3,0.1,47,0.1h97.1V713.6z"/>
+                                            <path d="M696.9,575.9c-2.2-0.2-4.3-0.2-6.5-0.2c-68.7,0-137.3,0-206,0c-68.7,0-137.3,0-206,0c-2.3,0-4.7,0-7,0.2
+                                                c-8.5,1-14.2,9.7-11.7,18c2.2,7.3,7.6,10.8,17.1,10.8c138.5,0,277,0,415.5,0c2.5,0,5-0.2,7.4-0.8c6.7-1.8,11-8.2,10.4-15.2
+                                                C709.4,581.8,703.9,576.4,696.9,575.9z"/>
+                                            <path d="M693.9,495.1c-74.6,0-149.2,0-223.8,0c-2.6,0-5.3,0.5-7.7,1.5c-6.3,2.6-9.6,9.4-8.3,16c1.3,6.7,7.4,11.4,14.9,11.4
+                                                c37.6,0,75.3,0,112.9,0c37.1,0,74.3,0,111.4,0c2.1,0,4.4,0,6.4-0.6c6.9-2,11.1-8.7,10.2-15.8C708.9,500.1,702.8,495.1,693.9,495.1z
+                                                "/>
+                                            <path d="M641.1,414.9c-4.6,0-9.3,0-13.9,0c-3.4,0-6.7,0-10.1,0c-5.7,0-11.5,0-17.2,0c-19.7,0-39.5,0-59.2,0.2
+                                                c-3.6,0-7.7,1.1-10.7,2.9c-5.4,3.3-7.1,10-5.1,15.8c2.2,6.4,7.7,10,15.6,10c50.8,0,101.6,0,152.4,0c9.8,0,16.3-5.8,16.4-14.3
+                                                c0.1-7.3-4.8-15-16.2-14.8c-10.6,0.2-21.3,0.2-31.9,0.2C654.5,415,647.8,414.9,641.1,414.9z"/>
+                                            <path d="M416.1,305.9c-0.1-88.4-71.7-159.9-160.1-159.8c-88.2,0-160,71.9-159.9,160.1c0.1,88.4,71.7,160,159.9,159.9
+                                                C344.8,466,416.2,394.5,416.1,305.9z M252.5,437.1C184.1,435.3,125.3,379,125.1,306c0.4-73.5,59.3-131.3,133.5-130.9
+                                                c70.7,0.3,128.9,60.2,128.6,131.9C386.8,379.8,326.4,439.1,252.5,437.1z"/>
+                                            <path d="M326.9,247.4c-6.4-5.4-14.7-4.4-20.7,2.3c-23.5,26.3-47.1,52.6-70.6,79c-0.8,0.8-1.2,2-2.2,3.8c-1.7-2.2-2.5-3.3-3.3-4.3
+                                                c-8.1-9.1-16.1-18.3-24.2-27.3c-5.7-6.3-14.8-7-20.6-1.9c-6.2,5.4-6.6,14.3-0.8,21c1.3,1.5,2.7,3,4,4.5c11,12.3,22,24.6,33.1,36.7
+                                                c7,7.6,15.9,7.9,22.2,0.9c28-31.2,56-62.5,83.9-93.9C333.7,261.4,333.2,252.8,326.9,247.4z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik17">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 781 677.1" style="enable-background:new 0 0 781 677.1;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M419.4,549.1V532C419.4,537.7,419.3,543.4,419.4,549.1c0,10.4,0,20.8,0,31.2C419.4,569.9,419.4,559.5,419.4,549.1z"/>
+                                            <path d="M607.5,230.5c0,10.2,4.3,15.9,11.8,15.9c7.5,0,11.8-5.8,11.8-16c0-47.1,0-94.2,0-141.3c0-12.3-3.6-15.9-16.1-15.9
+                                                c-43.2,0-86.4,0-129.6,0h-6.3c-0.1-1.7-0.2-2.9-0.3-4c-0.3-18.9-9.9-28.4-28.9-28.4c-9.5,0-18.9-0.1-28.4,0c-3.2,0-4.8-0.5-5.5-4.3
+                                                C412.2,15.9,393.4,0.2,372.9,0c-21.2-0.2-39.6,15.2-43.8,36.8c-0.6,2.9-1.7,4-4.8,4c-11.2-0.1-22.5-0.3-33.7,0.1
+                                                c-12.5,0.5-21.8,9.1-23.7,21.3c-0.5,3.3-0.1,6.8-0.1,10.9H260c-43.7,0-87.4,0-131,0c-10.6,0-14.7,4.2-14.7,14.9
+                                                c0,19.1,0,38.2,0,57.2v5.3c-3.7,0.6-6.8,0.9-9.8,1.5C38.3,164.3-5.8,222.7,0.6,289.5C6,346,51.6,393.6,107.9,401
+                                                c5.4,0.7,6.5,2.3,6.5,7.4c-0.2,84.3-0.1,168.6-0.2,252.8c0,7.2,2,12.7,8.7,15.9h498.8c0.6-0.3,1.2-0.6,1.7-0.9
+                                                c5.9-2.7,8.5-7.5,7.3-13.3c-1.2-5.7-5.5-9.1-12-9.3c-2,0-3.9,0-5.9,0h-475V411.7c0-9.5,0-9.5,9.3-11.2
+                                                c67.4-12.1,112.8-72.7,103.8-140.1c-6.3-47.2-32.1-80.7-75.6-99.8c-11.6-5.1-24.4-7.5-37.2-11.4v-52h128.8c0,4.4-0.6,8.5,0.1,12.5
+                                                c2.3,13.4,12.5,21.3,27.4,21.3c52.2,0,104.3,0,156.5,0c2.1,0,4.2-0.2,6.3-0.5c10.6-1.5,18.7-8.8,20.8-19.3c0.9-4.5,0.9-9.3,1.3-14
+                                                h128.3v6.7C607.5,146.1,607.5,188.3,607.5,230.5z M228.6,276.4c0,56.8-47.2,104.3-106.1,102.3c-54.9-1.9-99.3-47-99-103.7
+                                                c0.3-55.7,46.9-101.6,103-101.2C183.1,174.2,228.6,220.2,228.6,276.4z M455.4,70.5c-0.4,10.4-0.3,20.9,0,31.3
+                                                c0.1,4.3-1.2,5.6-5.5,5.6c-25.7-0.2-51.5-0.1-77.2-0.1c-24.8,0-49.5,0-74.3,0c-9.6,0-8.2,0.7-8.2-8.5c-0.1-9.6,0.2-19.2-0.1-28.8
+                                                c-0.1-4.2,1-5.7,5.4-5.6c13.8,0.3,27.7,0.1,41.5,0.1c10.5,0,14.7-4.3,14.8-14.8c0-2.8-0.1-5.6,0.4-8.3c2.1-10.9,11.4-18.3,22-17.4
+                                                c10.6,0.8,18.8,9.6,19.6,20.9c0.1,2.1,0,4.2,0.1,6.4c0.1,8.6,4.5,13.2,13.3,13.3c14,0.1,28,0.2,42-0.1
+                                                C453.8,64.2,455.6,65.3,455.4,70.5z"/>
+                                            <path d="M766.1,273.8c-18.1,0.3-36.2,0.1-54.3,0.1c-10.2,0-14.3,4.1-14.3,14.2c0,105.8,0,211.5,0,317.3c0,10.7,4.2,14.9,14.7,14.9
+                                                c18.1,0,36.2-0.1,54.3,0.1c6.5,0.1,11.4-1.9,14.5-7.9V280.9C777.5,275.5,772.6,273.7,766.1,273.8z M757.5,596.8h-36V297.9h36V596.8
+                                                z"/>
+                                            <path d="M761,139.9c-13.2-9.3-30.9-9-43.9,0.7c-13,9.7-18.7,26.9-12.7,41.8c2.5,6.2,2.1,10.3-2.6,14.4c-0.6,0.5-1,1.3-1.5,1.9
+                                                c-22.2,27.3-44.3,54.7-66.5,82c-0.9,1.2-2.9,2.6-4.1,2.3c-11.9-2.8-22.9-1.2-33,5.7c-19.3-13.6-38.2-27.2-57.4-40.4
+                                                c-3.9-2.7-5.7-5.2-4.1-10c0.7-2.1,0.5-4.6,0.2-6.8c-2-15.8-10.1-27.2-25.4-32.2c-14.9-4.9-28.5-1.5-39.2,10.1
+                                                c-10.7,11.6-12.5,25.3-6.7,39.9c1,2.6,0.9,4.3-0.8,6.6c-23.3,29.7-46.6,59.4-69.6,89.4c-3.8,4.9-7.1,6.6-13.4,5.9
+                                                c-18-2.1-34.3,10.1-38.9,27.9c-4.5,17.4,4.6,35.7,21.3,43.1c16.3,7.2,36,1.6,45.7-13.3c9.3-14.4,8.4-28.8-0.6-43
+                                                c0.1-0.4,0.2-0.7,0.4-0.9c24.2-31.1,48.4-62.2,72.6-93.3c1.8-2.4,3.5-2.5,6.2-1.6c10.8,3.6,21.3,2.2,30.8-3.9
+                                                c2.7-1.7,4.4-1.4,6.8,0.3c18,12.9,36.1,25.7,54.2,38.3c3.1,2.2,4.1,4.1,3.3,8c-4.8,24,17.9,47.2,41.8,42.9
+                                                c26.6-4.7,39.5-30.5,27.6-55c-0.6-1.2-0.5-3.6,0.3-4.6c23.8-29.6,47.7-59.1,71.7-88.5c0.9-1.1,3.3-1.6,4.9-1.6
+                                                c3.9,0.2,7.7,1.4,11.5,1.4c16.1,0.1,30.2-10.5,35.2-26.1C780,166.1,774.2,149.2,761,139.9z M377.5,401.9
+                                                c-7.4-0.1-13.7-6.4-13.6-13.8c0-7.6,6.1-13.6,13.7-13.5c7.7,0,13.6,6,13.6,13.6C391.1,395.7,384.9,402,377.5,401.9z M498.5,248.4
+                                                c-7.3,0.2-13.8-6.1-13.9-13.5c-0.1-7.8,5.6-13.8,13.3-13.8c7.7-0.1,13.8,5.8,14.1,13.3C512.1,241.5,505.7,248.2,498.5,248.4z
+                                                M618.6,332.6c-7.5-0.2-13.6-6.5-13.6-13.9c0-7.5,6.2-13.5,13.9-13.4c7.6,0.1,13.6,6.1,13.5,13.7
+                                                C632.4,326.5,626,332.8,618.6,332.6z M739.5,184.1c-7.4,0-13.7-6.3-13.7-13.7c0-7.5,6.3-13.7,13.8-13.7c7.6,0,13.7,6.2,13.7,13.7
+                                                C753.1,177.9,747,184.1,739.5,184.1z"/>
+                                            <path d="M540.2,557.5c0-69.9,0-139.8,0-209.8c0-10.9-4-15.1-14.4-15.1c-18.4,0-36.8,0-55.2,0c-10.1,0-14.2,4.2-14.2,14.2v258.7
+                                                c0,10.6,4.2,14.8,14.7,14.8c18.1,0,36.2,0,54.3,0c10.5,0,14.8-4.3,14.9-14.9C540.2,589.5,540.2,573.5,540.2,557.5z M516.2,596.5
+                                                h-36.1v-240h36.1V596.5z"/>
+                                            <path d="M645.8,413c-18.1,0-36.2,0-54.3,0c-10.4,0-14.8,4.5-14.9,14.9c0,59.2,0,118.3,0,177.5c0,10.5,4.4,15,14.8,15
+                                                c18.1,0,36.2,0,54.3,0c10.8,0,15-4.2,15-15.2c0-29.5,0-59,0-88.5c0-29.5,0-59,0-88.5C660.8,417.1,656.7,413,645.8,413z
+                                                M636.8,596.5h-36.1V436.7h36.1V596.5z"/>
+                                            <path d="M419.4,549.1V532c0-13.7,0-27.4,0-41.1c0-9-4.5-13.3-13.6-13.3c-18.7,0-37.5,0-56.2,0c-9.3,0-13.7,4.3-13.8,13.7
+                                                c0,38.4,0,76.9,0,115.4c0,9.3,4.4,13.7,13.9,13.7c18.6,0,37.1,0,55.7,0c9.7,0,14-4.4,14-14.1c0-8.7,0-17.3,0-26
+                                                C419.4,569.9,419.4,559.5,419.4,549.1z M395.4,596.5h-35.9v-95.3h35.9V596.5z"/>
+                                            <path d="M417.5,202.6c-0.1,5.3-3.1,9.4-8.2,10.8c-2,0.6-4.2,0.8-6.2,0.8c-39.3,0-78.5,0-117.8,0c-1.8,0-3.6,0-5.3-0.4
+                                                c-6-1.4-9.8-6.6-9.4-12.5c0.5-5.9,5-10.4,11.4-10.5c13.4-0.2,26.7-0.1,40.1-0.1c7.3,0,14.7,0,22,0c0,0,0,0,0,0
+                                                c20.4,0,40.7-0.1,61.1,0C412.9,190.8,417.6,195.6,417.5,202.6z"/>
+                                            <path d="M417.5,266.3c0.2,6.6-4.2,11.6-10.9,11.9c-8.6,0.4-17.3,0.2-25.9,0.2c-12.2,0-24.4,0-36.7,0c-19.4,0-38.8,0-58.2,0
+                                                c-2.7,0-5.6-0.1-8.2-1c-4.6-1.5-7.5-6.7-7.2-11.6c0.3-5,3.8-9.2,8.8-10.4c1.7-0.4,3.5-0.6,5.3-0.6c39.6,0,79.2,0,118.8,0
+                                                C412.2,254.8,417.3,259.1,417.5,266.3z"/>
+                                            <path d="M303.8,562.3c0,5.5-3.5,10-9,11.2c-2,0.4-4.2,0.6-6.3,0.6c-32.3,0-64.5,0-96.8,0c-2.1,0-4.3-0.2-6.3-0.6
+                                                c-5.2-1.2-8.9-6.2-8.7-11.5c0.2-5.6,4.3-10.6,9.8-11.1c5.2-0.5,10.4-0.4,15.6-0.4c5.8,0,11.5,0,17.3,0c6.9,0,13.9,0,20.8,0
+                                                c4.9,0,9.8,0,14.7,0c11.9,0,23.8,0,35.6,0C298.9,550.5,303.8,555.1,303.8,562.3z"/>
+                                            <path d="M303.8,498c0,7.1-5.2,11.7-13.3,11.8c-33.6,0-67.1,0-100.7,0c-6.7,0-10.9-3.1-12.5-8.8c-1.4-4.9,0.4-10.2,4.8-12.7
+                                                c2.3-1.3,5.2-1.9,7.8-2c16.8-0.2,33.6-0.1,50.3-0.1s33.6,0,50.3,0C298.9,486.3,303.8,490.8,303.8,498z"/>
+                                            <path d="M150.7,264.7c-4.1-0.5-8.3-0.1-12.6-0.1v-19.9h5.5c8.6,0,17.3,0.1,25.9-0.1c6.4-0.1,11.5-5.3,11.7-11.5
+                                                c0.2-6.1-4.8-11.4-11.3-11.9c-2.1-0.2-4.2-0.1-6.3-0.1h-25.8c0-3.5,0.1-6.4,0-9.3c-0.3-7.5-4.9-12.3-11.7-12.3
+                                                c-6.7,0-11.4,4.9-11.8,12.3c-0.1,2.9,0,5.8,0,9.2c-4,0-7.3-0.1-10.7,0c-18,0.5-32.4,15.2-32.5,33.2c-0.1,18,14.1,32.9,32,33.5
+                                                c3.5,0.1,7.1,0,10.8,0v20h-5.6c-8.3,0-16.6,0-24.9,0c-4.8,0-8.6,1.8-10.9,6.2c-4.4,8.2,1.4,17.1,11.5,17.4c8.3,0.3,16.6,0,24.9,0.1
+                                                c1.7,0,3.4,0.2,5.5,0.3c0,4-0.3,7.5,0.1,10.8c0.8,6.2,5.9,10.5,11.6,10.4c6.1-0.1,11-4.7,11.5-11.1c0.2-3.2,0-6.5,0-10.5
+                                                c3.8,0,6.7,0.1,9.6,0c19.1-0.8,33.1-14.1,34-32.3C182.2,281.9,169.2,267,150.7,264.7z M114.1,264.4c-6.1-0.7-12.5,2.3-17.3-3.7
+                                                c-2.7-3.4-3.1-7.3-0.8-11c4.3-7,11.3-4.7,18.1-4.9V264.4z M149.7,307.5c-10.6,2.3-11.9,1.2-11.9-9.6v-10.2
+                                                c4.7,0.3,8.6,0.2,12.4,0.9c4.6,0.9,7.6,5.1,7.5,9.6C157.5,302.8,154.3,306.5,149.7,307.5z"/>
+                                        </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <div class="gradienBlue shadow shadow-sm ratio ratio-1x1 p-0 m-0 rounded-circle titik18">
+                                    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 767" style="enable-background:new 0 0 800 767;" xml:space="preserve">
+                                        <defs>
+                                        </defs>
+                                        <g>
+                                            <path d="M570.1,289.9h-128c-14.7,0-21,6.3-21,20.9c0,145.2,0,290.3-0.1,435.4c0,10,3.5,17.1,13,20.7h144
+                                                c8.3-3.9,12.2-10.2,12.2-19.7c-0.2-145.8-0.1-291.6-0.1-437.4C590.1,296.6,583.4,289.9,570.1,289.9z M550,732.8
+                                                c-29.5-0.2-59-0.1-88.4-0.1c-1.6,0-3.3-0.1-5.4-0.2V325h99.5v5.6c0,132.1,0,264.2,0.1,396.3C555.7,731.3,554.7,732.9,550,732.8z"/>
+                                            <path d="M779.3,587.2c-8.2,1.8-13.3,8.4-13.3,17.6c-0.1,40.3,0,80.7,0,121v6h-99.5V247.6c2.3,0,4.3,0,6.2,0c14,0,28,0.2,42-0.2
+                                                c10.3-0.3,16.8-8,16.4-18.1c-0.4-9.4-7.6-16.2-17.4-16.2c-21.5-0.1-43-0.1-64.5,0c-2.4,0-5,0.5-7.3,1.5
+                                                c-8.7,3.5-10.2,10.7-10.2,19.2c0.1,171,0.1,342,0,512.9c0,9.2,3,16.1,11.3,20.4h145c5.1-2.4,9.7-5.4,12-11V599
+                                                c-0.4-0.7-0.9-1.4-1.3-2.1C794.6,589.1,787.2,585.4,779.3,587.2z"/>
+                                            <path d="M169.2,466.5c0-1.7,0-3.3-0.1-5c-0.4-9.5-7.1-16.5-16.5-16.5c-45.2-0.1-90.3-0.1-135.5,0c-6.8,0-11.6,3.5-14.8,9.4
+                                                c-0.7,1.3-1.5,2.5-2.3,3.7v296c0.2,0.3,0.3,0.5,0.5,0.8c-0.2-0.3-0.3-0.5-0.5-0.8c0,4.3,0,8.7,0,13c4.3,0,8.7,0,13,0
+                                                c-0.8-0.3-1.5-0.6-2.2-0.9c0.7,0.3,1.4,0.7,2.2,0.9h144c9.3-4,12.4-11.1,12.3-21.1C169.1,652.8,169.2,559.6,169.2,466.5z
+                                                M134.6,732.2H35.1v-5.5c0-80.5,0-161-0.1-241.4c0-4.8,1.2-6.1,6.1-6.1c29.3,0.2,58.7,0.1,88,0.1h5.6V732.2z"/>
+                                            <path d="M157.7,316.7c30.6-8.6,61.3-16.9,91.7-26.1c93.2-28.4,183.8-63.4,270.2-108.5c59.1-30.8,115.1-66.2,165.4-110.2
+                                                c4.3-3.8,8.6-7.6,13.8-12.3c0,2.9,0,4.5,0,6.1c0,11.5-0.2,23,0.1,34.5c0.2,9.2,7.7,16,17.1,16c9.3,0,17-6.8,17-16
+                                                c0.2-27.8,0.1-55.7,0-83.5c0-6.4-3.5-10.9-8.9-14.1c-1.4-0.8-2.8-1.7-4.2-2.5h-92c-0.4,0.5-0.7,1.1-1.2,1.4
+                                                c-9.4,4.9-13.3,12-11.2,20.3c2.3,9.1,8.5,13.4,19.4,13.4c11.5,0,23,0,34.5,0c1.2,0,2.4,0.3,3.8,0.4c-0.4,0.8-0.5,1.1-0.7,1.3
+                                                c-2.2,2-4.4,4.1-6.6,6.1c-49.2,43.8-104.5,78.5-162.7,108.8c-79.3,41.3-162.2,73.7-247.5,100.3c-35.4,11-71.4,20.5-107.1,30.7
+                                                c-10.1,2.9-15.5,11.8-13,21.4C138.3,314.1,147.7,319.5,157.7,316.7z"/>
+                                            <path d="M797.9,220.7c-4.3-6.4-10.5-8.7-17.8-7.4c-7,1.2-11.7,5.6-13.5,12.5c-0.7,2.5-0.6,5.3-0.6,7.9c0,76.5,0,152.9,0,229.4
+                                                c0,1.5,0,3,0.1,4.5c0.5,8.4,6.9,15,15.3,15.8c9,0.9,14.8-3.8,18.7-11.3V224C799.3,222.9,798.6,221.8,797.9,220.7z"/>
+                                            <path d="M778.4,518.2c-7.4,2.1-12.5,8.9-12.4,16.7c0,7.6,4.9,14.2,12.2,16.4c7.4,2.3,15.2-0.6,19.6-7.2c0.7-1.1,1.5-2.1,2.3-3.1
+                                                v-12c-0.7-1.1-1.4-2.2-2.1-3.3C793.5,519,785.9,516,778.4,518.2z"/>
+                                            <path d="M292.1,733.1c-8,1.7-13.8,9.6-13.2,18.2c0.5,8,5.6,12.4,12.2,15.7h10c1.1-0.7,2.3-1.3,3.4-1.9c7.6-4.3,10.8-13,7.8-21.1
+                                                C309.2,735.8,300.8,731.3,292.1,733.1z"/>
+                                            <path d="M788,767c4,0,8,0,12,0c0-3.7,0-7.3,0-11C797.7,761.6,793.1,764.6,788,767z"/>
+                                            <path d="M305.1,397c5.6-4.1,6.8-12,4.3-18.7c-2.6-6.9-8.8-11-17.4-11c-20.8-0.1-41.7-0.1-62.5,0c-2.6,0-5.3,0.5-7.8,1.4
+                                                c-8.2,3.1-10.8,7.8-10.8,18.6c0,119.5,0,239,0,358.5c0,1.2,0,2.3,0,3.5c0.5,11.2,10.9,18.7,21.7,15.8c8.6-2.3,12.7-8.6,12.7-19.6
+                                                V402.3c1.8-0.1,3-0.2,4.1-0.2c14.2,0,28.4,0.4,42.5-0.2C296.4,401.6,301.4,399.6,305.1,397z"/>
+                                            <path d="M379.8,383.9c-1.1-11.6-11.3-18.8-22.4-15.8c-7.8,2.2-12.4,9-12.4,18.9c0,119.3,0,238.7,0,358c0,1.2,0,2.3,0.1,3.5
+                                                c1,9.7,8.3,16.2,17.8,15.9c10.3-0.3,16.9-7.8,16.9-19.5c0-59.5,0-119,0-178.5c0-59.2,0-118.3,0-177.5
+                                                C379.9,387.2,380,385.5,379.8,383.9z"/>
+                                            <path d="M85.9,332.9c8.7,0.1,16.4-7.8,16.6-17.1c0.2-9.4-8.1-17.8-17.7-17.8c-8.7,0-16.5,8.1-16.6,17.2
+                                                C67.9,325.8,74.9,332.8,85.9,332.9z"/>
+                                        </g>
+                                        </svg>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="w-100 py-3">
+                            <div class="row row-cols-2 d-flex">
+                                <div class="col d-flex align-items-center justify-content-center">
+                                        <div class="w-100 shadow_ rounded-2 d-flex align-items-center justify-content-center p-2">
+                                                <p class="m-0 text-center" style="font-size: 2.3vh;">
+                                                    <span class="fw-bold">Manajemen SDM</span><br>
+                                                    Menggarap Transformasi budaya perilaku Capacity building tere
+                                                </p>
+        
+                                        </div>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-center">
+                                        <div class="w-100 shadow_ rounded-2 d-flex align-items-center justify-content-center p-2">
+                                            <p class="m-0 text-center" style="font-size: 2.3vh;">
+                                                <span class="fw-bold">Manajemen Budaya</span><br>
+                                                Sebagai pijakan Menuju healing hospital
+                                            </p>
+        
+                                        </div>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-center">
+                                        <div class="w-100 shadow_ rounded-2 d-flex align-items-center justify-content-center p-2">
+                                            <p class="m-0 text-center" style="font-size: 2.3vh;">
+                                                <span class="fw-bold">Manajemen Data</span><br>
+                                                Sentralisasi data, DSS, data security
+                                            </p>
+        
+                                        </div>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-center">
+                                        <div class="w-100 shadow_ rounded-2 d-flex align-items-center justify-content-center p-2">
+                                            <p class="m-0 text-center" style="font-size: 2.3vh;">
+                                                <span class="fw-bold">Manajemen Kas</span><br>
+                                                Menggarap Cost effective activity Investasi SDM yang tepat manfaat Return di atas rata-rata 
+                                            </p>
+        
+                                        </div>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-center">
+                                        <div class="w-100 shadow_ rounded-2 d-flex align-items-center justify-content-center p-2">
+                                            <p class="m-0 text-center" style="font-size: 2.3vh;">
+                                                <span class="fw-bold">Manajemen Resources</span><br>
+                                                Peningkatan revenue Pengembangan usaha Leverage lewat Kerjasama Kepastian hukum
+                                            </p>
+        
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div class="w-100 position-relative animate__animated animate__fadeInDown">
+            <footer class="p-5 bg-white">
+                <div class="d-flex justify-content-center shadow-sm p-2">
+                    <div class="row w-100 row-cols-1 row-cols-lg-2 align-items-center justify-content-center gap-3 gap-lg-0">
+                        <div class="col-auto d-flex align-items-center justify-content-center">
+                            <div class="row w-100 d-block d-lg-flex">
+                                <div class="col-auto d-flex align-items-center justify-content-center">
+                                    <img src="../img/Logos/2015.webp" alt="" srcset="" style="max-width: 100px;">
+                                </div>
+                                <div class="col d-flex justify-content-center align-items-center">
+                                    <p class="fw-bold p-0 m-0 text-center text-lg-start fs-5 fontSizeAlamatFooter mt-3 mt-lg-0">YAYASAN KRISTEN UNTUK KESEHATAN UMUM <br><span class="fw-normal">
+                                        Jl. Adi Sumarmo 51 Tohudan Colomadu 57173 Karanganyar Surakarta, Jawa Tengah.
+                                    </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <div class="row w-100 d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <div class="col-auto d-lg-block p-0">
+                                    <div class="border rounded" style="max-width: 200px; max-height: 100px; overflow:hidden;"><div style="width: 100%"><iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=200&amp;hl=en&amp;q=+(kantor%20pusat%20yakkum)&amp;t=&amp;z=19&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/drones/">best drones</a></iframe></div></div>
+                                    <div class="w-100 mt-2 d-flex align-items-center justify-content-center fs-3">
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sekretariatky@gmail.com" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-envelope"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/yakkum.official/" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-instagram"></i>
+                                        </a>
+                                        <a href="http://www.youtube.com/@yakkum-melayanidenganhati" class="mx-3 text-dark" target="_blank">
+                                            <i class="bi bi-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+   
+        </div>
+
+    <!-- Framework -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
+    <!-- System -->
+     <script src="../scripts/createPathAutomatic.js"></script>
+     <script>
+        const titik1 = document.querySelector(".titik1")
+        const titik2 = document.querySelector(".titik2")
+        const titik3 = document.querySelector(".titik3")
+        const titik4 = document.querySelector(".titik4")
+        const titik5 = document.querySelector(".titik5")
+        const titik6 = document.querySelector(".titik6")
+        
+        const titik7 = document.querySelector(".titik7")
+        const titik8 = document.querySelector(".titik8")
+        const titik9 = document.querySelector(".titik9")
+        const titik10 = document.querySelector(".titik10")
+        const titik11 = document.querySelector(".titik11")
+        const titik12 = document.querySelector(".titik12")
+        
+        const titik13 = document.querySelector(".titik13")
+        const titik14 = document.querySelector(".titik14")
+        const titik15 = document.querySelector(".titik15")
+        const titik16 = document.querySelector(".titik16")
+        const titik17 = document.querySelector(".titik17")
+        const titik18 = document.querySelector(".titik18")
+
+        CreateConnectPath(titik1, titik2, "var(--kiri-triangle)", "", "mid", "right", "2")
+        CreateConnectPath(titik3, titik4, "var(--kanan-triangle)", "", "mid", "left", "2")
+        CreateConnectPath(titik5, titik6, "var(--bawah-triangle)", "", "mid", "top", "2")
+        CreateStraightConnectPath(titik7, titik8, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik7, titik9, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik7, titik10, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik7, titik11, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik7, titik12, "black", "dash", "mid", "mid", "-1")
+        
+        CreateStraightConnectPath(titik13, titik14, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik13, titik15, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik13, titik16, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik13, titik17, "black", "dash", "mid", "mid", "-1")
+        CreateStraightConnectPath(titik13, titik18, "black", "dash", "mid", "mid", "-1")
+
+        let gradienBlue = document.querySelectorAll(".gradienBlue"),
+        shadow_ = document.querySelectorAll(".shadow_")
+
+        gradienBlue.forEach((el, i) => {
+            el.addEventListener("click", () => {
+                // Simpan status shadow sebelum diubah
+                const hadShadow = shadow_[i].classList.contains("shadow");
+                
+                // Hapus shadow dari semua elemen kecuali yang sedang diklik
+                shadow_.forEach((shadowEl, idx) => {
+                    if (idx !== i) {
+                        shadowEl.classList.remove("shadow");
+                    }
+                });
+                
+                // Toggle shadow pada elemen yang diklik
+                shadow_[i].classList.toggle("shadow");
+                
+                // Jika elemen lain di-click saat ini aktif, matikan shadow-nya
+                if (!hadShadow) {
+                    shadow_.forEach((shadowEl, idx) => {
+                        if (idx !== i) {
+                            shadowEl.classList.remove("shadow");
+                        }
+                    });
+                }
+            });
+        });
+            
+     </script>
+</body>
+</html>
