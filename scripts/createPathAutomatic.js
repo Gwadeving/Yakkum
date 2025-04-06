@@ -5,6 +5,8 @@ function CreateConnectPath(from, to, color, type, anchorStart, anchorEnd, zI) {
     svg.style.pointerEvents = "none";
     svg.style.zIndex = zI ? zI : "-1";
 
+    console.log(zI)
+
     document.body.appendChild(svg);
 
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
