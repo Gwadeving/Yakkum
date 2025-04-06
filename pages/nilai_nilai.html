@@ -1047,13 +1047,14 @@
    
         </div>
 
-    <!-- Framework -->
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <!-- Framework -->
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        
+        <!-- System -->
+         <script src="../scripts/createPathAutomatic.js"></script>
     
-    <!-- System -->
-     <script src="../scripts/createPathAutomatic.js"></script>
      <script>
         const titik1 = document.querySelector(".titik1")
         const titik2 = document.querySelector(".titik2")
@@ -1079,17 +1080,17 @@
         CreateConnectPath(titik1, titik2, "var(--kiri-triangle)", "", "mid", "right", "2")
         CreateConnectPath(titik3, titik4, "var(--kanan-triangle)", "", "mid", "left", "2")
         CreateConnectPath(titik5, titik6, "var(--bawah-triangle)", "", "mid", "top", "2")
-        CreateStraightConnectPath(titik7, titik8, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik7, titik9, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik7, titik10, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik7, titik11, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik7, titik12, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik7, titik8, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik7, titik9, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik7, titik10, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik7, titik11, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik7, titik12, "black", "dash", "mid", "mid", "-1")
         
-        CreateStraightConnectPath(titik13, titik14, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik13, titik15, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik13, titik16, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik13, titik17, "black", "dash", "mid", "mid", "-1")
-        CreateStraightConnectPath(titik13, titik18, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik13, titik14, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik13, titik15, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik13, titik16, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik13, titik17, "black", "dash", "mid", "mid", "-1")
+        CreateStraightPath(titik13, titik18, "black", "dash", "mid", "mid", "-1")
 
         let gradienBlue = document.querySelectorAll(".gradienBlue"),
         shadow_ = document.querySelectorAll(".shadow_")
