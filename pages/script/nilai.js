@@ -35,9 +35,9 @@ const titik5 = document.querySelector(".titik5")
 const titik6 = document.querySelector(".titik6")
 
 
-CreateConnectPath(titik1, titik2, "var(--kiri-triangle)", "", "mid", "right", "2")
-CreateConnectPath(titik3, titik4, "var(--kanan-triangle)", "", "mid", "left", "2")
-CreateConnectPath(titik5, titik6, "var(--bawah-triangle)", "", "mid", "top", "2")
+CreateConnectPath(titik1, titik2, "var(--kiri-triangle)", "path", "mid", "right", "2")
+CreateConnectPath(titik3, titik4, "var(--kanan-triangle)", "path", "mid", "left", "2")
+CreateConnectPath(titik5, titik6, "var(--bawah-triangle)", "path", "mid", "top", "2")
 
 
 const titik7 = document.querySelector(".titik7")
