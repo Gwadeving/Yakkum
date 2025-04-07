@@ -104,6 +104,7 @@ body{
 .navbar{
     align-items: center;
     background: transparent;
+    transition: all .3s ease;
     /* background: linear-gradient(90deg, rgba(9,115,177,1) 0%, rgba(10,75,123,1) 100%);
     box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);
     -webkit-box-shadow: -1px 10px 24px -9px rgba(0,0,0,.2);

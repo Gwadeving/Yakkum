@@ -55,8 +55,6 @@ function isLoading() {
 isLoading();
 
 
-
-
 let h1c = document.querySelector(".count"),
 scaleLoading = document.querySelector(".scaleLoading"),
 hilangkanLoading = document.querySelector(".hilangkanLoading"),

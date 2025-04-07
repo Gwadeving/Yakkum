@@ -1,24 +1,50 @@
+var opacity = 0;
+let isNavbarOpen = false;
+let scrl = 0;
+
+
 document.addEventListener("scroll", () => {
-    const customMaxScroll = 500;
-    const currentScroll = window.scrollY;
-    let nav = document.querySelector(".navbar"),
-    bsTheme = document.querySelector("[data-bs-theme]"),
-    dropDownBg = document.querySelector(".dropDownBg")
-
-    const opacity = Math.min(currentScroll / customMaxScroll, 1);
-
-    if(!(nav.classList).toString().includes("bg-white")) nav.style.backgroundColor = `rgba(255,255,255, ${opacity})`;
-
-    if(opacity === 1){
-        dropDownBg.classList.add("bg-white")
-        dropDownBg.classList.remove("bg-transparent")
-        dropDownBg.classList.remove("bg-blueYakkum")
-    } else {
-        dropDownBg.classList.add("bg-blueYakkum")
-        dropDownBg.classList.remove("bg-dark")
-        dropDownBg.classList.remove("bg-white")
-
+    if(isNavbarOpen == false){
+        let customMaxScroll = 500;
+        const currentScroll = window.scrollY;
+        scrl = currentScroll;
+        let nav = document.querySelector(".navbar");
+    
+        opacity = Math.min(currentScroll / customMaxScroll, 1);
+        if(!(nav.classList).toString().includes("bg-white")) nav.style.backgroundColor = `rgba(255,255,255, ${opacity})`;
+        op(opacity)
+        nav.style.boxShadow = `0 4px 8px rgba(0,0,0, ${opacity * 0.05})`;
     }
-    opacity === 1 ? bsTheme.setAttribute('data-bs-theme', "light") : bsTheme.setAttribute('data-bs-theme', "dark")
-    nav.style.boxShadow = `0 4px 8px rgba(0,0,0, ${opacity * 0.05})`;
 });
+
+function op(opacity){
+    if(opacity){
+        let bsTheme = document.querySelector("[data-bs-theme]");
+        opacity === 1 ? bsTheme.setAttribute('data-bs-theme', "light") : bsTheme.setAttribute('data-bs-theme', "dark")
+    }
+}
+
+let navbartoggler = document.querySelector(".navbar-toggler")
+
+
+
+navbartoggler.addEventListener("click", () => {
+    isNavbarOpen = !isNavbarOpen;
+
+    let nav = document.querySelector(".navbar");
+    let bsTheme = document.querySelector("[data-bs-theme]");
+
+    
+    
+    if (isNavbarOpen) {
+        nav.classList.add("bg-white")
+        nav.classList.add("shadow-sm")
+        bsTheme.setAttribute('data-bs-theme', "light")
+    } else {
+        nav.classList.remove("bg-white")
+        nav.classList.remove("shadow-sm")
+        bsTheme.setAttribute('data-bs-theme', "dark")
+        op(Math.min(currentScroll / customMaxScroll, 1))
+    }
+});
+
