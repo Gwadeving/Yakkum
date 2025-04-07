@@ -3,7 +3,7 @@ function CreateConnectPath(from, to, color, type, anchorStart, anchorEnd, z) {
     svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svg.style.position = "absolute";
     svg.style.pointerEvents = "none";
-    svg.style.zIndex = z ? z : "-1";
+    svg.style.zIndex = z ? z : "1";
 
     console.log(z)
 
