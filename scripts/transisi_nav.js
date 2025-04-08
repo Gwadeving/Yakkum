@@ -24,14 +24,9 @@ function op(opacity){
     }
 }
 
-let navbartoggler = document.querySelector(".navbar-toggler"),
-navbar_collapse = document.querySelector(".navbar-collapse")
+let navbartoggler = document.querySelector(".navbar-toggler");
 
-let klik = [navbartoggler]
-
-klik.forEach(el =>{
-
-    el.addEventListener("click", () => {
+    navbartoggler.addEventListener("click", () => {
         isNavbarOpen = !isNavbarOpen;
     
         let nav = document.querySelector(".navbar");
@@ -50,5 +45,4 @@ klik.forEach(el =>{
             op(Math.min(currentScroll / customMaxScroll, 1))
         }
     });
-})
 
