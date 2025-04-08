@@ -415,12 +415,24 @@
             
             console.log(judul)
             if(isi.length > 6){
-                console.log("Ambil : ", 2)
+                let ambil1 = isi.slice(0, 2)
+                let ambil2 = isi.slice(2)
+                let tampung = [ambil1, ambil2];
+                
+                console.log("Ambil 2: ", tampung)
             } else if (isi.length === 5){
-                console.log("Ambil : ", 1)
+                let ambil1 = isi[0],
+                ambil2 = isi.slice(1);
+                
+                let tampung = [ambil1, ambil2];
+                console.log("Ambil 1: ", tampung)
+                
             } else if (isi.length === 6 || isi.length < 5){
-                console.log("Ambil: ", 0)
+                let tampung = isi;
+                console.log("Ambil 0: ", tampung)
 
+            } else {
+                
             }
         })
      </script>

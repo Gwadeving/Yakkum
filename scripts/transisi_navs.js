@@ -24,10 +24,9 @@ function op(opacity){
     }
 }
 
-let navbartoggler = document.querySelector(".navbar-toggler"),
-navbartogglericon = document.querySelector(".navbar-toggler-icon")
+let navbartoggler = document.querySelector(".navbar-toggler");
 
-let klik = [navbartoggler, navbartogglericon]
+let klik = [navbartoggler]
 
 klik.forEach(elemn =>{
     elemn.addEventListener("click", () => {
