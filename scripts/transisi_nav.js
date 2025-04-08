@@ -24,27 +24,31 @@ function op(opacity){
     }
 }
 
-let navbartoggler = document.querySelector(".navbar-toggler")
+let navbartoggler = document.querySelector(".navbar-toggler"),
+navbar_collapse = document.querySelector(".navbar-collapse")
 
+let klik = [navbartoggler]
 
+klik.forEach(el =>{
 
-navbartoggler.addEventListener("click", () => {
-    isNavbarOpen = !isNavbarOpen;
-
-    let nav = document.querySelector(".navbar");
-    let bsTheme = document.querySelector("[data-bs-theme]");
-
+    el.addEventListener("click", () => {
+        isNavbarOpen = !isNavbarOpen;
     
+        let nav = document.querySelector(".navbar");
+        let bsTheme = document.querySelector("[data-bs-theme]");
     
-    if (isNavbarOpen) {
-        nav.classList.add("bg-white")
-        nav.classList.add("shadow-sm")
-        bsTheme.setAttribute('data-bs-theme', "light")
-    } else {
-        nav.classList.remove("bg-white")
-        nav.classList.remove("shadow-sm")
-        bsTheme.setAttribute('data-bs-theme', "dark")
-        op(Math.min(currentScroll / customMaxScroll, 1))
-    }
-});
+        
+        
+        if (isNavbarOpen) {
+            nav.classList.add("bg-white")
+            nav.classList.add("shadow-sm")
+            bsTheme.setAttribute('data-bs-theme', "light")
+        } else {
+            nav.classList.remove("bg-white")
+            nav.classList.remove("shadow-sm")
+            bsTheme.setAttribute('data-bs-theme', "dark")
+            op(Math.min(currentScroll / customMaxScroll, 1))
+        }
+    });
+})
 
