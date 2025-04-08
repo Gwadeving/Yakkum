@@ -24,9 +24,13 @@ function op(opacity){
     }
 }
 
-let navbartoggler = document.querySelector(".navbar-toggler");
+let navbartoggler = document.querySelector(".navbar-toggler"),
+navbartogglericon = document.querySelector(".navbar-toggler-icon")
 
-    navbartoggler.addEventListener("click", () => {
+let klik = [navbartoggler, navbartogglericon]
+
+klik.forEach(elemn =>{
+    elemn.addEventListener("click", () => {
         isNavbarOpen = !isNavbarOpen;
     
         let nav = document.querySelector(".navbar");
@@ -45,4 +49,6 @@ let navbartoggler = document.querySelector(".navbar-toggler");
             op(Math.min(currentScroll / customMaxScroll, 1))
         }
     });
+
+})
 
