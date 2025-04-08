@@ -47,6 +47,10 @@
             scale: .9;
         }
 
+        .cols h2 img{
+            pointer-events: none;
+        }
+
         .cols:hover{
             opacity: 1;
             cursor: pointer;
@@ -250,7 +254,7 @@
                         {
                             img: "../img/Unit Yakkum/3.jpg",
                             name: "RS Bethesda Wonosari",
-                            direct: ""
+                            direct: "www.youtube.com"
                         },
                         {
                             img: "../img/Unit Yakkum/4.jpg",
@@ -349,12 +353,6 @@
                 }
             ]
 
-        // for(let i = 1; i <= final_isi.unit_yakkum.length; i++){
-        //     let {name, img} = final_isi.unit_yakkum[i];
-        //     contain.innerHTML += `
-        //         <div class="cols border bg-blueYakkum p-3">${name.toUpperCase()}</div>
-        //     `
-        // }
         let turun = document.querySelector(".isiKotak");
         
         final_isi.forEach((els, i) => {
@@ -368,7 +366,7 @@
                             <div class="h-100 position-absolute rounded bg-blueYakkum" style="width: .5rem;"></div>
                             <h2 class="ms-3 text-dark m-0">${judul}</h2>
                         </div>
-                        <div class="d-flex flex-nowrap w-100 contain gap-3"></div>
+                        <div class="d-flex flex-nowrap w-100 contain gap-3 z-2"></div>
                     </div>
                 `;
                 
@@ -376,6 +374,15 @@
                 const containers = turun.querySelectorAll(".contain");
                 const currentContainer = containers[containers.length - 1];
                 
+                    containers.forEach((el, i) =>{
+                        // containers[i].scrollBy({
+                        //     left: 300,
+                        //     behavior: "smooth"
+                        // })
+                        
+                        dragble(el)
+                    })
+
                 if(isi) {
                     isi.forEach(el => {
                         let {name, img, direct} = el;
@@ -384,7 +391,7 @@
         
                         
                         currentContainer.innerHTML += `
-                            <div class="cols bg-blueYakkum p-2 p-lg-4" onclick='direct("${direct || direct != "" ? direct : "#"}")'>
+                            <div class="cols bg-blueYakkum p-2 p-lg-4 z-1" onclick='direct("${direct || direct != "" ? direct : "#"}")'>
                                 <div class="w-100 h-75 images border overflow-hidden d-flex align-items-center justify-content-center">
                                     <img src="${image}" class="object-fit-cover h-100"/>
                                 </div>
@@ -419,6 +426,42 @@
                 }, 100);
             }
 
+        }
+
+        function dragble(elem){
+                      let isDragging = false;
+                        let startX, scrollLeft;
+                        elem.addEventListener('mouseleave', (e) => {
+                            isDragging = false;
+                            console.log("ok")
+                            e.preventDefault()
+                        });
+                        
+                        elem.addEventListener('mouseup', (e) => {
+                            isDragging = false;
+                            e.preventDefault()
+                        });
+                        
+                        elem.addEventListener('mousedown', (e) => {
+                            isDragging = true;
+                            startX = e.pageX - elem.offsetLeft;
+                            scrollLeft = elem.scrollLeft;
+                            e.preventDefault()
+                        });
+                        
+                        elem.addEventListener('mousemove', (e) => {
+                            if(!isDragging) return;
+                            e.preventDefault();
+                            const x = e.pageX - elem.offsetLeft;
+                            const walk = (x - startX) *2;
+                            elem.scrollBy({
+                                left: -walk,
+                                behavior:"smooth"
+                            })
+
+                            console.log(walk)
+
+                        });
         }
 
 
