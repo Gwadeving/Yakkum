@@ -297,6 +297,13 @@ body{
         font-size: 5vw !important;
         text-align: center;
      }
+
+     .carousel-item {
+        height: 80vh !important;
+    }
+    .containerInfo1{
+        top: 0 !important;
+    }
      .aturUkuranLingkaran{
         width: 23%;
     }
@@ -339,6 +346,10 @@ body{
         height: 100% !important;
     }
 
+    .carousel-item {
+        height: 70vh !important;
+    }
+
     .aturUkuranFont{
         font-size: 2.5vw;
         text-align: center;
@@ -364,6 +375,11 @@ body{
         width: 60% !important;
     }
 
+    #MediaInformasi .col{
+        max-width: 250px !important;
+    }
+
+
  }
 
 
@@ -374,4 +390,9 @@ body{
         font-size: 25vw !important;
     }
 
- }
+    
+}
+
+#MediaInformasi .col{
+    max-width: 300px;
+}
