@@ -37,6 +37,16 @@
             .cards .col{
                 flex: 0 0 calc(100% /2) !important;
             }
+
+
+
+            .titleOrang{
+                height: 36% !important;
+            }
+
+            .struktur{
+                width: 100% !important;
+            }
         }
 
 
@@ -45,6 +55,18 @@
             .cards .col{
                 flex: 0 0 calc(100% /4) !important;
             }
+            .text_card{
+                line-height: 1.3vh !important;
+
+            }
+
+            .titleOrang{
+                height: 35% !important;
+            }
+
+            .struktur{
+                width: 100% !important;
+            }
         }
 
         /* Desktop */
@@ -52,10 +74,31 @@
             .cards .col{
                 flex: 0 0 calc(100% /7) !important;
             }
+
+            .struktur{
+                width: 50% !important;
+            }
+        }
+        
+        .struktur{
+            width: 80%;
+        }
+        .text_card{
+            font-size: .6rem;
+            line-height: 1.85vh;
+        }
+        
+        .titleOrang{
+            padding: 10px;
+            height: 28%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: linear-gradient(-180deg, #0080FF, #004AAD);
         }
 
-
-
+        .ukuranFoto{
+            width: 100%;
+        }
 
     </style>
     <title>Struktur YAKKUM</title>
@@ -123,54 +166,20 @@
             </div>
         </div>
 
-        <!-- <div class="w-100 d-flex align-items-center flex-column justify-content-center p-3 py-0">
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 w-100 d-flex align-items-start justify-content-start align-items-lg-center justify-content-lg-center cards bg-primary">
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-            </div>
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 w-100 d-flex align-items-start justify-content-start align-items-lg-center justify-content-lg-center cards bg-primary">
-                <div class="col">aoiod</div>
-                <div class="col">aoiod</div>
-            </div>
 
-        </div> -->
 
-        <!-- Card -->
-        <div class="borders w-25 p-3 overflow-hidden position-relative">
-            <div class="w-100 position-relative">
-                <div class="w-100 overflow-hidden aspect d-flex align-items-end justify-content-center position-relative">
-                    <img src="../img/Structure Yakkum/bu peni/bg.png" alt="" style="width: 104.5%;" class="position-absolute">
-                </div>
-                <div class="w-100 position-absolute top-0 aspect">
-                    <div class="w-100 h-100 d-flex align-items-end justify-content-center position-relative">
-                        <img src="../img/Structure Yakkum/bu peni/object.png" alt="" style="width: 104.5%;" class="position-absolute">
-                    </div>
-                </div>
-            </div>
+        <div class="cards">
 
-            <div class="position-absolute bottom-0 start-0 w-100 titleOrang d-flex align-items-end">
-                <div class="position-absolute end-0 h-100 d-flex align-items-center justify-content-center text-white" style="width: 82%;">
-                    <div>
-                        <p class="fw-bold m-0 text-center" style="line-height: 1.37vw; font-size: 1.2vw;">Dra. Peni Rahaju, M.M <br><span>Ketua II</span><br><span>Pengurus Yakkum</span></p>
-                    </div>
-                </div>
-                <svg version="1.1" class="w-100 bottom-0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1926 392.9" style="enable-background:new 0 0 1926 392.9;" xml:space="preserve">
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="200%">
-                          <stop offset="0%" stop-color="#0080FF" />
-                          <stop offset="40%" stop-color="#004AAD" />
-                        </linearGradient>
-                    </defs>
-                    <polygon points="1925.6,392.5 0.9,392.5 341.2,0.4 1925.6,0.4 " fill="url(#grad1)"/>
-                </svg>
-
-            </div>
         </div>
+
+        <!-- structure -->
+        <div class="w-100 d-flex align-items-center justify-content-center p-4 p-md-5 bg-grayYakkum">
+            <div class="struktur overflow-hidden rounded-2 shadow animate__animated animate__fadeIn">
+                <img src="../img/Structure Yakkum/struktur Yakkum.png" class="w-100">
+            </div>
+         </div>
+
+
     </div>
 
         <!-- Footer -->
@@ -216,6 +225,7 @@
         </div>
 
 
+
     <!-- Framework -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -229,41 +239,89 @@
                     judul: "Pembina YAKKUM",
                     isi:[
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt yonatan/bg.png",
+                                    object: "../img/Structure Yakkum/pdt yonatan/object.png",
+                                }
+                            ],
                             nama: "Pdt. Yonatan Wijayanto",
                             sebagai: "",
                             jabatan: "Ketua Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/prof_dr nindyo/bg.png",
+                                    object: "../img/Structure Yakkum/prof_dr nindyo/object.png",
+                                }
+                            ],
                             nama: "Prof. Dr. Nindyo Pramono, SH., M.S",
                             sebagai: "",
                             jabatan: "Ketua II Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt sundayono/bg.png",
+                                    object: "../img/Structure Yakkum/pdt sundayono/object.png",
+                                }
+                            ],
                             nama: "Pdt. Sundayono, S.Si.,MBA",
                             sebagai: "",
                             jabatan: "",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt ritra/bg.png",
+                                    object: "../img/Structure Yakkum/pdt ritra/object.png",
+                                }
+                            ],
                             nama: "Pdt. Ritra Dwi Lestari",
                             sebagai: "",
                             jabatan: "Sekretaris II Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/dr handoyo/bg.png",
+                                    object: "../img/Structure Yakkum/dr handoyo/object.png",
+                                }
+                            ],
                             nama: "dr. Handoyo Pramusinto, Sp.BS",
                             sebagai: "",
                             jabatan: "Angota Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "Dr. dr.Tjahjono Kuntjoro",
                             sebagai: "",
                             jabatan: "Anggota Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt enos/bg.png",
+                                    object: "../img/Structure Yakkum/pdt enos/object.png",
+                                }
+                            ],
                             nama: "Pdt. Enos Bayu Setiadji",
                             sebagai: "",
                             jabatan: "Anggota Pembina YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt anugrah/bg.png",
+                                    object: "../img/Structure Yakkum/pdt anugrah/object.png",
+                                }
+                            ],
                             nama: "Pdt. Anugrah Kristian",
                             sebagai: "",
                             jabatan: "Anggota Pembina YAKKUM",
@@ -276,46 +334,100 @@
                     judul: "Pengurus YAKKUM",
                     isi:[
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "Pdt. Simon Julianto, S.Th., M.Si.",
                             sebagai: "Ketua I",
                             jabatan: "Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/bu peni/bg.png",
+                                    object: "../img/Structure Yakkum/bu peni/object.png",
+                                }
+                            ],
                             nama: "Dra. Peni Rahaju, M.M",
                             sebagai: "Ketua II",
                             jabatan: "Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "Kus Winarni, S,H",
                             sebagai: "Ketua II",
                             jabatan: "Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "dr. Sapto Pudjo Hadwardoyo MARS.AAK. FISQua.CHQP",
                             sebagai: "",
                             jabatan: "Sekretaris II Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/dr usil/bg.png",
+                                    object: "../img/Structure Yakkum/dr usil/object.png",
+                                }
+                            ],
                             nama: "Dr. Usil Sis Sucahyo",
                             sebagai: "Bendahara I",
                             jabatan: "Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/suyarrudin dipo/bg.png",
+                                    object: "../img/Structure Yakkum/suyarrudin dipo/object.png",
+                                }
+                            ],
                             nama: "Suyarrudin Dipo",
                             sebagai: "Bendahara II",
                             jabatan: "Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/prof hindriyanto/bg.png",
+                                    object: "../img/Structure Yakkum/prof hindriyanto/object.png",
+                                }
+                            ],
                             nama: "Prof. Hindriyanto Dwi Purnomo, S.T.,M.IT, Ph.D.",
                             sebagai: "",
                             jabatan: "Anggota Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/rohadi hartawidjaja/bg.png",
+                                    object: "../img/Structure Yakkum/rohadi hartawidjaja/object.png",
+                                }
+                            ],
                             nama: "Rohadi Hartawidjaja, S.H",
                             sebagai: "",
                             jabatan: "Anggota Pengurus YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "Pdt. Erik Timoteus Purba, S.Th., M.Si.",
                             sebagai: "",
                             jabatan: "Anggota Pengurus YAKKUM",
@@ -328,26 +440,56 @@
                     judul: "Pengawas YAKKUM",
                     isi:[
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/daniel sugiarto/bg.png",
+                                    object: "../img/Structure Yakkum/daniel sugiarto/object.png",
+                                }
+                            ],
                             nama: "Daniel Sugiarto Roestamadji",
                             sebagai: "",
                             jabatan: "Ketua Pengawas YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/agus sutjino/bg.png",
+                                    object: "../img/Structure Yakkum/agus sutjino/object.png",
+                                }
+                            ],
                             nama: "Agus Sutjino, AK",
                             sebagai: "",
                             jabatan: "Sekretaris Pengawas YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/susetyo wahyudianto/bg.png",
+                                    object: "../img/Structure Yakkum/susetyo wahyudianto/object.png",
+                                }
+                            ],
                             nama: "Susetyo Wahyudianto",
                             sebagai: "",
                             jabatan: "Anggota Pengawas YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/neil aldrin/bg.png",
+                                    object: "../img/Structure Yakkum/neil aldrin/object.png",
+                                }
+                            ],
                             nama: "Neil Aldrin Apolla Matondang",
                             sebagai: "",
                             jabatan: "Anggota Pengawas YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt yohanes/bg.png",
+                                    object: "../img/Structure Yakkum/pdt yohanes/object.png",
+                                }
+                            ],
                             nama: "Pdt. Yohanes Eko Prasetyo, S.Sos, S.Si",
                             sebagai: "",
                             jabatan: "Anggota Pengawas YAKKUM",
@@ -360,6 +502,12 @@
                     judul: "Pendeta YAKKUM",
                     isi: [
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/pdt hizkia/bg.png",
+                                    object: "../img/Structure Yakkum/pdt hizkia/object.png",
+                                }
+                            ],
                             nama: "Pdt. Hizkia Fredo Valerian, S,Si., M.Fil",
                             sebagai: "",
                             jabatan: "Pendeta Pelayanan Khusus YAKKUM",
@@ -372,31 +520,67 @@
                     judul: "Directorat Yakkum",
                     isi: [
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "dr. Sunarima, M.Kes",
                             sebagai: "",
                             jabatan: "Direktur DPK YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/dr daniel/bg.png",
+                                    object: "../img/Structure Yakkum/dr daniel/object.png",
+                                }
+                            ],
                             nama: "dr. Daniel Budi Wibowo, M.Kes",
                             sebagai: "",
                             jabatan: "Staf Ahli DPK YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/dr paran/bg.png",
+                                    object: "../img/Structure Yakkum/dr paran/object.png",
+                                }
+                            ],
                             nama: "dr. Paran Bagionoto, Sp.B",
                             sebagai: "",
                             jabatan: "Staf Ahli DPK YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "dr. Susi Herawati, M.Kes",
                             sebagai: "",
                             jabatan: "Staf Ahli DPK YAKKUM",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "",
+                                    object: "",
+                                }
+                            ],
                             nama: "Arshinta, S.Si., MPH",
                             sebagai: "",
                             jabatan: "Direktur Direktorat PKMK",
                         },
                         {
+                            img: [
+                                {
+                                    bg: "../img/Structure Yakkum/dr bagoes/bg.png",
+                                    object: "../img/Structure Yakkum/dr bagoes/object.png",
+                                }
+                            ],
                             nama: "Dr. dr. Bagoes Widjanarko, MPH., MA",
                             sebagai: "",
                             jabatan: "Direktur Direktorat Akademik",
@@ -407,34 +591,170 @@
 
         ]
 
-
-        datas.forEach(el => {
-            let {judul,isi} = el[0];
+        const default_img = "../img/Logos/2015.webp"
+        datas.forEach((el, i) => {
+            let {judul,isi, img} = el[0];
 
             // console.log(isi)
             
             console.log(judul)
+            let cards = document.querySelector(".cards")
+            cards.innerHTML += `
+            <div class="w-100 d-flex align-items-center flex-column justify-content-center p-4 py-0 cardsContain">
+                <div class="position-relative py-2 d-flex align-items-center my-3 my-md-4" style="background: linear-gradient(90deg, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));">
+                    <div class="h-100 position-absolute rounded bg-blueYakkum" style="width: .5rem;"></div>
+                    <h2 class="ms-3 text-dark m-0">${judul}</h2>
+                </div>
+    
+            </div>
+            
+            `
+            let cardsContain = document.querySelectorAll(".cardsContain")
+            let row = document.querySelectorAll(".row")
+
             if(isi.length > 6){
                 let ambil1 = isi.slice(0, 2)
                 let ambil2 = isi.slice(2)
                 let tampung = [ambil1, ambil2];
-                
-                console.log("Ambil 2: ", tampung)
-            } else if (isi.length === 5){
-                let ambil1 = isi[0],
-                ambil2 = isi.slice(1);
-                
-                let tampung = [ambil1, ambil2];
-                console.log("Ambil 1: ", tampung)
-                
-            } else if (isi.length === 6 || isi.length < 5){
-                let tampung = isi;
-                console.log("Ambil 0: ", tampung)
 
-            } else {
+                tampung.forEach(el =>{
+                    cardsContain[i].innerHTML += `
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 w-100 d-flex align-items-start justify-content-start align-items-lg-center justify-content-lg-center cards">
+                        ${
+                            el.map(elm => 
+                            `
+                            <div class="col my-4">
+                                        <!-- Card -->
+                                <div class="borders w-100 p-3 position-relative">
+                                    <div class="w-100 position-relative shadow">
+                                        <div class="w-100 overflow-hidden aspect d-flex align-items-end justify-content-center position-relative">
+                                            <img src="${elm.img[0].bg || elm.img[0].bg !== "" || elm.img[0].b !== undefined ? elm.img[0].bg : default_img}" alt="" class="ukuranFoto position-absolute">
+                                        </div>
+                                        <div class="w-100 position-absolute top-0 aspect">
+                                            <div class="w-100 h-100 d-flex align-items-end justify-content-center position-relative">
+                                                <img src="${elm.img[0].object || elm.img[0].object !== "" ? elm.img[0].object : ""}" alt="" class="ukuranFoto position-absolute">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <div class="position-absolute bottom-0 start-0 w-100 titleOrang">
+                                    <div class="end-0 bottom-0 position-absolute h-100 d-flex align-items-center justify-content-center text-white w-100">
+                                        <div>
+                                            <p class="fw-bold m-0 text-center text_card">${elm.sebagai || elm.sebagai !== "" ? `${elm.nama} <br><span>${elm.sebagai}</span><br><span>${elm.jabatan}</span>` : `${elm.nama} <br><span>${elm.jabatan}</span>`}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                </div>    
+                                
+                                
+                            </div>
+                        `
+                    
+                            ).join("")
+                        
+                        }
+                    </div>
+                    
+                    
+                    `
+                })
                 
+                
+                
+            } else if (isi.length === 5){
+                
+                let ambil1 = isi.slice(0, 1)
+                let ambil2 = isi.slice(1)
+                let tampung = [ambil1, ambil2];
+
+                tampung.forEach(el =>{
+                    cardsContain[i].innerHTML += `
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 w-100 d-flex align-items-start justify-content-start align-items-lg-center justify-content-lg-center cards">
+                        ${
+                            el.map(elm => 
+                            `
+                            <div class="col my-4">
+                                        <!-- Card -->
+                                <div class="borders w-100 p-3 position-relative">
+                                    <div class="w-100 position-relative shadow">
+                                        <div class="w-100 overflow-hidden aspect d-flex align-items-end justify-content-center position-relative">
+                                            <img src="${elm.img[0].bg || elm.img[0].bg !== "" || elm.img[0].b !== undefined ? elm.img[0].bg : default_img}" alt=""  class="ukuranFoto position-absolute">
+                                        </div>
+                                        <div class="w-100 position-absolute top-0 aspect">
+                                            <div class="w-100 h-100 d-flex align-items-end justify-content-center position-relative">
+                                                <img src="${elm.img[0].object || elm.img[0].object !== "" ? elm.img[0].object : ""}" alt=""  class="ukuranFoto position-absolute">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute bottom-0 start-0 w-100 titleOrang">
+                                        <div class="end-0 bottom-0 position-absolute h-100 d-flex align-items-center justify-content-center text-white w-100">
+                                            <div>
+                                                <p class="fw-bold m-0 text-center text_card">${elm.sebagai || elm.sebagai !== "" ? `${elm.nama} <br><span>${elm.sebagai}</span><br><span>${elm.jabatan}</span>` : `${elm.nama} <br><span>${elm.jabatan}</span>`}</p>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>    
+                                
+                                
+                            </div>
+                        `
+                    
+                            ).join("")
+                        
+                        }
+                    </div>
+                    
+                    
+                    `
+                })
+                
+                
+                
+            } else if (isi.length === 6 || isi.length < 5 || isi.length >= 9){
+                let tampung = isi;
+
+                cardsContain[i].innerHTML += `
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 w-100 d-flex align-items-start justify-content-start align-items-lg-center justify-content-lg-center cards">
+                        ${tampung.map(elm => 
+                        `
+                            <div class="col my-4">
+                                        <!-- Card -->
+                                <div class="borders w-100 p-3 position-relative">
+                                    <div class="w-100 position-relative shadow">
+                                        <div class="w-100 overflow-hidden aspect d-flex align-items-end justify-content-center position-relative">
+                                            <img src="${elm.img[0].bg || elm.img[0].bg !== "" || elm.img[0].b !== undefined ? elm.img[0].bg : default_img}" alt=""  class="ukuranFoto position-absolute">
+                                        </div>
+                                        <div class="w-100 position-absolute top-0 aspect">
+                                            <div class="w-100 h-100 d-flex align-items-end justify-content-center position-relative">
+                                                <img src="${elm.img[0].object || elm.img[0].object !== "" ? elm.img[0].object : ""}" alt=""  class="ukuranFoto position-absolute">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="position-absolute bottom-0 start-0 w-100 titleOrang">
+                                        <div class="end-0 bottom-0 position-absolute h-100 d-flex align-items-center justify-content-center text-white w-100">
+                                            <div>
+                                                <p class="fw-bold m-0 text-center text_card">${elm.sebagai || elm.sebagai !== "" ? `${elm.nama} <br><span>${elm.sebagai}</span><br><span>${elm.jabatan}</span>` : `${elm.nama} <br><span>${elm.jabatan}</span>`}</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>    
+                                
+                                
+                            </div>
+                        `
+                    
+                    ).join('')}
+                    
+                    </div>
+                `;
+
             }
         })
+     
      </script>
 </body>
 </html>

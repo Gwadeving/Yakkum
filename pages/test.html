@@ -1,82 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag Scrolling Container</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/root.css">
     <style>
-        .contain{
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-            overflow-y: hidden;
+        .shape-container {
+            width: 50%;
+            height: 392.9px;
+            position: relative;
+            overflow: hidden;
         }
-
-        .cols{
-            flex: 0 0 calc((100% / 2));
-            aspect-ratio: 3/4;
-            scroll-snap-align: center;
-            transition: 0.5s ease;
-            display: inline-block;
-            background: #cccc;
-            scale: 0.9;
-        }
-
-        .curentStyle {
-            background: var(--YakkumBlue);
-            color: white;
-            scale: 1;
+        
+        .shape {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #0080FF 0%, #004AAD 40%);
+            clip-path: polygon(0% 100%, 0% 0%, 17.7% 0%, 100% 100%);
         }
     </style>
 </head>
 <body>
-
-    <!-- main -->
-     <div class="w-100 d-flex flex-nowarp contain gap-3"></div>
-    <!-- Framework -->
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
-    <script>
-        let contain = document.querySelector(".contain"),
-        isi = 21;
-
-        for(let i = 1; i <= isi; i++){
-            contain.innerHTML += `
-                <div class="cols border" id="${i}">${i}</div>
-            `
-        }
-
-        contain.addEventListener("scrollsnapchanging", (event)=>{
-            const provPend = document.querySelector(".curentStyle")
-            console.log("scrollsnapchanging", event)
-
-            if (provPend) {
-                provPend.classList.remove("curentStyle");
-            }
-
-            event.snapTargetInline.classList.add("curentStyle");
-        })
-
-        contain.addEventListener("scrollsnapchange", (event)=>{
-            const curr = document.querySelector(".curentStyle")
-
-            console.log("scrollsnapchange", event)
-
-            if (curr) {
-                curr.classList.remove("curentStyle");
-                curr.classList.remove("pending");
-            }
-
-            event.snapTargetInline.classList.add("curentStyle");
-            
-        })
-
-
-    </script>
+    <div class="shape-container">
+        <div class="shape"></div>
+    </div>
 </body>
 </html>
