@@ -84,6 +84,14 @@ img, video {
     margin-top: 6.5rem;
 }
 
+#MediaInformasi .col{
+    animation: all .3s ease-in-out;
+}
+#MediaInformasi .col:hover{
+    scale: 1.1;
+    cursor: pointer;
+
+}
 
  /* Footer */
  .fontSizeAlamatFooter{
