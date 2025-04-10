@@ -1,4 +1,3 @@
-
 sessionStorage.setItem("loadingScreen", true)
 
 // Loading System Setiing
@@ -113,6 +112,9 @@ function updateText(newText, stepDuration) {
                 span.textContent = char;
                 span.style.animation = `charAppear 0.3s ease ${index * 0.05}s forwards`;
                 h1c.appendChild(span);
+
+                
+
             });
 
             resolve();
@@ -151,6 +153,8 @@ countdown(awalTahunCowndown, TahunSaatini(), durasiAnimasi, stepTahun).then(() =
             setTimeout(()=>{
                 VideoLoading.style.display = "none";
                 textAwal.classList.remove("d-none")
+
+                
             }, 1000)
         })
     }, 1000)
